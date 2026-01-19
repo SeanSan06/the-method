@@ -1,12 +1,12 @@
-/* html, body, and root sizing */
+/* html, body, and root defaults & standardizing */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: black;
+  background-color: white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,6 +28,8 @@ html, body, #root {
     background-color: white;
 }
 
+
+
 /* Navigation bar area */
 nav {
     display: flex;
@@ -39,14 +41,55 @@ nav {
     margin: 0;
     padding: 0;
 
-    background-color: white;
+    background-color: whitesmoke;
     color: black;
+    border-bottom: solid 2px skyblue;
 }
+    /* Navigation bar sub areas */
+    #nav-bar h1 {
+        background-color: whitesmoke;
+    }
 
-#nav-bar-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 20rem;
-    list-style-type: none;
-}
+    #nav-bar-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 24rem;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+
+        background-color: whitesmoke;
+    }
+
+        #nav-bar-links li {
+            background-color: whitesmoke;
+        }
+
+    #log-in-sign-up {
+        width: 12rem;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        gap: 8px;
+
+        background-color: whitesmoke;
+    }
+
+    #log-in-sign-up button {
+        all: unset;
+        width: 80%;
+        height: 60%;
+        border-radius: 4px;
+        cursor: pointer;
+
+        background-color: skyblue;
+    }
+
+    #log-in-sign-up button:active {
+        background-color: rgb(125, 196, 225);
+        transform: scale(0.95);
+    }
