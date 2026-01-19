@@ -1,5 +1,6 @@
 # docker-ignore specifics
 Dockerfile
+docker-compose.yml
 
 #### .GITIGNORE BELOW ####
 
