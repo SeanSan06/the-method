@@ -3,9 +3,13 @@ A web site that allows users to create, edit, practice interviews, and apply for
 
 ## Backend
 
-Setup:
-- setup virtual enviornment using `python3 -m venv venv`
-- install dependencies with `pip install -r requirements.txt`
+Backend can be deployed through docker by running:
+```
+docker compose up --build -d
+```
+which will run on `localhost:8000`
 
-Deploy:
-```fastapi dev backend/main.py```
+Take down the deployment by running:
+```
+docker compose down
+```
