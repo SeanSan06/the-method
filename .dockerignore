@@ -2,6 +2,26 @@
 Dockerfile
 docker-compose.yml
 
+# Frontend (not needed for backend Docker image)
+frontend/
+node_modules/
+
+# Git
+.git/
+.gitignore
+
+# OS files
+.DS_Store
+**/.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Documentation
+*.md
+README*
+
 #### .GITIGNORE BELOW ####
 
 # Byte-compiled / optimized / DLL files

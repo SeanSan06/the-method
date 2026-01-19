@@ -2,7 +2,9 @@ FROM python:3.14-slim
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+COPY backend ./backend
+ENV PYTHONPATH=/usr/src/app
 CMD ["fastapi", "run", "backend/main.py"]
