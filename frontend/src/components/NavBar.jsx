@@ -1,10 +1,8 @@
-import React from "react";
-
 function NavBar() {
     return  (
-        <nav>
-            <h1>The Method</h1>
-            <ul>
+        <nav href="/" id="nav-bar">
+            <h1 id="the-method">The Method</h1>
+            <ul id="nav-bar-links">
                 <li>Home</li>
                 <li>About</li>
                 <li>Contact</li>

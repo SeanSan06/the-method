@@ -1,26 +1,23 @@
-html, body {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+/* html, body, and root sizing */
+* {
+    box-sizing: border-box;
+    background-color: white;
 }
 
-#root {
-    flex: 1 1 auto;   /* grow in both directions */
-    min-width: 100%;  /* make sure it doesn’t shrink horizontally */
+html, body, #root {
+    min-width: 100%;
     min-height: 100%;
+    flex: 1 0 0;
     margin: 0;
     padding: 0;
+    background-color: white;
 }
 
-
-
+/* Navigation bar area */
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 5rem;
@@ -29,4 +26,12 @@ nav {
 
     background-color: white;
     color: black;
+}
+
+#nav-bar-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 20rem;
+    list-style-type: none;
 }
