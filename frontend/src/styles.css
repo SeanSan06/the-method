@@ -1,0 +1,32 @@
+html, body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    flex: 1 1 auto;   /* grow in both directions */
+    min-width: 100%;  /* make sure it doesn’t shrink horizontally */
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    margin: 0;
+    padding: 0;
+
+    background-color: white;
+    color: black;
+}
