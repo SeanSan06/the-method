@@ -3,6 +3,8 @@ services:
     build: .
     ports:
       - "8000:8000"
+    env_file:
+      - .env
     environment:
       - DATABASE_URL=postgresql://admin:zlg1DY1b1T3S@db:5432/the_method
     depends_on:

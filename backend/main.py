@@ -27,8 +27,11 @@ async def chat_endpoint(request: ResumeRequest):
   """
 
   try:
+      # Prepend system prompt to messages
+      messages = [{"role": "system", "content": RESUME_SYSTEM_PROMPT}] + request.messages
+
       # Call the chat function
-      response = chat(request.messages)
+      response = chat(messages)
 
       return {"response": response}
   

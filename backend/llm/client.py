@@ -1,25 +1,25 @@
-from huggingface_hub import InferenceClient
-import os
+from groq import Groq
+from dotenv import load_dotenv
 
+load_dotenv()
 
-MODEL = "meta-llama/Meta-Llama-3-8B-Instruct"
-
-
-client = InferenceClient(
-    model=MODEL,
-    token=os.getenv("HF_API_TOKEN"),
-)
+MODEL = "llama-3.1-8b-instant"
+client = Groq()
 
 
 def chat(messages, max_tokens=300, temperature=0.3):
     """
-    Send chat-style messsage to the LLM and return raw text output.
+    Send chat-style message to the LLM and return raw text output.
     """
+    try:
+        completion = client.chat.completions.create(
+            model=MODEL,
+            messages=messages,
+            max_tokens=max_tokens,
+            temperature=temperature
+        )
+        return completion.choices[0].message.content
 
-    response = client.chat_completion(
-        messages=messages,
-        max_tokens=max_tokens,
-        temperature=temperature,
-    )
-
-    return response.choices[0].message["content"]
+    except Exception as e:
+        print(f"Error occurred: {e}")
+        return "Error occurred while processing the request."
