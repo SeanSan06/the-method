@@ -4,7 +4,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - name=value
+      - DATABASE_URL=postgresql://admin:zlg1DY1b1T3S@db:5432/the_method
     depends_on:
       db:
         condition: service_healthy
