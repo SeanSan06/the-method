@@ -5,3 +5,24 @@ services:
       - "8000:8000"
     env_file:
       - .env
+    environment:
+      - DATABASE_URL=postgresql://admin:zlg1DY1b1T3S@db:5432/the_method
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: postgres:18-alpine
+    volumes:
+      - postgres-data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_DB=the_method
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=zlg1DY1b1T3S
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d the_method"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres-data:
