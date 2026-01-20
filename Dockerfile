@@ -13,4 +13,6 @@ ENV PYTHONPATH=/app
 
 COPY --from=frontend /app/frontend/dist ./static
 
+COPY backend ./backend
+ENV PYTHONPATH=/usr/src/app
 CMD ["fastapi", "run", "backend/main.py"]

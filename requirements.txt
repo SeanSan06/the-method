@@ -43,5 +43,5 @@ websockets==16.0
 transformers
 accelerate
 torch
-huggingface_hub
 python-dotenv
+groq 
