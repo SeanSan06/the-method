@@ -7,6 +7,7 @@ MODEL = "llama-3.1-8b-instant"
 client = Groq()
 
 
+# only for llm testing
 def chat(messages, max_tokens=300, temperature=0.3):
     """
     Send chat-style message to the LLM and return raw text output.
