@@ -1,16 +1,14 @@
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from backend.llm.client import chat
 from backend.llm.prompts import RESUME_SYSTEM_PROMPT
 from backend.models import ResumeRequest, GenerateResumeRequest
 app = FastAPI()
 
-
-# basic test route
-@app.get('/')
-def index():
-  return 'hello world!'
-
+class ResumeRequest(BaseModel):
+    messages: list
 
 @app.post('/chat')
 async def chat_endpoint(request: ResumeRequest):
@@ -58,3 +56,12 @@ async def generate_resume_endpoint(request: GenerateResumeRequest):
 
   except Exception as e:
       return {"error": str(e)}
+"""
+FRONTEND ROUTES
+"""
+
+app.mount('/assets', StaticFiles(directory='static/assets'), 'static')
+
+@app.get('/')
+async def serve_index():
+    return FileResponse('static/index.html')
