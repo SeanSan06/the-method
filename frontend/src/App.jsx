@@ -1,15 +1,13 @@
 import { useState } from 'react'
-import NavBar from "./components/NavBar";
-import HeroArea from "./components/HeroArea";
 import './App.css'
+import HomePage from './pages/HomePage';
 
 function App() {
     const [count, setCount] = useState(0)
 
     return (
         <div>
-            <NavBar />
-            <HeroArea />
+            <HomePage />
         </div>
     )
 }

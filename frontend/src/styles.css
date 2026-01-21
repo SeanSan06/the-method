@@ -127,9 +127,16 @@ nav {
     }
 
     #make-resume {
-        width: 6rem;
-        height: 1.5rem;
+        all: unset;
+        width: 10rem;
+        height: 3.5rem;
+        border-radius: 4px;
+        cursor: pointer;
 
         background-color: skyblue;
-        color: black;
+    }
+
+    #make-resume:active {
+        background-color: rgb(125, 196, 225);
+        transform: scale(0.95);
     }
