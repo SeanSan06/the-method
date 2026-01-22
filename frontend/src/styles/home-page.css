@@ -85,6 +85,7 @@ nav {
         height: 60%;
         border-radius: 4px;
         cursor: pointer;
+        text-align: center;
 
         background-color: skyblue;
     }

@@ -1,10 +1,11 @@
 import NavBar from "../components/NavBar";
-import HeroArea from "../components/HeroArea";
+import Form from "../components/Form";
 
 function HomePage() {
     return  (
         <div>
-            <h1>Form</h1>
+            <NavBar />
+            <Form />
         </div>
     );
 }
