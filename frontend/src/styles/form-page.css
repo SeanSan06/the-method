@@ -6,8 +6,14 @@
 }
 
 
-
-#form-area {
+#resume-form, 
+#basic-information-container, #basic-information, 
+#links-container, #link, 
+#education-container, #education, 
+#experience-container, #experience, 
+#projects-container, #project, 
+#certifications-container, #certification, 
+#awards-container, #award {
     display: flex;
     flex-direction: column;
     justify-content: center;
