@@ -85,6 +85,7 @@ nav {
         height: 60%;
         border-radius: 4px;
         cursor: pointer;
+        text-align: center;
 
         background-color: skyblue;
     }
@@ -105,6 +106,8 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 16px;
+
     background-color: white;
 }
 
@@ -122,4 +125,19 @@ nav {
         font-size: 1.5rem;
         margin: 0;
         padding: 0;
+    }
+
+    #make-resume {
+        all: unset;
+        width: 10rem;
+        height: 3.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+
+        background-color: skyblue;
+    }
+
+    #make-resume:active {
+        background-color: rgb(125, 196, 225);
+        transform: scale(0.95);
     }
