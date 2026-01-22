@@ -5,10 +5,10 @@ from pydantic import BaseModel
 from backend.llm.client import chat
 from backend.llm.prompts import RESUME_SYSTEM_PROMPT
 from backend.models import ResumeRequest, GenerateResumeRequest
+from backend.llm.service import generate_resume
 app = FastAPI()
 
-class ResumeRequest(BaseModel):
-    messages: list
+
 
 @app.post('/chat')
 async def chat_endpoint(request: ResumeRequest):
@@ -37,25 +37,24 @@ async def chat_endpoint(request: ResumeRequest):
 @app.post('/llm/generate-resume')
 async def generate_resume_endpoint(request: GenerateResumeRequest):
   """
-  Endpoint to generate and enhance a full resume.
+  HTTP route handler. Deals with FastAPI/HTTP specifics
   """
-  try:
-      resume_data = request.resume.model_dump_json(exclude_none=True)
-      
-      messages = [
-          {"role": "system", "content": RESUME_SYSTEM_PROMPT},
-          {"role": "user", "content": resume_data}
-      ]
-      
-      response = chat(messages, max_tokens=1500)
-      
-      # Parse the JSON response back to dict
-      import json
-      enhanced_resume = json.loads(response)
-      return {"resume": enhanced_resume}
 
+  try:
+     # extract data from HTTP request
+     resume_dict = request.resume.model_dump()
+
+     # call service func
+     enhanced_resume = generate_resume(resume_dict)
+
+     # return http response
+     return {"resume": enhanced_resume}
+  
   except Exception as e:
-      return {"error": str(e)}
+        return {"error": str(e)}
+
+
+
 """
 FRONTEND ROUTES
 """
