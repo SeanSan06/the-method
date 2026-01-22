@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import './App.css'
 import HomePage from './pages/HomePage';
+import "./styles.css";
+
 
 function App() {
     const [count, setCount] = useState(0)
