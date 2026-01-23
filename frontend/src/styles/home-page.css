@@ -64,10 +64,14 @@ nav {
         background-color: whitesmoke;
     }
 
-        #nav-bar-links li {
-            cursor: pointer;
+        #nav-bar-links li a {
+            text-decoration: none;
+            color: black;
+        }
 
-            background-color: whitesmoke;
+        #nav-bar-links li a.active-link {
+            border-bottom: 3px solid skyblue;
+            font-weight: bold;
         }
 
     #log-in-sign-up {
