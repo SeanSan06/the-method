@@ -1,7 +1,7 @@
 import NavBar from "../components/NavBar";
 import Form from "../components/Form";
 
-function HomePage() {
+function FormPage() {
     return  (
         <div>
             <NavBar />
@@ -10,4 +10,4 @@ function HomePage() {
     );
 }
 
-export default HomePage;
+export default FormPage;
