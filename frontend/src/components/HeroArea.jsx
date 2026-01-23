@@ -8,7 +8,7 @@ function HeroArea() {
             <h1>The <span id="method-word">Method</span></h1>
             <p>Make Every Task Happen, Own Destiny</p>
             <button id="make-resume" onClick={() => navigate('/form')}>
-                Go to Form
+                Create Resume
             </button>
         </div>
     );
