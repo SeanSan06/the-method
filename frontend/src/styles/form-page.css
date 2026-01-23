@@ -1,22 +1,116 @@
+/* Form component */
 #form-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem 1rem 4rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
+#form-page h1 {
+    font-size: 4.5rem;
+    margin: 0px;
+}
 
-#resume-form, 
-#basic-information-container, #basic-information, 
-#links-container, #link, 
-#education-container, #education, 
-#experience-container, #experience, 
-#projects-container, #project, 
-#certifications-container, #certification, 
-#awards-container, #award {
+/* Main form */
+#resume-form {
+    width: 100%;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 35%;
+    gap: 1rem;
+}
+
+/* Section titles */
+#resume-form h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+/* Cards */
+#basic-information-container,
+#links-container,
+#education-container,
+#experience-container,
+#projects-container,
+#certifications-container,
+#awards-container {
+    width: 100%;
+}
+
+/* Inner card layout */
+#basic-information,
+#link,
+#education,
+#experience,
+#project,
+#certification,
+#award {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+
+    border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+}
+
+/* Labels */
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    gap: 0.25rem;
+}
+
+/* Inputs and textareas */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea {
+    width: 100%;
+    padding: 0.85rem 0.9rem;
+    font-size: 1.50rem;
+    border-radius: 8px;
+
+    background-color: lightgray;
+    border: 1px solid #ccc;
+    color: black;
+}
+
+/* Checkbox fix */
+input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.5rem;
+}
+
+/* Textarea resize */
+textarea {
+    resize: vertical;
+}
+
+/* Skills and coursework */
+#resume-form > input[type="text"] {
+    padding: 0.6rem 0.75rem;
+    border-radius: 6px;
+
+    border: 1px solid #ccc;
+}
+
+/* Submit button */
+button[type="submit"] {
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    background-color: skyblue;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.97);
 }

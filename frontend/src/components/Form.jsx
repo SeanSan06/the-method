@@ -11,22 +11,18 @@ function Form() {
                                 Name:
                                 <input type="text" name="resume[name]" />
                             </label>
-                            <br />
                             <label>
                                 Phone:
                                 <input type="text" name="resume[phone]" />
                             </label>
-                            <br />
                             <label>
                                 Email:
                                 <input type="email" name="resume[email]" />
                             </label>
-                            <br />
                             <label>
                                 US Citizen:
                                 <input type="checkbox" name="resume[is_us_citizen]" />
                             </label>
-                            <br />
                         </div>
                     </div>
 
@@ -184,7 +180,6 @@ function Form() {
                         </div>
                     </div>
 
-                    <br />
                     <button type="submit">Submit Resume</button>
                 </form>
 
