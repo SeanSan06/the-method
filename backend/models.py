@@ -65,3 +65,6 @@ class Resume(BaseModel):
 class GenerateResumeRequest(BaseModel):
     resume: Resume
 
+class OptimizeResumeRequest(BaseModel):
+    resume: Resume
+    job_description: str

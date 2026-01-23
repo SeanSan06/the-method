@@ -1,48 +1,55 @@
-from backend.llm.client import chat
 from backend.llm.prompts import RESUME_SYSTEM_PROMPT, ATS_OPTIMIZATION_PROMPT
+from backend.llm.client import generate_json
 import json
 
 
-def generate_resume(resume_data: dict) -> dict:
+def generate_resume(resume_dict: dict) -> dict:
     """
-    Enhance raw resume data using the llm
+    Enhance raw resume data using the llm.
 
     Args:
         resume_data (dict): The raw resume data with resume model fields
-
     Returns:
         dict: The enhanced resume data - same structure as input
-    
     """
     messages = [
         {"role": "system", "content": RESUME_SYSTEM_PROMPT},
-        {"role": "user", "content": json.dumps(resume_data)}
+        {"role": "user", "content": json.dumps(resume_dict)}
     ]
 
-    response = chat(messages, max_tokens=1500, temperature=0.3)
+    result = generate_json(messages, use_smart_model=False)
 
-    enhanced_resume = json.loads(response)
+    if "error" in result:
+        return {"error": result["error"], "original": resume_dict}
+    
+    return result
 
-    return enhanced_resume
 
-
-def optimize_resume(resume_data: dict, job_description: str) -> dict:
+def optimize_resume(resume_dict: dict, job_description: str) -> dict:
     """
     Optimize resume data for ATS based on job description.
 
     Args:
-        resume_data (dict): The raw resume data with resume model fields
+        resume_dict (dict): The raw resume data with resume model fields
         job_description (str): The job description text to optimize against
+    
     Returns:
         dict: The optimized resume data - same structure as input
     """
+    user_content = f"""Resume Data:
+{json.dumps(resume_dict, indent=2)}
+
+Job Description:
+{job_description}"""
+
     messages = [
         {"role": "system", "content": ATS_OPTIMIZATION_PROMPT},
-        {"role": "user", "content": f"Resume Data: {json.dumps(resume_data)}\n\nJob Description: {job_description}"}
+        {"role": "user", "content": user_content}
     ]
 
-    response = chat(messages, max_tokens=2000, temperature=0.3)
-
-    optimized_resume = json.loads(response)
-
-    return optimized_resume
+    result = generate_json(messages, use_smart_model=True)
+    
+    if "error" in result:
+        return {"error": result["error"], "original": resume_dict}
+    
+    return result
