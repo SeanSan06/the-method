@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage';
 import FormPage from  './pages/FormPage';
+import './styles/styles.css'
 import './styles/home-page.css'
 import './styles/form-page.css'
 
