@@ -7,7 +7,7 @@ function NavBar() {
 
     return  (
         <nav href="/" id="nav-bar">
-            <h2 id="the-method">The Method</h2>
+            <h2 id="the-method">The <span class="method-word">Method</span></h2>
             <ul id="nav-bar-links">
                 <li>
                     <NavLink
