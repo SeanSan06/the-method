@@ -1,13 +1,11 @@
 import NavBar from "../components/NavBar";
-import Form from "../components/Form";
 
-function FormPage() {
+function ContactPage() {
     return  (
         <div>
             <NavBar />
-            <Form />
         </div>
     );
 }
 
-export default FormPage;
+export default ContactPage;
