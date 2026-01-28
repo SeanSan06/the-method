@@ -1,9 +1,11 @@
 import NavBar from "../components/NavBar";
+import FileUpload from "../components/FileUpload";
 
 function DashboardPage() {
     return  (
-        <div>
+        <div id="dashboard">
             <NavBar />
+            <FileUpload />
         </div>
     );
 }

@@ -8,6 +8,7 @@ import DashboardPage from  './pages/DashboardPage';
 import './styles/styles.css'
 import './styles/home-page.css'
 import './styles/form-page.css'
+import './styles/dashboard-page.css'
 
 // Defines what Page Component appears for each of the 5 webpages
 function App() {
