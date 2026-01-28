@@ -44,6 +44,8 @@ nav {
 }
     /* Navigation bar sub areas */
     #nav-bar h2 {
+        font-size: 3rem;
+
         background-color: whitesmoke;
     }
 
@@ -73,6 +75,7 @@ nav {
         }
 
     #log-in-sign-up {
+        font-size: 1.25rem;
         width: 12rem;
         height: 100%;
         display: flex;
