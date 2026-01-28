@@ -218,3 +218,6 @@ __pycache__/
 .env
 *.pyc
 venv/
+
+# Local Data
+backend/interview/data/
