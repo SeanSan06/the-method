@@ -27,11 +27,32 @@ function NavBar() {
                     </NavLink>
                 </li>
 
-                <li>Dashboard</li>
+                <li>
+                    <NavLink
+                        to="/dashboard"
+                        className={({ isActive }) => isActive ? 'active-link' : undefined}
+                    >
+                        Dashboard
+                    </NavLink>
+                </li>
                 
-                <li>About</li>
+                <li>
+                    <NavLink
+                        to="/about"
+                        className={({ isActive }) => isActive ? 'active-link' : undefined}
+                    >
+                        About
+                    </NavLink>
+                </li>
 
-                <li>Contact</li>
+                <li>
+                    <NavLink
+                        to="/contact"
+                        className={({ isActive }) => isActive ? 'active-link' : undefined}
+                    >
+                        Contact
+                    </NavLink>
+                </li>
             </ul>
             <div id="log-in-sign-up">
                 <button>Log in</button>
