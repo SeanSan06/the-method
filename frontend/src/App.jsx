@@ -7,14 +7,15 @@ import DashboardPage from  './pages/DashboardPage';
 import AboutPage from  './pages/AboutPage';
 import ContactPage from  './pages/ContactPage';
 
-import './styles/styles.css' 
+import './styles/styles.css'
 import './styles/home-page.css'
 import './styles/form-page.css'
 import './styles/dashboard-page.css'
 import './styles/about-page.css'
 import './styles/contact-page.css'
 
-// Defines what Page Component appears for each of the 5 webpages
+// Defines what Page Component appears for each of the 5 webpages 
+// based on the current path
 function App() {
     return (
     <div>
