@@ -9,7 +9,7 @@
 
 #upload-file-field {
     width: 85%;
-    min-height: 30vh;
+    min-height: 45vh;
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -35,6 +35,11 @@
 
     border: 2px dashed lightgray;
     background-color: white;
+}
+
+#file-upload-icon {
+    width: 5rem;
+    height: 5rem;
 }
 
 #upload-new-resume {
