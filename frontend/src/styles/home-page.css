@@ -1,6 +1,6 @@
 /* Hero Area */
 #hero-area {
-    width: 100vw;
+    width: 100%;
     height: calc(100vh - 5rem);
     display: flex;
     flex-direction: column;
@@ -37,3 +37,23 @@
         background-color: rgb(125, 196, 225);
         transform: scale(0.95);
     }
+
+/* Footer Area */
+#footer-information-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0px;
+
+    background-color: white;
+}
+
+#copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px;
+    padding: 16px;
+
+    background-color: white;
+}
