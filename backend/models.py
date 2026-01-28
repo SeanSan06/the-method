@@ -68,3 +68,24 @@ class GenerateResumeRequest(BaseModel):
 class OptimizeResumeRequest(BaseModel):
     resume: Resume
     job_description: str
+
+
+class AnalyzeResumeRequest(BaseModel):
+    resume: Resume
+    job_description: str
+
+
+
+class AnalyzeResumeResponse(BaseModel):
+    score: float
+    confidence: str
+    recommendation: str
+    tfidf_score: float
+    skills_overlap: float
+    experience_score: float
+    experience_years: int
+    matched_skills: list[str]
+    missing_skills: list[str]
+    suggested_keywords: list[str]
+    jd_skills_count: int
+    resume_name: str

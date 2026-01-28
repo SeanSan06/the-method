@@ -5,11 +5,14 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from backend.llm.client import chat
 from backend.llm.prompts import RESUME_SYSTEM_PROMPT
-from backend.models import ResumeRequest, GenerateResumeRequest, OptimizeResumeRequest
+from backend.models import ResumeRequest, GenerateResumeRequest, OptimizeResumeRequest, AnalyzeResumeRequest
 from backend.llm.service import generate_resume, optimize_resume
+from backend.resume_analyzer import ResumeAnalyzer, ValidationError
+
 
 
 app = FastAPI()
+resume_analyzer = ResumeAnalyzer()
 
 
 # For local development
@@ -92,6 +95,32 @@ async def optimize_resume_endpoint(request: OptimizeResumeRequest):
   return {"resume": optimized_resume}
 
 
+
+@app.post('/analyze-resume')
+async def analyze_resume_endpoint(request: AnalyzeResumeRequest):
+    """
+    Analyze resume against job description.
+
+    Args:
+        request (AnalyzeResumeRequest): The request body containing the user's prompt.
+    Returns:
+        dict: The analysis results or an error message.
+    """
+
+    try:
+        resume_dict = request.resume.model_dump()
+
+        result = resume_analyzer.analyze({
+            "resume": resume_dict,
+            "job_description": request.job_description
+        })
+
+        return result.to_dict()
+    
+    except ValidationError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 """
