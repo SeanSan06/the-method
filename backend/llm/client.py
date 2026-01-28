@@ -1,4 +1,4 @@
-from groq import Groq
+from groq import Groq # type: ignore
 from dotenv import load_dotenv
 import json
 import time
