@@ -46,7 +46,7 @@
     align-items: center;
     height: 48rem;
 
-    background-color: red;
+    background-color: rgb(222, 222, 222);
 }
 
 #review-header {
@@ -77,8 +77,10 @@
     padding: 24px;
     width: 36rem;
     height: 24rem;
+    border-radius: 32px;
 
-    background-color: blue;
+    border: 4px lightgray solid;
+    background-color: whitesmoke;
 }
 
 #review-card-1 p, #review-card-2 p, #review-card-3 p {
