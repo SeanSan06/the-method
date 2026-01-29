@@ -1,24 +1,25 @@
 function HowItWorks() {
     return (
         <div>
-            <div id = "Whole-box">
-                <title> 
+            <div id = "whole-box">
+                <h1 class = "title"> 
                     How The Method Works 
-                </title>
-                <h1>
+                </h1>
+                <h1 class = "title">
                     Four simple steps to your next career move
                 </h1>
                 <div id = "upper-box">
-                    <h2>
-                        01
-                    </h2>
-                    <h2>
-                        Resume Upload & Feedback
-                    </h2>
-                    <p>
-                        Instant grading and tips to improve your resume with AI-powered analysis.
-                    </p>
-
+                    <div>
+                        <h2>
+                            01
+                        </h2>
+                        <h2>
+                            Resume Upload & Feedback
+                        </h2>
+                        <p>
+                            Instant grading and tips to improve your resume with AI-powered analysis.
+                        </p>
+                    </div>
                     <h2>
                         02
                     </h2>

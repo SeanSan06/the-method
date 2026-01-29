@@ -38,6 +38,26 @@
         transform: scale(0.95);
     }
 
+/* HowItWorks Area */
+.title {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+#upper-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#lower-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 /* Footer Area */
 #footer-information-area {
     display: flex;
