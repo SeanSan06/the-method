@@ -49,13 +49,16 @@
 #upper-box {
     display: flex;
     flex-direction: row;
+    gap: 75px;
     justify-content: space-evenly;
 }
+
+
 
 #lower-box {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 /* Footer Area */
