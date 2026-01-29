@@ -1,0 +1,13 @@
+services:
+  web:
+    develop:
+      watch:
+        - action: sync
+          path: backend
+          target: /app/backend
+        - action: rebuild
+          path: frontend
+        - action: rebuild
+          path: requirements.txt
+        - action: rebuild
+          path: Dockerfile

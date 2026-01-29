@@ -3,11 +3,16 @@ A web site that allows users to create, edit, practice interviews, and apply for
 
 ## Deploy
 
-App can be deployed through docker by running:
-```
-docker compose up --build -d
-```
-which will run on `localhost:8000`
+App can be deployed via two methods through docker:
+- **Production**:
+  ```
+  docker compose up --build -d
+  ```
+- **Dev** (with hot-reload):
+  ```
+  docker compose up --watch
+  ```
+both of which will run the app on `localhost:8000`
 
 Take down the deployment by running:
 ```
