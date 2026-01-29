@@ -38,6 +38,36 @@
         transform: scale(0.95);
     }
 
+/* Reviews Area */
+#reviews-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 48rem;
+
+    background-color: red;
+}
+
+#review-cards-area {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#review-card-1, #review-card-2, #review-card-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 36rem;
+    height: 24rem;
+
+    background-color: blue;
+}
+
 /* Footer Area */
 #footer-information-area {
     display: flex;
