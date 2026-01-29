@@ -1,0 +1,85 @@
+#upload-file-area {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#upload-file-field {
+    width: 85%;
+    min-height: 45vh;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    border-radius: 16px;
+
+    border: 2px solid lightgray;
+    background-color: white;
+}
+
+#inside-border-dashes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    border-radius: 16px;
+
+    border: 2px dashed lightgray;
+    background-color: white;
+}
+
+#file-upload-icon {
+    width: 5rem;
+    height: 5rem;
+}
+
+#upload-new-resume {
+    font-size: 2rem;
+    margin: 8px 0px;
+}
+
+#upload-file-button-div-wrapper {
+    font-size: 2rem;
+    margin: 8px 0px 8px 0px;
+    padding: 0px;
+}
+
+#drag-and-drop-caption {
+    margin: 8px 0px 8px 0px;
+    padding: 0px;
+}
+
+#upload-file-button-div-wrapper {
+    margin: 8px 0px 8px 0px;
+}
+
+    #inside-border-dashes button {
+        all: unset;
+        width: 15rem;
+        height: 5rem;
+        border-radius: 16px;
+        cursor: pointer;
+        text-align: center;
+
+        background-color: skyblue;
+    }
+
+        #inside-border-dashes button:active {
+            transform: scale(0.95);
+
+            background-color: rgb(125, 196, 225);
+        }
+
+#supported-formats-caption {
+    margin: 8px 0px 8px 0px;
+    padding: 0px;
+}
