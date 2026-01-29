@@ -5,8 +5,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from backend.llm.client import chat
 from backend.llm.prompts import RESUME_SYSTEM_PROMPT
-from backend.models import ResumeRequest, GenerateResumeRequest, OptimizeResumeRequest, AnalyzeResumeRequest
-from backend.llm.service import generate_resume, optimize_resume
+from backend.models import ResumeRequest, GenerateResumeRequest, OptimizeResumeRequest, AnalyzeResumeRequest, CoverLetterRequest
+from backend.llm.service import generate_resume, optimize_resume, generate_cover_letter
 from backend.resume_analyzer import ResumeAnalyzer, ValidationError
 
 
@@ -121,6 +121,31 @@ async def analyze_resume_endpoint(request: AnalyzeResumeRequest):
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post('/llm/generate-cover-letter')
+async def generate_cover_letter_endpoint(request: CoverLetterRequest):
+    """
+    Generate a cover letter based on resume and job description.
+
+    Args:
+        request (OptimizeResumeRequest): The request body containing the user's prompt.
+    Returns:
+        dict: The generated cover letter or an error message.
+    """
+
+    resume_dict = request.resume.model_dump()
+    job_description = request.job_description
+    company_name = request.company_name
+    position_title = request.position_title
+    hiring_manager_name = request.hiring_manager_name
+
+    result = generate_cover_letter(resume_dict, job_description, company_name, position_title, hiring_manager_name)
+
+    if "error" in result:
+        raise HTTPException(status_code=500, detail=result["error"])
+
+    return result
 
 
 """

@@ -3,6 +3,7 @@ This module defines Pydantic models for resume-related data structures and reque
 """
 
 
+from typing import Optional
 from pydantic import BaseModel
 
 
@@ -89,3 +90,17 @@ class AnalyzeResumeResponse(BaseModel):
     suggested_keywords: list[str]
     jd_skills_count: int
     resume_name: str
+
+
+class CoverLetterRequest(BaseModel):
+    resume: Resume
+    job_description: str
+    company_name: Optional[str] | None = None
+    position_title: Optional[str] | None = None
+    hiring_manager_name: Optional[str] | None = None
+
+
+class CoverLetterResponse(BaseModel):
+    cover_letter: str
+    word_count: int
+    suggestions: list[str] | None = None
