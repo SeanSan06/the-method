@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ResumePreview from "./ResumePreview"; // remove
 
 function Form() {
     const [resume, setResume] = useState({
@@ -42,33 +43,34 @@ function Form() {
         certifications: [{ name: "", issuer: "", date: "" }],
         awards: [{ name: "", issuer: "", date: "" }]
     });
+    const [generatedResume, setGeneratedResume] = useState(null); // remove
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Passed this..")
 
         const payload = {
-            resume: resume, // "resume" basemodel obj(models.py)
-        }
+            resume: resume,
+        };
 
-        const response = await fetch("http://localhost:8000/llm/generate-resume", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload),
-        });
+        try {
+            const response = await fetch("http://localhost:8000/llm/generate-resume", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+            });
 
-        if (!response.ok) {
-            console.error("Failed to generate resume", data);
-            return;
+            const data = await response.json();
+            setGeneratedResume(data); // remove
+            console.log(data);
+        } catch (err) {
+            console.error("Error submitting resume:", err);
         }
-        const data = await response.json();
-        console.log(data);
     };
-  
+
     return (
         <div id="form-page">
             <h1>Resume Maker</h1>
-                <form id="resume-form" onClick={handleSubmit}>
+                <form id="resume-form" onSubmit={handleSubmit}>
                     {/* Basic Information */}
                     <h2>Basic Information</h2>
                     <div className="card">
@@ -511,6 +513,15 @@ function Form() {
 
                     <button type="submit">Submit Resume</button>
                 </form>
+                                
+                {/* Remove */}
+                {generatedResume && (
+                <>
+                    <hr />
+                    <ResumePreview resume={generatedResume.resume} />
+                </>
+                )}
+
         </div>
     );
 }
