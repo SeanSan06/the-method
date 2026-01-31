@@ -10,7 +10,7 @@ App can be deployed via two methods through docker:
   ```
 - **Dev** (with hot-reload):
   ```
-  docker compose up --watch
+  docker compose up --build --watch
   ```
 both of which will run the app on `localhost:8000`
 
