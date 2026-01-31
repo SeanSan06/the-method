@@ -54,17 +54,22 @@
 
 #whole-box {
     display: flex;
-    justify-content: space-around;
-    
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    width: 100%;
 }
 
 .steps-box {
-    flex-wrap: wrap;
-    width: 10rem;
-    height: 20rem;
-    box-sizing: content-box;
+    flex: 0 1 400px;
+    min-height: 15rem;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
 }
-
 
 /*
 #upper-box {

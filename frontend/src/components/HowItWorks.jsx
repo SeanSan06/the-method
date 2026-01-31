@@ -8,7 +8,7 @@ function HowItWorks() {
                     Four simple steps to your next career move
                 </p>
             <div id="whole-box">
-                <div class = "steps-box">
+                <div className = "steps-box">
                     <h2>
                         01
                     </h2>
@@ -20,7 +20,7 @@ function HowItWorks() {
                     </p>
                 </div>
 
-                <div class = "steps-box">
+                <div className = "steps-box">
                     <h2>
                         02
                     </h2>
@@ -32,7 +32,7 @@ function HowItWorks() {
                     </p>
                 </div>
             
-                <div class = "steps-box">
+                <div className = "steps-box">
                     <h2>
                         03
                     </h2>
@@ -44,7 +44,7 @@ function HowItWorks() {
                     </p>
                 </div>
 
-                <div class = "steps-box">
+                <div className = "steps-box">
                     <h2>
                         04
                     </h2>
