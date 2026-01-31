@@ -3,7 +3,7 @@ from enum import Enum
 from datetime import date, datetime
 from typing import List, Optional
 
-from sqlalchemy import String, Boolean, Numeric, Date, Text, ForeignKey, func, text
+from sqlalchemy import Boolean, Numeric, Date, Text, ForeignKey, func, text
 from sqlalchemy.dialects.postgresql import UUID as PG_UUID, JSONB as PG_JSONB, ARRAY as PG_ARRAY, ENUM as PG_ENUM
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 

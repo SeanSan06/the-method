@@ -6,8 +6,13 @@ from backend.llm.client import chat
 from backend.llm.prompts import RESUME_SYSTEM_PROMPT
 from backend.models import ResumeRequest, GenerateResumeRequest
 from backend.llm.service import generate_resume
+from backend.database import init_db, get_db
 app = FastAPI()
 
+
+@app.on_event('startup')
+def startup_db():
+    init_db()
 
 
 @app.post('/chat')
