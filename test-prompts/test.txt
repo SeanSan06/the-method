@@ -1,0 +1,587 @@
+{
+  "resume": {
+    "name": "Sarah Chen",
+    "phone": "+1 (555) 123-4567",
+    "email": "sarah.chen@email.com",
+    "is_us_citizen": true,
+    "links": [
+      {
+        "type": "LinkedIn",
+        "url": "https://linkedin.com/in/sarahchen"
+      },
+      {
+        "type": "GitHub",
+        "url": "https://github.com/sarahchen"
+      },
+      {
+        "type": "Portfolio",
+        "url": "https://sarahchen.dev"
+      }
+    ],
+    "about_section": "Full-stack software engineer with 4 years of experience building scalable web applications. Passionate about clean code, system design, and mentoring junior developers.",
+    "education": [
+      {
+        "school": "University of California, Berkeley",
+        "major": "B.S. Computer Science",
+        "gpa": "3.8",
+        "activities": "ACM Chapter President, Women in CS Vice President",
+        "start_year": "2016",
+        "end_year": "2020"
+      }
+    ],
+    "relevant_coursework": [
+      "Data Structures and Algorithms",
+      "Operating Systems",
+      "Computer Networks",
+      "Database Systems",
+      "Machine Learning",
+      "Software Engineering"
+    ],
+    "experience": [
+      {
+        "company": "TechCorp Inc.",
+        "title": "Senior Software Engineer",
+        "location": "San Francisco, CA",
+        "description": "Led development of microservices architecture serving 2M+ daily active users. Reduced API response time by 40% through caching optimization. Mentored 3 junior engineers and conducted code reviews.",
+        "start_date": "June 2022",
+        "end_date": "Present"
+      },
+      {
+        "company": "StartupXYZ",
+        "title": "Software Engineer",
+        "location": "Palo Alto, CA",
+        "description": "Built RESTful APIs using Node.js and PostgreSQL. Implemented CI/CD pipelines reducing deployment time by 60%. Collaborated with product team to ship 15+ features.",
+        "start_date": "August 2020",
+        "end_date": "May 2022"
+      },
+      {
+        "company": "Berkeley Robotics Lab",
+        "title": "Software Engineering Intern",
+        "location": "Berkeley, CA",
+        "description": "Developed computer vision algorithms for autonomous navigation. Created data visualization dashboard using React and D3.js.",
+        "start_date": "May 2019",
+        "end_date": "August 2019"
+      }
+    ],
+    "projects": [
+      {
+        "name": "AI Resume Optimizer",
+        "description": "Full-stack web app using FastAPI, React, and OpenAI API to optimize resumes for ATS. Implements authentication, database persistence, and PDF generation. Deployed on AWS with Docker.",
+        "link": "https://github.com/sarahchen/resume-optimizer",
+        "start_date": "January 2024",
+        "end_date": "Present"
+      },
+      {
+        "name": "Distributed Task Scheduler",
+        "description": "Built a distributed task scheduling system using Python, Redis, and Celery. Handles 10K+ tasks per minute with fault tolerance and automatic retries.",
+        "link": "https://github.com/sarahchen/task-scheduler",
+        "start_date": "September 2023",
+        "end_date": "December 2023"
+      }
+    ],
+    "skills": [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Node.js",
+      "FastAPI",
+      "PostgreSQL",
+      "MongoDB",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Git",
+      "REST APIs",
+      "System Design",
+      "Agile/Scrum"
+    ],
+    "certifications": [
+      {
+        "name": "AWS Certified Solutions Architect - Associate",
+        "issuer": "Amazon Web Services",
+        "date": "March 2023"
+      },
+      {
+        "name": "Certified Kubernetes Application Developer (CKAD)",
+        "issuer": "Cloud Native Computing Foundation",
+        "date": "November 2022"
+      }
+    ],
+    "awards": [
+      {
+        "name": "Hackathon Winner - Best AI Application",
+        "issuer": "TechCorp Annual Hackathon",
+        "date": "October 2023"
+      },
+      {
+        "name": "Dean's List",
+        "issuer": "UC Berkeley College of Engineering",
+        "date": "2018-2020"
+      }
+    ]
+  },
+  "job_description": "We are hiring a Staff Backend Engineer to lead our platform team. Requirements: 5+ years of experience building distributed systems, expert-level Python and Go, deep knowledge of PostgreSQL and Redis, experience with Kubernetes and cloud infrastructure (AWS or GCP), proven track record of leading technical projects and mentoring engineers. Nice to have: experience with event-driven architecture, Kafka, gRPC, and observability tools (Datadog, Prometheus). You will own the design and implementation of our core platform services, drive technical decisions, and help scale our systems to support 10x growth."
+}
+
+Expected Score: ~33 (LOW MATCH - Full-stack engineer with JavaScript/Node.js focus, missing Go, Redis, Kafka, gRPC, Datadog, lacks 5+ years backend-specific experience)
+
+=====================================================================================================================
+
+TEST CASE 1: HIGH MATCH (~85-90 score)
+
+{
+  "resume": {
+    "name": "Alex Kumar",
+    "email": "alex.kumar@email.com",
+    "phone": "555-0101",
+    "is_us_citizen": true,
+    "links": [
+      {"type": "github", "url": "https://github.com/alexkumar"},
+      {"type": "linkedin", "url": "https://linkedin.com/in/alexkumar"}
+    ],
+    "about_section": "Staff Backend Engineer with 7 years of experience building distributed systems and event-driven architectures.",
+    "education": [
+      {
+        "school": "Stanford University",
+        "major": "Computer Science",
+        "gpa": "3.8",
+        "start_year": "2012",
+        "end_year": "2016"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Scale Systems Inc",
+        "title": "Staff Backend Engineer",
+        "location": "San Francisco, CA",
+        "description": "Led backend architecture for event-driven microservices using Go and Python\nDesigned and implemented Kafka-based message queues handling 1M+ events/day\nOptimized PostgreSQL queries reducing response time by 60%\nBuilt gRPC APIs for inter-service communication\nManaged Kubernetes deployments on AWS and GCP",
+        "start_date": "January 2020",
+        "end_date": "Present"
+      },
+      {
+        "company": "DataFlow Corp",
+        "title": "Senior Backend Engineer",
+        "location": "Seattle, WA",
+        "description": "Developed microservices in Python and Go for real-time data processing\nImplemented Redis caching layer reducing database load by 40%\nBuilt monitoring dashboards using Datadog for observability\nMigrated monolith to microservices architecture on Kubernetes",
+        "start_date": "June 2018",
+        "end_date": "December 2019"
+      },
+      {
+        "company": "TechStart",
+        "title": "Backend Engineer",
+        "location": "Austin, TX",
+        "description": "Built REST APIs using Python/Flask and PostgreSQL\nImplemented CI/CD pipelines for AWS deployments\nWorked on distributed systems using Redis for caching",
+        "start_date": "July 2016",
+        "end_date": "May 2018"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Open Source Kafka Client",
+        "description": "Contributed to Kafka Go client library with 2K+ GitHub stars",
+        "link": "https://github.com/kafka-go",
+        "start_date": "2021",
+        "end_date": "Present"
+      }
+    ],
+    "skills": [
+      "Python",
+      "Go",
+      "PostgreSQL",
+      "Redis",
+      "Kubernetes",
+      "AWS",
+      "GCP",
+      "Kafka",
+      "gRPC",
+      "Datadog",
+      "Docker",
+      "Microservices",
+      "Event-driven Architecture",
+      "REST APIs"
+    ],
+    "relevant_coursework": ["Distributed Systems", "Database Systems"],
+    "certifications": [
+      {"name": "AWS Solutions Architect", "issuer": "Amazon", "date": "2020"}
+    ]
+  },
+  "job_description": "Staff Backend Engineer: 5+ years Python, Go, PostgreSQL, Redis, Kubernetes, AWS/GCP. Event-driven architecture, Kafka, gRPC, Datadog."
+}
+
+Expected Score: ~85-90 (HIGH MATCH - Has ALL required skills: Python, Go, PostgreSQL, Redis, Kubernetes, AWS, GCP, Kafka, gRPC, Datadog, 7 years experience, staff-level role)
+
+=====================================================================================================================
+
+TEST CASE 2: GOOD MATCH (~65-75 score)
+
+{
+  "resume": {
+    "name": "Maria Rodriguez",
+    "email": "maria.rodriguez@email.com",
+    "phone": "555-0202",
+    "is_us_citizen": true,
+    "links": [
+      {"type": "github", "url": "https://github.com/mariarodriguez"}
+    ],
+    "about_section": "Backend Engineer with 5 years of experience in Python and cloud infrastructure.",
+    "education": [
+      {
+        "school": "UC Berkeley",
+        "major": "Computer Science",
+        "gpa": "3.7",
+        "start_year": "2014",
+        "end_year": "2018"
+      }
+    ],
+    "experience": [
+      {
+        "company": "CloudTech Solutions",
+        "title": "Senior Backend Engineer",
+        "location": "Remote",
+        "description": "Built scalable APIs using Python/Django and PostgreSQL\nDeployed microservices on Kubernetes with Helm charts\nImplemented caching strategies using Redis\nManaged AWS infrastructure (EC2, RDS, S3, Lambda)",
+        "start_date": "March 2021",
+        "end_date": "Present"
+      },
+      {
+        "company": "WebApp Inc",
+        "title": "Backend Developer",
+        "location": "San Jose, CA",
+        "description": "Developed REST APIs in Python with PostgreSQL backend\nOptimized database queries and implemented connection pooling\nWorked with Docker containers for local development\nParticipated in agile development and code reviews",
+        "start_date": "June 2018",
+        "end_date": "February 2021"
+      }
+    ],
+    "projects": [
+      {
+        "name": "E-commerce Platform",
+        "description": "Built scalable backend using Python, PostgreSQL, and Redis for session management",
+        "start_date": "2022",
+        "end_date": "2023"
+      }
+    ],
+    "skills": [
+      "Python",
+      "PostgreSQL",
+      "Redis",
+      "Kubernetes",
+      "AWS",
+      "Docker",
+      "Django",
+      "REST APIs",
+      "Git",
+      "Linux",
+      "CI/CD"
+    ],
+    "relevant_coursework": ["Algorithms", "Database Systems", "Operating Systems"]
+  },
+  "job_description": "Staff Backend Engineer: 5+ years Python, Go, PostgreSQL, Redis, Kubernetes, AWS/GCP. Event-driven architecture, Kafka, gRPC, Datadog."
+}
+
+Expected Score: ~65-75 (GOOD MATCH - Has Python, PostgreSQL, Redis, Kubernetes, AWS, 5 years experience. Missing: Go, Kafka, gRPC, Datadog, GCP, event-driven architecture)
+
+=====================================================================================================================
+
+TEST CASE 3: MEDIUM MATCH (~50-60 score)
+
+{
+  "resume": {
+    "name": "David Chen",
+    "email": "david.chen@email.com",
+    "phone": "555-0303",
+    "is_us_citizen": false,
+    "links": [
+      {"type": "linkedin", "url": "https://linkedin.com/in/davidchen"}
+    ],
+    "about_section": "Software Engineer with 3 years of backend development experience.",
+    "education": [
+      {
+        "school": "University of Washington",
+        "major": "Computer Science",
+        "gpa": "3.5",
+        "start_year": "2017",
+        "end_year": "2021"
+      }
+    ],
+    "experience": [
+      {
+        "company": "StartupXYZ",
+        "title": "Backend Engineer",
+        "location": "Seattle, WA",
+        "description": "Developed backend services using Python and Flask\nWorked with PostgreSQL for data persistence\nDeployed applications on AWS EC2 and RDS\nWrote unit tests and participated in code reviews",
+        "start_date": "August 2021",
+        "end_date": "Present"
+      },
+      {
+        "company": "Tech Internship",
+        "title": "Software Engineering Intern",
+        "location": "Redmond, WA",
+        "description": "Built internal tools using Python\nLearned about REST API design and implementation\nWorked with SQL databases",
+        "start_date": "June 2020",
+        "end_date": "August 2020"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Personal Blog Platform",
+        "description": "Built using Python/Flask with PostgreSQL backend and deployed on AWS",
+        "link": "https://github.com/davidchen/blog",
+        "start_date": "2022",
+        "end_date": "2022"
+      }
+    ],
+    "skills": [
+      "Python",
+      "PostgreSQL",
+      "AWS",
+      "Flask",
+      "REST APIs",
+      "Git",
+      "SQL",
+      "Docker",
+      "Linux"
+    ],
+    "relevant_coursework": ["Data Structures", "Web Development", "Database Systems"]
+  },
+  "job_description": "Staff Backend Engineer: 5+ years Python, Go, PostgreSQL, Redis, Kubernetes, AWS/GCP. Event-driven architecture, Kafka, gRPC, Datadog."
+}
+
+Expected Score: ~50-60 (MEDIUM MATCH - Has Python, PostgreSQL, AWS. Missing: Go, Redis, Kubernetes, Kafka, gRPC, Datadog, GCP, event-driven architecture. Only 3 years experience vs 5+ required)
+
+=====================================================================================================================
+
+TEST CASE 4: LOW MATCH (~35-45 score)
+
+{
+  "resume": {
+    "name": "Jessica Park",
+    "email": "jessica.park@email.com",
+    "phone": "555-0404",
+    "is_us_citizen": true,
+    "links": [
+      {"type": "portfolio", "url": "https://jessicapark.dev"}
+    ],
+    "about_section": "Full-stack developer with focus on backend APIs and database design.",
+    "education": [
+      {
+        "school": "Arizona State University",
+        "major": "Information Systems",
+        "gpa": "3.4",
+        "start_year": "2018",
+        "end_year": "2022"
+      }
+    ],
+    "experience": [
+      {
+        "company": "WebDev Agency",
+        "title": "Full-Stack Developer",
+        "location": "Phoenix, AZ",
+        "description": "Built web applications using Node.js and MongoDB\nDeveloped REST APIs for client projects\nImplemented authentication and authorization systems\nWorked with React for frontend development",
+        "start_date": "June 2022",
+        "end_date": "Present"
+      },
+      {
+        "company": "Freelance",
+        "title": "Web Developer",
+        "location": "Remote",
+        "description": "Created websites for small businesses\nUsed WordPress and custom PHP development\nManaged MySQL databases",
+        "start_date": "2021",
+        "end_date": "2022"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Task Management App",
+        "description": "Built with Node.js, Express, and MongoDB",
+        "link": "https://github.com/jpark/taskapp",
+        "start_date": "2023",
+        "end_date": "2023"
+      }
+    ],
+    "skills": [
+      "Node.js",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "React",
+      "REST APIs",
+      "MySQL",
+      "HTML",
+      "CSS",
+      "Git"
+    ],
+    "relevant_coursework": ["Web Development", "Database Management"]
+  },
+  "job_description": "Staff Backend Engineer: 5+ years Python, Go, PostgreSQL, Redis, Kubernetes, AWS/GCP. Event-driven architecture, Kafka, gRPC, Datadog."
+}
+
+Expected Score: ~35-45 (LOW MATCH - Wrong tech stack: Node.js/MongoDB instead of Python/PostgreSQL. Missing: Python, Go, PostgreSQL, Redis, Kubernetes, AWS, Kafka, gRPC, Datadog, event-driven architecture. Only 2-3 years experience)
+
+=====================================================================================================================
+
+TEST CASE 5: VERY LOW MATCH (~15-25 score)
+
+{
+  "resume": {
+    "name": "Emily Thompson",
+    "email": "emily.thompson@email.com",
+    "phone": "555-0505",
+    "is_us_citizen": true,
+    "links": [
+      {"type": "portfolio", "url": "https://emilythompson.design"}
+    ],
+    "about_section": "Frontend Developer specializing in React and modern JavaScript frameworks.",
+    "education": [
+      {
+        "school": "New York University",
+        "major": "Digital Media",
+        "gpa": "3.6",
+        "start_year": "2019",
+        "end_year": "2023"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Design Studio Co",
+        "title": "Frontend Developer",
+        "location": "New York, NY",
+        "description": "Built responsive web interfaces using React and TypeScript\nImplemented component libraries with Storybook\nWorked with designers to create pixel-perfect UIs\nOptimized frontend performance and accessibility",
+        "start_date": "July 2023",
+        "end_date": "Present"
+      },
+      {
+        "company": "Marketing Agency",
+        "title": "Junior Frontend Developer",
+        "location": "Brooklyn, NY",
+        "description": "Created landing pages using HTML, CSS, and JavaScript\nIntegrated with WordPress CMS\nImplemented Google Analytics tracking",
+        "start_date": "January 2023",
+        "end_date": "June 2023"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Portfolio Website",
+        "description": "Built with React, Next.js, and Tailwind CSS",
+        "link": "https://emilythompson.design",
+        "start_date": "2023",
+        "end_date": "2023"
+      },
+      {
+        "name": "E-commerce UI Kit",
+        "description": "Reusable React components for online stores",
+        "link": "https://github.com/ethompson/ecommerce-ui",
+        "start_date": "2024",
+        "end_date": "2024"
+      }
+    ],
+    "skills": [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Next.js",
+      "Figma",
+      "Git",
+      "Webpack",
+      "Responsive Design"
+    ],
+    "relevant_coursework": ["Web Design", "Interactive Media", "User Experience Design"],
+    "certifications": [
+      {"name": "React Developer Certification", "issuer": "Scrimba", "date": "2023"}
+    ]
+  },
+  "job_description": "Staff Backend Engineer: 5+ years Python, Go, PostgreSQL, Redis, Kubernetes, AWS/GCP. Event-driven architecture, Kafka, gRPC, Datadog."
+}
+
+Expected Score: ~15-25 (VERY LOW MATCH - Frontend developer applying for backend role. Zero backend skills match: No Python, Go, PostgreSQL, Redis, Kubernetes, AWS, Kafka, gRPC, Datadog, event-driven architecture. Only 1-2 years experience, wrong domain entirely)
+
+=====================================================================================================================
+
+
+
+TEST FOR THE COVER LETTER GENERATOR
+
+
+{
+  "resume": {
+    "name": "Alex Kumar",
+    "email": "alex.kumar@email.com",
+    "phone": "555-0101",
+    "is_us_citizen": true,
+    "links": [
+      {"type": "github", "url": "https://github.com/alexkumar"},
+      {"type": "linkedin", "url": "https://linkedin.com/in/alexkumar"}
+    ],
+    "about_section": "Staff Backend Engineer with 7 years of experience building distributed systems and event-driven architectures.",
+    "education": [
+      {
+        "school": "Stanford University",
+        "major": "Computer Science",
+        "gpa": "3.8",
+        "start_year": "2012",
+        "end_year": "2016"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Scale Systems Inc",
+        "title": "Staff Backend Engineer",
+        "location": "San Francisco, CA",
+        "description": "Led backend architecture for event-driven microservices using Go and Python\nDesigned and implemented Kafka-based message queues handling 1M+ events/day\nOptimized PostgreSQL queries reducing response time by 60%\nBuilt gRPC APIs for inter-service communication\nManaged Kubernetes deployments on AWS and GCP",
+        "start_date": "January 2020",
+        "end_date": "Present"
+      },
+      {
+        "company": "DataFlow Corp",
+        "title": "Senior Backend Engineer",
+        "location": "Seattle, WA",
+        "description": "Developed microservices in Python and Go for real-time data processing\nImplemented Redis caching layer reducing database load by 40%\nBuilt monitoring dashboards using Datadog for observability\nMigrated monolith to microservices architecture on Kubernetes",
+        "start_date": "June 2018",
+        "end_date": "December 2019"
+      },
+      {
+        "company": "TechStart",
+        "title": "Backend Engineer",
+        "location": "Austin, TX",
+        "description": "Built REST APIs using Python/Flask and PostgreSQL\nImplemented CI/CD pipelines for AWS deployments\nWorked on distributed systems using Redis for caching",
+        "start_date": "July 2016",
+        "end_date": "May 2018"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Open Source Kafka Client",
+        "description": "Contributed to Kafka Go client library with 2K+ GitHub stars",
+        "link": "https://github.com/kafka-go",
+        "start_date": "2021",
+        "end_date": "Present"
+      }
+    ],
+    "skills": [
+      "Python",
+      "Go",
+      "PostgreSQL",
+      "Redis",
+      "Kubernetes",
+      "AWS",
+      "GCP",
+      "Kafka",
+      "gRPC",
+      "Datadog",
+      "Docker",
+      "Microservices",
+      "Event-driven Architecture",
+      "REST APIs"
+    ],
+    "relevant_coursework": ["Distributed Systems", "Database Systems"],
+    "certifications": [
+      {"name": "AWS Solutions Architect", "issuer": "Amazon", "date": "2020"}
+    ]
+  },
+  "job_description": "Staff Backend Engineer: 5+ years Python, Go, PostgreSQL, Redis, Kubernetes, AWS/GCP. Event-driven architecture, Kafka, gRPC, Datadog.",
+  "company_name": "Cisco Systems",
+  "position_title": "Staff Backend Engineer",
+  "hiring_manager_name": "John Wayne"
+}

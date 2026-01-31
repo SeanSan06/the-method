@@ -1,0 +1,123 @@
+/* Hero Area */
+#hero-area {
+    width: 100%;
+    height: calc(100vh - 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+    #hero-area h1 {
+        font-size: 10rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    #hero-area p {
+        font-size: 2.5rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    #make-resume {
+        all: unset;
+        width: 20rem;
+        height: 7rem;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 2rem;
+
+        background-color: skyblue;
+    }
+
+    #make-resume:active {
+        background-color: rgb(125, 196, 225);
+        transform: scale(0.95);
+    }
+
+/* Reviews Area */
+#reviews-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 48rem;
+
+    background-color: rgb(222, 222, 222);
+}
+
+#review-header {
+    font-size: 4rem;
+    margin: 8px;
+    padding: 0px;
+}
+
+#review-caption {
+    font-size: 2rem;
+    margin: 8px;
+    padding: 0px;
+}
+
+#review-cards-area {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#review-card-1, #review-card-2, #review-card-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 0px;
+    padding: 24px;
+    width: 36rem;
+    height: 24rem;
+    border-radius: 32px;
+
+    border: 4px lightgray solid;
+    background-color: whitesmoke;
+}
+
+#review-card-1 p, #review-card-2 p, #review-card-3 p {
+    font-size: 1.25rem;
+}
+
+.reivew-quote {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.reivew-name {
+    margin: 0px;
+}
+
+.reivew-job {
+    margin: 0px;
+}
+
+/* Footer Area */
+#footer-information-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0px;
+
+    background-color: white;
+}
+
+#copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px;
+    padding: 16px;
+
+    background-color: white;
+}

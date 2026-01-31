@@ -1,3 +1,6 @@
+# stupid MacOS shit
+.DS_Store
+
 # docker-ignore specifics
 Dockerfile
 docker-compose.yml
