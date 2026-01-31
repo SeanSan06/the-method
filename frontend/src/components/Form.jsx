@@ -1,4 +1,48 @@
+import { useState } from "react";
+
 function Form() {
+    const [resume, setResume] = useState({
+        name: "",
+        phone: "",
+        email: "",
+        is_us_citizen: false,
+        links: [{ type: "", url: "" }],
+        about_section: "",
+        education: [
+        {
+            school: "",
+            major: "",
+            gpa: "",
+            activities: "",
+            start_year: "",
+            end_year: "",
+        },
+        ],
+        relevant_coursework: [""],
+        experience: [
+        {
+            company: "",
+            title: "",
+            location: "",
+            description: "",
+            start_date: "",
+            end_date: "",
+        },
+        ],
+        projects: [
+        {
+            name: "",
+            description: "",
+            link: "",
+            start_date: "",
+            end_date: "",
+        },
+        ],
+        skills: [""],
+        certifications: [{ name: "", issuer: "", date: "" }],
+        awards: [{ name: "", issuer: "", date: "" }]
+    });
+  
     return (
         <div id="form-page">
             <h1>Resume Maker</h1>
