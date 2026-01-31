@@ -3,14 +3,14 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.llm.client import chat
-from backend.llm.prompts import RESUME_SYSTEM_PROMPT
-from backend.models import ResumeRequest, GenerateResumeRequest, OptimizeResumeRequest, AnalyzeResumeRequest, CoverLetterRequest
-from backend.llm.service import generate_resume, optimize_resume, generate_cover_letter
-from backend.resume_analyzer import ResumeAnalyzer, ValidationError
+from llm.client import chat
+from llm.prompts import RESUME_SYSTEM_PROMPT
+from models import ResumeRequest, GenerateResumeRequest, OptimizeResumeRequest, AnalyzeResumeRequest, CoverLetterRequest
+from llm.service import generate_resume, optimize_resume, generate_cover_letter
+from resume_analyzer import ResumeAnalyzer, ValidationError
 
-from backend.database import init_db, get_db
 
+from database import init_db, get_db
 
 app = FastAPI()
 resume_analyzer = ResumeAnalyzer()
@@ -19,7 +19,7 @@ resume_analyzer = ResumeAnalyzer()
 # For local development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -151,14 +151,3 @@ async def generate_cover_letter_endpoint(request: CoverLetterRequest):
         raise HTTPException(status_code=500, detail=result["error"])
 
     return result
-
-
-"""
-FRONTEND ROUTES
-"""
-
-app.mount('/assets', StaticFiles(directory='static/assets'), 'static')
-
-@app.get('/')
-async def serve_index():
-    return FileResponse('static/index.html')

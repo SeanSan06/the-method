@@ -22,8 +22,8 @@ from typing import Dict, Any, Set, Tuple, Optional, List
 from dataclasses import dataclass, asdict
 from enum import Enum
 
-from backend.llm.client import generate_json
-from backend.llm.prompts import SKILL_EXTRACTION_PROMPT
+from llm.client import generate_json
+from llm.prompts import SKILL_EXTRACTION_PROMPT
 
 logger = logging.getLogger(__name__)
 
