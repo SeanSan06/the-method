@@ -498,3 +498,90 @@ TEST CASE 5: VERY LOW MATCH (~15-25 score)
 Expected Score: ~15-25 (VERY LOW MATCH - Frontend developer applying for backend role. Zero backend skills match: No Python, Go, PostgreSQL, Redis, Kubernetes, AWS, Kafka, gRPC, Datadog, event-driven architecture. Only 1-2 years experience, wrong domain entirely)
 
 =====================================================================================================================
+
+
+
+TEST FOR THE COVER LETTER GENERATOR
+
+
+{
+  "resume": {
+    "name": "Alex Kumar",
+    "email": "alex.kumar@email.com",
+    "phone": "555-0101",
+    "is_us_citizen": true,
+    "links": [
+      {"type": "github", "url": "https://github.com/alexkumar"},
+      {"type": "linkedin", "url": "https://linkedin.com/in/alexkumar"}
+    ],
+    "about_section": "Staff Backend Engineer with 7 years of experience building distributed systems and event-driven architectures.",
+    "education": [
+      {
+        "school": "Stanford University",
+        "major": "Computer Science",
+        "gpa": "3.8",
+        "start_year": "2012",
+        "end_year": "2016"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Scale Systems Inc",
+        "title": "Staff Backend Engineer",
+        "location": "San Francisco, CA",
+        "description": "Led backend architecture for event-driven microservices using Go and Python\nDesigned and implemented Kafka-based message queues handling 1M+ events/day\nOptimized PostgreSQL queries reducing response time by 60%\nBuilt gRPC APIs for inter-service communication\nManaged Kubernetes deployments on AWS and GCP",
+        "start_date": "January 2020",
+        "end_date": "Present"
+      },
+      {
+        "company": "DataFlow Corp",
+        "title": "Senior Backend Engineer",
+        "location": "Seattle, WA",
+        "description": "Developed microservices in Python and Go for real-time data processing\nImplemented Redis caching layer reducing database load by 40%\nBuilt monitoring dashboards using Datadog for observability\nMigrated monolith to microservices architecture on Kubernetes",
+        "start_date": "June 2018",
+        "end_date": "December 2019"
+      },
+      {
+        "company": "TechStart",
+        "title": "Backend Engineer",
+        "location": "Austin, TX",
+        "description": "Built REST APIs using Python/Flask and PostgreSQL\nImplemented CI/CD pipelines for AWS deployments\nWorked on distributed systems using Redis for caching",
+        "start_date": "July 2016",
+        "end_date": "May 2018"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Open Source Kafka Client",
+        "description": "Contributed to Kafka Go client library with 2K+ GitHub stars",
+        "link": "https://github.com/kafka-go",
+        "start_date": "2021",
+        "end_date": "Present"
+      }
+    ],
+    "skills": [
+      "Python",
+      "Go",
+      "PostgreSQL",
+      "Redis",
+      "Kubernetes",
+      "AWS",
+      "GCP",
+      "Kafka",
+      "gRPC",
+      "Datadog",
+      "Docker",
+      "Microservices",
+      "Event-driven Architecture",
+      "REST APIs"
+    ],
+    "relevant_coursework": ["Distributed Systems", "Database Systems"],
+    "certifications": [
+      {"name": "AWS Solutions Architect", "issuer": "Amazon", "date": "2020"}
+    ]
+  },
+  "job_description": "Staff Backend Engineer: 5+ years Python, Go, PostgreSQL, Redis, Kubernetes, AWS/GCP. Event-driven architecture, Kafka, gRPC, Datadog.",
+  "company_name": "Cisco Systems",
+  "position_title": "Staff Backend Engineer",
+  "hiring_manager_name": "John Wayne"
+}

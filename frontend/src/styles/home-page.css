@@ -53,12 +53,75 @@
     justify-content: space-evenly;
 }
 
-
-
 #lower-box {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     justify-content: space-around;
+}
+
+/* Reviews Area */
+#reviews-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 48rem;
+
+    background-color: rgb(222, 222, 222);
+}
+
+#review-header {
+    font-size: 4rem;
+    margin: 8px;
+    padding: 0px;
+}
+
+#review-caption {
+    font-size: 2rem;
+    margin: 8px;
+    padding: 0px;
+}
+
+#review-cards-area {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#review-card-1, #review-card-2, #review-card-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin: 0px;
+    padding: 24px;
+    width: 36rem;
+    height: 24rem;
+    border-radius: 32px;
+
+    border: 4px lightgray solid;
+    background-color: whitesmoke;
+}
+
+#review-card-1 p, #review-card-2 p, #review-card-3 p {
+    font-size: 1.25rem;
+}
+
+.reivew-quote {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.reivew-name {
+    margin: 0px;
+}
+
+.reivew-job {
+    margin: 0px;
 }
 
 /* Footer Area */
