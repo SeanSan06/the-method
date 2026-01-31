@@ -28,7 +28,7 @@ def chat(messages, max_tokens=300, temperature=0.3):
     except Exception as e:
         print(f"Error occurred: {e}")
         return "Error occurred while processing the request."
-    
+
 
 def generate_json(messages, max_tokens=2000, temperature=0.2, retries=2, use_smart_model=False):
     """
