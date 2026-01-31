@@ -1,5 +1,5 @@
-from backend.llm.prompts import RESUME_SYSTEM_PROMPT, ATS_OPTIMIZATION_PROMPT, COVER_LETTER_PROMPT
-from backend.llm.client import generate_json
+from llm.prompts import RESUME_SYSTEM_PROMPT, ATS_OPTIMIZATION_PROMPT, COVER_LETTER_PROMPT
+from llm.client import generate_json
 import json
 from typing import Optional
 
