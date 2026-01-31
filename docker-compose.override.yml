@@ -1,13 +1,23 @@
 services:
-  web:
+  backend:
     develop:
       watch:
         - action: sync
           path: backend
-          target: /app/backend
+          target: /app
         - action: rebuild
+          path: backend/requirements.txt
+        - action: rebuild
+          path: backend/Dockerfile
+  frontend:
+    develop:
+      watch:
+        - action: sync
           path: frontend
+          target: /app
         - action: rebuild
-          path: requirements.txt
+          path: frontend/package.json
         - action: rebuild
-          path: Dockerfile
+          path: frontend/package-lock.json
+        - action: rebuild
+          path: frontend/Dockerfile
