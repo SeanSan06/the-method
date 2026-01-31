@@ -39,13 +39,34 @@
     }
 
 /* HowItWorks Area */
-.title {
+#how-it-works-title{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+#how-it-works-caption {
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
 }
 
+#whole-box {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.steps-box {
+    flex-wrap: wrap;
+    width: 10rem;
+    height: 20rem;
+    box-sizing: content-box;
+}
+
+
+/*
 #upper-box {
     display: flex;
     flex-direction: row;
@@ -58,7 +79,9 @@
     flex-direction: row;
     justify-content: space-evenly;
     justify-content: space-around;
+    gap:
 }
+*/
 
 /* Reviews Area */
 #reviews-area {
