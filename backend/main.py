@@ -9,6 +9,7 @@ from backend.models import ResumeRequest, GenerateResumeRequest, OptimizeResumeR
 from backend.llm.service import generate_resume, optimize_resume, generate_cover_letter
 from backend.resume_analyzer import ResumeAnalyzer, ValidationError
 
+from backend.database import init_db, get_db
 
 
 app = FastAPI()
@@ -22,6 +23,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.on_event('startup')
+def startup_db():
+    init_db()
 
 
 @app.post('/chat')
