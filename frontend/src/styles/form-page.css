@@ -95,7 +95,7 @@ textarea:focus {
 }
 
 /* Submit button */
-button[type="submit-button"] {
+button[type="submit"] {
     margin-top: 2.5rem;
     padding: 1rem;
     width: 85%;
@@ -108,6 +108,6 @@ button[type="submit-button"] {
     color: black;
 }
 
-button[type="submit-button"]:active {
+button[type="submit"]:active {
     transform: scale(0.97);
 }
