@@ -43,10 +43,12 @@ function Form() {
         certifications: [{ name: "", issuer: "", date: "" }],
         awards: [{ name: "", issuer: "", date: "" }]
     });
+    
     const [generatedResume, setGeneratedResume] = useState(null); // remove
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        // console.log("Passed this")
 
         const payload = {
             resume: resume,
@@ -60,8 +62,9 @@ function Form() {
             });
 
             const data = await response.json();
+            // console.log(data)
             setGeneratedResume(data); // remove
-            console.log(data);
+            // console.log(data)
         } catch (err) {
             console.error("Error submitting resume:", err);
         }

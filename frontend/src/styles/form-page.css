@@ -116,32 +116,163 @@ button[type="submit"]:active {
 
 
 /* remove */
-.resume-page {
-  width: 210mm;
-  min-height: 297mm;
-  margin: 40px auto;
-  padding: 40px;
-  background: white;
-  color: black;
-  font-family: "Times New Roman", serif;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
+    /* Page sizing (A4) and base typography */
+    .resume-latex {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 14mm 18mm;
+        margin: 10mm auto;
+        background: #fff;
+        color: #111;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 11pt;
+        line-height: 1.25;
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+    }
 
-.resume-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
+    /* Heading (centered) */
+    .heading {
+        text-align: center;
+        margin-bottom: 6px;
+        padding-bottom: 6px;
+    }
 
-.resume-page h1 {
-  margin-bottom: 5px;
-}
+    .name {
+        font-size: 20pt;
+        margin: 0;
+        letter-spacing: 0.5px;
+        font-weight: 700;
+        text-transform: none;
+    }
 
-.resume-page h2 {
-  border-bottom: 1px solid #333;
-  padding-bottom: 4px;
-  margin-top: 20px;
-}
+    .contact {
+        margin-top: 4px;
+        font-size: 9.5pt;
+        color: #222;
+    }
 
-.resume-page section {
-  margin-bottom: 16px;
-}
+    /* Section title — small-caps + rule, compact like LaTeX's titlerule */
+    .section {
+        margin-top: 10px;
+    }
+
+    .section-title {
+        font-variant: small-caps;
+        font-weight: 700;
+        font-size: 11pt;
+        text-transform: lowercase; /* font-variant shows small-caps; keep lowercase to match LaTeX scshape */
+        margin: 10px 0 6px 0;
+        padding-bottom: 4px;
+        border-bottom: 1px solid #000;
+        display: inline-block;
+    }
+
+    /* Body content under sections */
+    .section-body {
+        margin-top: 6px;
+    }
+
+    /* Subheading rows mimic the tabular with fill */
+    /* left side grows, right side is aligned to right */
+    .subheading {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 4px;
+    }
+
+    .sub-left {
+        max-width: 72%;
+    }
+
+    .sub-title {
+        font-size: 11pt;
+        line-height: 1.1;
+    }
+
+    .sub-subtitle {
+        font-size: 9.5pt;
+        color: #333;
+        margin-top: 1px;
+    }
+
+    .sub-right {
+        font-size: 9.5pt;
+        text-align: right;
+        color: #111;
+        min-width: 90px;
+    }
+
+    /* Blocks / small metadata */
+    .block {
+        margin-bottom: 6px;
+    }
+
+    .muted {
+        color: #444;
+    }
+
+    .small {
+        font-size: 9.5pt;
+    }
+
+    /* Lists: no bullets, tight spacing like the LaTeX template */
+    .item-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 4px 0 0 0;
+    }
+
+    .item-block {
+        margin-bottom: 6px;
+    }
+
+    /* The bullet-like items under experiences/projects */
+    .resume-items {
+        list-style: none;
+        margin: 4px 0 0 0;
+        padding-left: 10px; /* indent for items */
+    }
+
+    .resume-item {
+        margin-bottom: 4px;
+        font-size: 10pt;
+    }
+
+    /* Projects heading style */
+    .project-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .proj-left .proj-tech {
+        margin-top: 2px;
+        color: #333;
+        font-size: 9.5pt;
+    }
+
+    /* technical skills compact block */
+    .skills-list {
+        margin-top: 2px;
+    }
+
+    /* Links and anchors */
+    a {
+    color: inherit;
+        text-decoration: underline;
+    }
+
+    /* Print rules to remove shadows and ensure proper margins */
+    @media print {
+    body {
+        margin: 0;
+    }
+    .resume-latex {
+        box-shadow: none;
+        margin: 0;
+        padding: 12mm 14mm;
+        width: auto;
+    }
+    }
