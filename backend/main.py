@@ -9,6 +9,8 @@ from models import ResumeRequest, GenerateResumeRequest, OptimizeResumeRequest, 
 from llm.service import generate_resume, optimize_resume, generate_cover_letter
 from resume_analyzer import ResumeAnalyzer, ValidationError
 
+from interview.service import get_questions
+
 
 from database import init_db, get_db
 
@@ -151,3 +153,13 @@ async def generate_cover_letter_endpoint(request: CoverLetterRequest):
         raise HTTPException(status_code=500, detail=result["error"])
 
     return result
+
+@app.get("/interview-questions/{company}")
+def get_interview_questions_endpoint(company: str):
+
+    data = get_questions(company)
+
+    if data is None:
+        raise HTTPException(status_code=404, detail=f"Company '{company}' not found or has no data")
+
+    return data
