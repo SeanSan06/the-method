@@ -1,10 +1,3 @@
-import React from "react";
-
-function SafeText({ children }) {
-    if (!children && children !== 0) return null;
-    return <>{children}</>;
-}
-
 function SubHeading({ leftTitle, leftSubtitle, right }) {
   return (
       <div className="subheading">
@@ -36,8 +29,8 @@ export default function ResumePreview({ resume }) {
     <div className="resume-latex" role="document">
         {/* Heading */}
         <header className="heading">
-          <h1 className="name">{resume.name || "Your Name"}</h1>
-          <div className="contact">{joinContact}</div>
+            <h1 className="name">{resume.name || "Your Name"}</h1>
+            <div className="contact">{joinContact}</div>
         </header>
 
         {/* Education */}
@@ -45,48 +38,48 @@ export default function ResumePreview({ resume }) {
             <div className="section-title">Education</div>
 
             <div className="section-body">
-              {resume.education && resume.education.length > 0 ? (
-                  resume.education.map((edu, i) => (
-                      <div key={i} className="block">
-                          <SubHeading
-                              leftTitle={edu.school || ""}
-                              leftSubtitle={edu.major ? `${edu.major}` : ""}
-                              right={
-                                  `${edu.start_year || ""}` +
-                                  `${edu.start_year || edu.end_year ? " — " : ""}` +
-                                  `${edu.end_year || ""}`
-                              }
-                          />
+                {resume.education && resume.education.length > 0 ? (
+                    resume.education.map((edu, i) => (
+                        <div key={i} className="block">
+                            <SubHeading
+                                leftTitle={edu.school || ""}
+                                leftSubtitle={edu.major ? `${edu.major}` : ""}
+                                right={
+                                    `${edu.start_year || ""}` +
+                                    `${edu.start_year || edu.end_year ? " — " : ""}` +
+                                    `${edu.end_year || ""}`
+                                }
+                            />
 
-                        {edu.gpa && (
-                            <div className="muted small">
-                                GPA: {edu.gpa}
-                            </div>
-                        )}
+                            {edu.gpa && (
+                                <div className="muted small">
+                                    GPA: {edu.gpa}
+                                </div>
+                            )}
 
-                        {edu.activities && (
-                            <div className="muted small">
-                                {edu.activities}
-                            </div>
-                        )}
+                            {edu.activities && (
+                                <div className="muted small">
+                                    {edu.activities}
+                                </div>
+                            )}
 
-                        {i === 0 &&
-                          resume.relevant_coursework &&
-                          resume.relevant_coursework.filter(Boolean).length > 0 && (
-                            <div className="small coursework">
-                              <strong>Relevant Coursework:</strong>{" "}
-                              {resume.relevant_coursework
-                                .filter(Boolean)
-                                .join(", ")}
-                            </div>
-                          )}
-                      </div>
-                  ))
-              ) : (
-                  <div className="muted small">
-                      No education entered
-                  </div>
-              )}
+                            {i === 0 &&
+                            resume.relevant_coursework &&
+                            resume.relevant_coursework.filter(Boolean).length > 0 && (
+                                <div className="small coursework">
+                                <strong>Relevant Coursework:</strong>{" "}
+                                {resume.relevant_coursework
+                                    .filter(Boolean)
+                                    .join(", ")}
+                                </div>
+                            )}
+                        </div>
+                    ))
+                ) : (
+                    <div className="muted small">
+                        No education entered
+                    </div>
+                )}
             </div>
         </section>
 
@@ -106,10 +99,10 @@ export default function ResumePreview({ resume }) {
                                 />
                               {exp.description && (
                                   <ul className="resume-items">
-                                      {/* split description into lines if it's multi-line, else single item */}
-                                      {exp.description.split("\n").map((d, idx) => (
-                                        d.trim() ? <li key={idx} className="resume-item">{d}</li> : null
-                                      ))}
+                                        {/* split description into lines if it's multi-line, else single item */}
+                                        {exp.description.split("\n").map((d, idx) => (
+                                            d.trim() ? <li key={idx} className="resume-item">{d}</li> : null
+                                        ))}
                                   </ul>
                               )}
                             </li>
@@ -123,26 +116,26 @@ export default function ResumePreview({ resume }) {
 
         {/* Projects */}
         <section className="section">
-          <div className="section-title">Projects</div>
-          <div className="section-body">
-              {resume.projects && resume.projects.length > 0 ? (
-                  <ul className="item-list">
-                      {resume.projects.map((p, i) => (
-                          <li key={i} className="item-block">
-                              <div className="project-heading">
-                                  <div className="proj-left">
-                                      <strong>{p.name}</strong>
-                                      {p.description && <div className="muted small proj-tech">{p.description}</div>}
-                                  </div>
-                                <div className="sub-right small">{p.start_date || ""}{p.start_date || p.end_date ? " — " : ""}{p.end_date || ""}</div>
-                              </div>
-                          </li>
-                      ))}
-                  </ul>
-              ) : (
-                <div className="muted small">No projects entered</div>
-              )}
-          </div>
+            <div className="section-title">Projects</div>
+            <div className="section-body">
+                {resume.projects && resume.projects.length > 0 ? (
+                    <ul className="item-list">
+                        {resume.projects.map((p, i) => (
+                            <li key={i} className="item-block">
+                                <div className="project-heading">
+                                    <div className="proj-left">
+                                        <strong>{p.name}</strong>
+                                        {p.description && <div className="muted small proj-tech">{p.description}</div>}
+                                    </div>
+                                    <div className="sub-right small">{p.start_date || ""}{p.start_date || p.end_date ? " — " : ""}{p.end_date || ""}</div>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <div className="muted small">No projects entered</div>
+                )}
+            </div>
         </section>
 
         {/* Academic Clubs */}
@@ -150,21 +143,21 @@ export default function ResumePreview({ resume }) {
             <section className="section">
                 <div className="section-title">Academic Clubs</div>
                 <div className="section-body">
-                  {/* if the user provided clubs array use it else fallback */}
-                  {resume.clubs && resume.clubs.length > 0 ? (
-                      resume.clubs.map((c, i) => (
-                          <div key={i} className="block">
-                              <SubHeading
-                                  leftTitle={c.name}
-                                  leftSubtitle={c.role}
-                                  right={`${c.start || ""}${c.start || c.end ? " — " : ""}${c.end || ""}`}
-                              />
-                              {c.description && <div className="muted small">{c.description}</div>}
-                          </div>
-                      ))
-                  ) : (
-                      <div className="muted small">No clubs entered</div>
-                  )}
+                    {/* if the user provided clubs array use it else fallback */}
+                    {resume.clubs && resume.clubs.length > 0 ? (
+                        resume.clubs.map((c, i) => (
+                            <div key={i} className="block">
+                                <SubHeading
+                                    leftTitle={c.name}
+                                    leftSubtitle={c.role}
+                                    right={`${c.start || ""}${c.start || c.end ? " — " : ""}${c.end || ""}`}
+                                />
+                                {c.description && <div className="muted small">{c.description}</div>}
+                            </div>
+                        ))
+                    ) : (
+                        <div className="muted small">No clubs entered</div>
+                    )}
                 </div>
             </section>
         ) : null}
@@ -174,13 +167,13 @@ export default function ResumePreview({ resume }) {
           <div className="section-title">Technical Skills</div>
           <div className="section-body">
               <div className="skills-list small">
-                  {resume.skills && resume.skills.length > 0 ? (
-                      <div>
-                          <strong>Languages:</strong> {resume.skills.join(", ")}
-                      </div>
-                  ) : (
-                      <div className="muted small">No skills entered</div>
-                  )}
+                    {resume.skills && resume.skills.length > 0 ? (
+                        <div>
+                            <strong>Languages:</strong> {resume.skills.join(", ")}
+                        </div>
+                    ) : (
+                        <div className="muted small">No skills entered</div>
+                    )}
               </div>
             </div>
         </section>
