@@ -99,7 +99,7 @@ button[type="submit"] {
     margin-top: 2.5rem;
     padding: 1rem;
     width: 85%;
-    font-size: 1.5rem;
+    font-size: 2.0rem;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -134,7 +134,7 @@ button[type="submit"]:active {
     color: black;
 }
 
-/* HEADER */
+/* Headers */
 .resume-header {
     text-align: center;
     margin-bottom: 12px;
@@ -151,7 +151,7 @@ button[type="submit"]:active {
     margin: 0;
 }
 
-/* SECTION */
+/* Sections */
 section {
     margin-top: 14px;
 }
@@ -165,12 +165,35 @@ section h2 {
     text-transform: uppercase;
 }
 
-/* BLOCK */
+/* Buttons that add a new section */
+.add-section-form-button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    width: 35%;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    background-color: skyblue;
+    color: black;
+}
+
+  .add-section-form-button:active {
+      transform: scale(0.97);
+  }
+
+
+/* Block */
 .resume-block {
     margin-bottom: 8px;
 }
 
-/* ROW ALIGNMENT (like LaTeX tabular*) */
+/* Row allignment (like LaTeX tabular*) */
 .row {
     display: flex;
     justify-content: space-between;
@@ -181,7 +204,7 @@ section h2 {
   font-size: 10.5pt;
 }
 
-/* LISTS */
+/* Lists */
 ul {
     margin: 4px 0 4px 18px;
     padding: 0;
@@ -191,7 +214,7 @@ li {
     margin-bottom: 3px;
 }
 
-/* SKILLS */
+/* Skills */
 .skills {
     margin-top: 4px;
 }

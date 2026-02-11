@@ -166,6 +166,8 @@ function Form() {
                                 }}
                             />
                         </label>
+
+                        <button class="add-section-form-button">Add Section</button>
                     </div>
 
                     {/* About */}
@@ -263,6 +265,8 @@ function Form() {
                                 }}
                             />
                         </label>
+
+                        <button class="add-section-form-button">Add Section</button>
                     </div>
 
                     {/* Relevant Coursework */}
@@ -362,6 +366,8 @@ function Form() {
                                 }}
                             />
                         </label>
+
+                        <button class="add-section-form-button">Add Section</button>
                     </div>
 
                     {/* Projects */}
@@ -431,6 +437,8 @@ function Form() {
                                 }}
                             />
                         </label>
+
+                        <button class="add-section-form-button">Add Section</button>
                     </div>
 
                     {/* Skills */}
@@ -534,6 +542,8 @@ function Form() {
                                 }}
                             />
                         </label>
+
+                        <button class="add-section-form-button">Add Section</button>
                     </div>
 
                     <button type="submit">Submit Resume</button>
