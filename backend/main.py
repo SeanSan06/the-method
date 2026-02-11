@@ -2,12 +2,15 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+import os
 
 from llm.client import chat
 from llm.prompts import RESUME_SYSTEM_PROMPT
 from models import ResumeRequest, GenerateResumeRequest, OptimizeResumeRequest, AnalyzeResumeRequest, CoverLetterRequest
 from llm.service import generate_resume, optimize_resume, generate_cover_letter
 from resume_analyzer import ResumeAnalyzer, ValidationError
+
+from interview.service import get_questions
 
 
 from database import init_db, get_db
@@ -50,8 +53,8 @@ async def chat_endpoint(request: ResumeRequest):
         raise HTTPException(status_code=500, detail=response)
 
     return {"response": response}
-  
-  
+
+
 
 @app.post('/llm/generate-resume')
 async def generate_resume_endpoint(request: GenerateResumeRequest):
@@ -76,7 +79,7 @@ async def generate_resume_endpoint(request: GenerateResumeRequest):
     # return http response
     return {"resume": enhanced_resume}
 
-  
+
 
 @app.post('/llm/optimize-resume')
 async def optimize_resume_endpoint(request: OptimizeResumeRequest):
@@ -121,7 +124,7 @@ async def analyze_resume_endpoint(request: AnalyzeResumeRequest):
         })
 
         return result.to_dict()
-    
+
     except ValidationError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
@@ -151,3 +154,33 @@ async def generate_cover_letter_endpoint(request: CoverLetterRequest):
         raise HTTPException(status_code=500, detail=result["error"])
 
     return result
+
+@app.get("/interview-questions/{company}")
+def get_interview_questions_endpoint(company: str):
+
+    data = get_questions(company)
+
+    if data is None:
+        raise HTTPException(status_code=404, detail=f"Company '{company}' not found or has no data")
+
+    return data
+
+
+"""
+Frontend Routes
+"""
+
+# This is for static assets like css, js, images
+app.mount('/assets', StaticFiles(directory='static/assets'), name='static')
+
+# Serves the frontend for all other routes
+@app.get('/{full_path:path}')
+async def serve_frontend(full_path: str):
+    """Serve frontend static files and handle React routing"""
+    # Try to serve the specific file if it exists
+    file_path = f'static/{full_path}'
+    if full_path and os.path.exists(file_path) and os.path.isfile(file_path):
+        return FileResponse(file_path)
+
+    # Otherwise serve index.html for React routing
+    return FileResponse('static/index.html')

@@ -10,9 +10,9 @@ App can be deployed via two methods through docker:
   ```
 - **Dev** (with hot-reload):
   ```
-  docker compose up --watch
+  docker compose up --build --watch
   ```
-both of which will run the app on `localhost:8000`
+This will run the frontend on `localhost:5173` and the api on `localhost:8000`
 
 Take down the deployment by running:
 ```
