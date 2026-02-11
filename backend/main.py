@@ -164,23 +164,3 @@ def get_interview_questions_endpoint(company: str):
         raise HTTPException(status_code=404, detail=f"Company '{company}' not found or has no data")
 
     return data
-
-
-"""
-Frontend Routes
-"""
-
-# This is for static assets like css, js, images
-app.mount('/assets', StaticFiles(directory='static/assets'), name='static')
-
-# Serves the frontend for all other routes
-@app.get('/{full_path:path}')
-async def serve_frontend(full_path: str):
-    """Serve frontend static files and handle React routing"""
-    # Try to serve the specific file if it exists
-    file_path = f'static/{full_path}'
-    if full_path and os.path.exists(file_path) and os.path.isfile(file_path):
-        return FileResponse(file_path)
-
-    # Otherwise serve index.html for React routing
-    return FileResponse('static/index.html')
