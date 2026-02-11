@@ -83,9 +83,9 @@ function Form() {
             });
 
             const data = await response.json();
-            // console.log(data) // used for dev logs
+            console.log(data) // used for dev logs
             setGeneratedResume(data);
-            // console.log(data) // used for dev logs
+            console.log(data) // used for dev logs
         } catch (err) {
             console.error("Error submitting resume:", err);
         }
@@ -167,7 +167,7 @@ function Form() {
                             />
                         </label>
 
-                        <button class="add-section-form-button">Add Section</button>
+                        <button type="button" className="add-section-form-button">Add Section</button>
                     </div>
 
                     {/* About */}
@@ -266,7 +266,7 @@ function Form() {
                             />
                         </label>
 
-                        <button class="add-section-form-button">Add Section</button>
+                        <button type="button" className="add-section-form-button">Add Section</button>
                     </div>
 
                     {/* Relevant Coursework */}
@@ -289,86 +289,117 @@ function Form() {
                     {/* Experience */}
                     <h2>Experience</h2>
                     <div className="card">
+
+                    {resume.experience.map((exp, index) => (
+                        <div key={index} className="experience-block">
+                        <h3 class="resume-sub-headers">Experience #{index + 1}</h3>
                         <label>
                             Company
                             <input
-                                type="text"
-                                value={resume.experience[0].company}
-                                onChange={(e) => {
+                            type="text"
+                            value={exp.company}
+                            onChange={(e) => {
                                 const newExp = [...resume.experience];
-                                newExp[0].company = e.target.value;
+                                newExp[index].company = e.target.value;
                                 setResume({ ...resume, experience: newExp });
-                                }}
+                            }}
                             />
                         </label>
 
                         <label>
                             Title
                             <input
-                                type="text"
-                                value={resume.experience[0].title}
-                                onChange={(e) => {
+                            type="text"
+                            value={exp.title}
+                            onChange={(e) => {
                                 const newExp = [...resume.experience];
-                                newExp[0].title = e.target.value;
+                                newExp[index].title = e.target.value;
                                 setResume({ ...resume, experience: newExp });
-                                }}
+                            }}
                             />
                         </label>
 
                         <label>
                             Location
                             <input
-                                type="text"
-                                value={resume.experience[0].location}
-                                onChange={(e) => {
+                            type="text"
+                            value={exp.location}
+                            onChange={(e) => {
                                 const newExp = [...resume.experience];
-                                newExp[0].location = e.target.value;
+                                newExp[index].location = e.target.value;
                                 setResume({ ...resume, experience: newExp });
-                                }}
+                            }}
                             />
                         </label>
 
                         <label>
                             Description
                             <textarea
-                                rows="3"
-                                value={resume.experience[0].description}
-                                onChange={(e) => {
+                            rows="3"
+                            value={exp.description}
+                            onChange={(e) => {
                                 const newExp = [...resume.experience];
-                                newExp[0].description = e.target.value;
+                                newExp[index].description = e.target.value;
                                 setResume({ ...resume, experience: newExp });
-                                }}
+                            }}
                             />
                         </label>
 
                         <label>
                             Start Date
                             <input
-                                type="text"
-                                value={resume.experience[0].start_date}
-                                onChange={(e) => {
+                            type="text"
+                            value={exp.start_date}
+                            onChange={(e) => {
                                 const newExp = [...resume.experience];
-                                newExp[0].start_date = e.target.value;
+                                newExp[index].start_date = e.target.value;
                                 setResume({ ...resume, experience: newExp });
-                                }}
+                            }}
                             />
                         </label>
 
                         <label>
                             End Date
                             <input
-                                type="text"
-                                value={resume.experience[0].end_date}
-                                onChange={(e) => {
+                            type="text"
+                            value={exp.end_date}
+                            onChange={(e) => {
                                 const newExp = [...resume.experience];
-                                newExp[0].end_date = e.target.value;
+                                newExp[index].end_date = e.target.value;
                                 setResume({ ...resume, experience: newExp });
-                                }}
+                            }}
                             />
                         </label>
 
-                        <button class="add-section-form-button">Add Section</button>
+                        <hr class="resume-hr-between-sections" />
+                        </div>
+                    ))}
+
+                        <button
+                            type="button"
+                            className="add-section-form-button"
+                            onClick={() => {
+                            setResume({
+                                ...resume,
+                                experience: [
+                                ...resume.experience,
+                                {
+                                    company: "",
+                                    title: "",
+                                    location: "",
+                                    description: "",
+                                    start_date: "",
+                                    end_date: "",
+                                },
+                                ],
+                            });
+                            }}
+                        >
+                            Add Section
+                        </button>
+
                     </div>
+
 
                     {/* Projects */}
                     <h2>Personal / Team Projects</h2>
@@ -438,7 +469,7 @@ function Form() {
                             />
                         </label>
 
-                        <button class="add-section-form-button">Add Section</button>
+                        <button type="button" className="add-section-form-button">Add Section</button>
                     </div>
 
                     {/* Skills */}
@@ -543,7 +574,7 @@ function Form() {
                             />
                         </label>
 
-                        <button class="add-section-form-button">Add Section</button>
+                        <button type="button" className="add-section-form-button">Add Section</button>
                     </div>
 
                     <button type="submit">Submit Resume</button>
