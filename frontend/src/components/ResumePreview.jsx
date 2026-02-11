@@ -1,200 +1,101 @@
-function SubHeading({ leftTitle, leftSubtitle, right }) {
-  return (
-      <div className="subheading">
-          <div className="sub-left">
-              <div className="sub-title"><strong>{leftTitle}</strong></div>
-              {leftSubtitle && <div className="sub-subtitle"><em>{leftSubtitle}</em></div>}
-          </div>
-          <div className="sub-right">
-              <span>{right}</span>
-          </div>
-      </div>
-  );
-}
-
-export default function ResumePreview({ resume }) {
+function ResumePreview({ resume }) {
   if (!resume) return null;
 
-  const contactPieces = [
-      resume.phone,
-      resume.email,
-      resume.links?.[0]?.url,
-      resume.links?.[0]?.type ? resume.links[0].type : null,
-      resume.is_us_citizen ? "US Citizen" : null,
-  ].filter(Boolean);
-
-  const joinContact = contactPieces.join("  |  ");
-
   return (
-    <div className="resume-latex" role="document">
-        {/* Heading */}
-        <header className="heading">
-            <h1 className="name">{resume.name || "Your Name"}</h1>
-            <div className="contact">{joinContact}</div>
-        </header>
+    <div className="resume-wrapper">
+      <div className="resume-page">
 
-        {/* Education */}
-        <section className="section">
-            <div className="section-title">Education</div>
+        {/* HEADER */}
+        <div className="resume-header">
+          <h1>{resume.name}</h1>
+          <p>
+            {resume.phone} · {resume.email}
+            {resume.links?.map((link, i) => (
+              <span key={i}> · {link.url}</span>
+            ))}
+          </p>
+        </div>
 
-            <div className="section-body">
-                {resume.education && resume.education.length > 0 ? (
-                    resume.education.map((edu, i) => (
-                        <div key={i} className="block">
-                            <SubHeading
-                                leftTitle={edu.school || ""}
-                                leftSubtitle={edu.major ? `${edu.major}` : ""}
-                                right={
-                                    `${edu.start_year || ""}` +
-                                    `${edu.start_year || edu.end_year ? " — " : ""}` +
-                                    `${edu.end_year || ""}`
-                                }
-                            />
-
-                            {edu.gpa && (
-                                <div className="muted small">
-                                    GPA: {edu.gpa}
-                                </div>
-                            )}
-
-                            {edu.activities && (
-                                <div className="muted small">
-                                    {edu.activities}
-                                </div>
-                            )}
-
-                            {i === 0 &&
-                            resume.relevant_coursework &&
-                            resume.relevant_coursework.filter(Boolean).length > 0 && (
-                                <div className="small coursework">
-                                <strong>Relevant Coursework:</strong>{" "}
-                                {resume.relevant_coursework
-                                    .filter(Boolean)
-                                    .join(", ")}
-                                </div>
-                            )}
-                        </div>
-                    ))
-                ) : (
-                    <div className="muted small">
-                        No education entered
-                    </div>
-                )}
-            </div>
-        </section>
-
-
-        {/* Experience */}
-        <section className="section">
-            <div className="section-title">Experiences</div>
-            <div className="section-body">
-                {resume.experience && resume.experience.length > 0 ? (
-                    <ul className="item-list">
-                        {resume.experience.map((exp, i) => (
-                            <li key={i} className="item-block">
-                                <SubHeading
-                                    leftTitle={`${exp.title || ""} ${exp.company ? `— ${exp.company}` : ""}`}
-                                    leftSubtitle={exp.location}
-                                    right={`${exp.start_date || ""}${exp.start_date || exp.end_date ? " — " : ""}${exp.end_date || ""}`}
-                                />
-                              {exp.description && (
-                                  <ul className="resume-items">
-                                        {/* split description into lines if it's multi-line, else single item */}
-                                        {exp.description.split("\n").map((d, idx) => (
-                                            d.trim() ? <li key={idx} className="resume-item">{d}</li> : null
-                                        ))}
-                                  </ul>
-                              )}
-                            </li>
-                        ))}
-                    </ul>
-                ) : (
-                  <div className="muted small">No experience entered</div>
-              )}
-            </div>
-        </section>
-
-        {/* Projects */}
-        <section className="section">
-            <div className="section-title">Projects</div>
-            <div className="section-body">
-                {resume.projects && resume.projects.length > 0 ? (
-                    <ul className="item-list">
-                        {resume.projects.map((p, i) => (
-                            <li key={i} className="item-block">
-                                <div className="project-heading">
-                                    <div className="proj-left">
-                                        <strong>{p.name}</strong>
-                                        {p.description && <div className="muted small proj-tech">{p.description}</div>}
-                                    </div>
-                                    <div className="sub-right small">{p.start_date || ""}{p.start_date || p.end_date ? " — " : ""}{p.end_date || ""}</div>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                ) : (
-                    <div className="muted small">No projects entered</div>
-                )}
-            </div>
-        </section>
-
-        {/* Academic Clubs */}
-        {resume.clubs || resume.awards ? (
-            <section className="section">
-                <div className="section-title">Academic Clubs</div>
-                <div className="section-body">
-                    {/* if the user provided clubs array use it else fallback */}
-                    {resume.clubs && resume.clubs.length > 0 ? (
-                        resume.clubs.map((c, i) => (
-                            <div key={i} className="block">
-                                <SubHeading
-                                    leftTitle={c.name}
-                                    leftSubtitle={c.role}
-                                    right={`${c.start || ""}${c.start || c.end ? " — " : ""}${c.end || ""}`}
-                                />
-                                {c.description && <div className="muted small">{c.description}</div>}
-                            </div>
-                        ))
-                    ) : (
-                        <div className="muted small">No clubs entered</div>
-                    )}
+        {/* EDUCATION */}
+        {resume.education?.length > 0 && (
+          <section>
+            <h2>Education</h2>
+            {resume.education.map((edu, i) => (
+              <div key={i} className="resume-block">
+                <div className="row">
+                  <strong>{edu.school}</strong>
+                  <span>{edu.start_year} – {edu.end_year}</span>
                 </div>
-            </section>
-        ) : null}
-
-        {/* Skills */}
-        <section className="section">
-          <div className="section-title">Technical Skills</div>
-          <div className="section-body">
-              <div className="skills-list small">
-                    {resume.skills && resume.skills.length > 0 ? (
-                        <div>
-                            <strong>Languages:</strong> {resume.skills.join(", ")}
-                        </div>
-                    ) : (
-                        <div className="muted small">No skills entered</div>
-                    )}
+                <div className="row sub">
+                  <em>{edu.major}</em>
+                  <span>{edu.gpa && `GPA: ${edu.gpa}`}</span>
+                </div>
               </div>
-            </div>
-        </section>
+            ))}
+          </section>
+        )}
 
-        {/* Certifications */}
-        <section className="section">
-            <div className="section-title">Certifications</div>
-            <div className="section-body">
-                {resume.certifications && resume.certifications.length > 0 ? (
-                  <ul className="item-list">
-                      {resume.certifications.map((c, i) => (
-                          <li key={i} className="small">
-                              <strong>{c.name}</strong>{c.issuer ? ` — ${c.issuer}` : ""} {c.date ? ` (${c.date})` : ""}
-                          </li>
-                      ))}
+        {/* EXPERIENCE */}
+        {resume.experience?.length > 0 && (
+          <section>
+            <h2>Experience</h2>
+            {resume.experience.map((exp, i) => (
+              <div key={i} className="resume-block">
+                <div className="row">
+                  <strong>{exp.company}</strong>
+                  <span>{exp.start_date} – {exp.end_date}</span>
+                </div>
+                <div className="row sub">
+                  <em>{exp.title}</em>
+                  <span>{exp.location}</span>
+                </div>
+                {exp.description && (
+                  <ul>
+                    {exp.description.split("\n").map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
                   </ul>
-              ) : (
-                <div className="muted small">No certifications entered</div>
-              )}
-            </div>
-        </section>
+                )}
+              </div>
+            ))}
+          </section>
+        )}
+
+        {/* PROJECTS */}
+        {resume.projects?.length > 0 && (
+          <section>
+            <h2>Projects</h2>
+            {resume.projects.map((proj, i) => (
+              <div key={i} className="resume-block">
+                <div className="row">
+                  <strong>{proj.name}</strong>
+                  <span>{proj.start_date} – {proj.end_date}</span>
+                </div>
+                {proj.description && (
+                  <ul>
+                    {proj.description.split("\n").map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </section>
+        )}
+
+        {/* SKILLS */}
+        {resume.skills?.length > 0 && (
+          <section>
+            <h2>Technical Skills</h2>
+            <p className="skills">
+              {resume.skills.join(", ")}
+            </p>
+          </section>
+        )}
+
+      </div>
     </div>
   );
 }
+
+export default ResumePreview;
