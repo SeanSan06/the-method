@@ -141,133 +141,188 @@ function Form() {
                     {/* Links */}
                     <h2>Links</h2>
                     <div className="card">
-                        <label>
-                            Type
-                            <input
+                        {resume.links.map((link, index) => (
+                            <div key={index} className="link-block">
+
+                            <h3>Link #{index + 1}</h3>
+
+                            <label>
+                                Type
+                                <input
                                 type="text"
-                                value={resume.links[0].type}
+                                value={link.type}
                                 onChange={(e) => {
-                                const newLinks = [...resume.links];
-                                newLinks[0].type = e.target.value;
-                                setResume({ ...resume, links: newLinks });
+                                    const newLinks = [...resume.links];
+                                    newLinks[index].type = e.target.value;
+                                    setResume({ ...resume, links: newLinks });
                                 }}
-                            />
-                        </label>
+                                />
+                            </label>
 
-                        <label>
-                            URL
-                            <input
+                            <label>
+                                URL
+                                <input
                                 type="url"
-                                value={resume.links[0].url}
+                                value={link.url}
                                 onChange={(e) => {
-                                const newLinks = [...resume.links];
-                                newLinks[0].url = e.target.value;
-                                setResume({ ...resume, links: newLinks });
+                                    const newLinks = [...resume.links];
+                                    newLinks[index].url = e.target.value;
+                                    setResume({ ...resume, links: newLinks });
                                 }}
-                            />
-                        </label>
+                                />
+                            </label>
 
-                        <button type="button" className="add-section-form-button">Add Section</button>
+                            <hr className="resume-hr-between-sections" />
+                            </div>
+                        ))}
+
+                        <button
+                            type="button"
+                            className="add-section-form-button"
+                            onClick={() => {
+                            setResume({
+                                ...resume,
+                                links: [
+                                ...resume.links,
+                                { type: "", url: "" }
+                                ]
+                            });
+                            }}
+                        >
+                            Add Section
+                        </button>
                     </div>
+
 
                     {/* About */}
                     <h2>About</h2>
-                    <div className="card">
-                        <label>
-                            About You
-                            <textarea
-                                rows="4"
-                                value={resume.about_section}
-                                onChange={(e) =>
-                                setResume({ ...resume, about_section: e.target.value })
-                                }
-                            />
-                        </label>
+                        <div className="card">
+                            <label>
+                                About You
+                                <textarea
+                                    rows="4"
+                                    value={resume.about_section}
+                                    onChange={(e) =>
+                                    setResume({ ...resume, about_section: e.target.value })
+                                    }
+                                />
+                            </label>
+                        </div>
+
+                        {/* Education */}
+                        <h2>Education</h2>
+                        <div className="card">
+                        {resume.education.map((edu, index) => (
+                            <div key={index} className="education-block">
+
+                            <h3>Education #{index + 1}</h3>
+
+                            <label>
+                                School
+                                <input
+                                type="text"
+                                value={edu.school}
+                                onChange={(e) => {
+                                    const newEducation = [...resume.education];
+                                    newEducation[index].school = e.target.value;
+                                    setResume({ ...resume, education: newEducation });
+                                }}
+                                />
+                            </label>
+
+                            <label>
+                                Major
+                                <input
+                                type="text"
+                                value={edu.major}
+                                onChange={(e) => {
+                                    const newEducation = [...resume.education];
+                                    newEducation[index].major = e.target.value;
+                                    setResume({ ...resume, education: newEducation });
+                                }}
+                                />
+                            </label>
+
+                            <label>
+                                GPA
+                                <input
+                                type="text"
+                                value={edu.gpa}
+                                onChange={(e) => {
+                                    const newEducation = [...resume.education];
+                                    newEducation[index].gpa = e.target.value;
+                                    setResume({ ...resume, education: newEducation });
+                                }}
+                                />
+                            </label>
+
+                            <label>
+                                Activities
+                                <input
+                                type="text"
+                                value={edu.activities}
+                                onChange={(e) => {
+                                    const newEducation = [...resume.education];
+                                    newEducation[index].activities = e.target.value;
+                                    setResume({ ...resume, education: newEducation });
+                                }}
+                                />
+                            </label>
+
+                            <label>
+                                Start Year
+                                <input
+                                type="text"
+                                value={edu.start_year}
+                                onChange={(e) => {
+                                    const newEducation = [...resume.education];
+                                    newEducation[index].start_year = e.target.value;
+                                    setResume({ ...resume, education: newEducation });
+                                }}
+                                />
+                            </label>
+
+                            <label>
+                                End Year
+                                <input
+                                type="text"
+                                value={edu.end_year}
+                                onChange={(e) => {
+                                    const newEducation = [...resume.education];
+                                    newEducation[index].end_year = e.target.value;
+                                    setResume({ ...resume, education: newEducation });
+                                }}
+                                />
+                            </label>
+
+                            <hr className="resume-hr-between-sections" />
+                            </div>
+                        ))}
+
+                        <button
+                            type="button"
+                            className="add-section-form-button"
+                            onClick={() => {
+                            setResume({
+                                ...resume,
+                                education: [
+                                ...resume.education,
+                                {
+                                    school: "",
+                                    major: "",
+                                    gpa: "",
+                                    activities: "",
+                                    start_year: "",
+                                    end_year: "",
+                                },
+                                ],
+                            });
+                            }}
+                        >
+                            Add Section
+                        </button>
                     </div>
 
-                    {/* Education */}
-                    <h2>Education</h2>
-                    <div className="card">
-                        <label>
-                            School
-                            <input
-                                type="text"
-                                value={resume.education[0].school}
-                                onChange={(e) => {
-                                const newEducation = [...resume.education];
-                                newEducation[0].school = e.target.value;
-                                setResume({ ...resume, education: newEducation });
-                                }}
-                            />
-                        </label>
-
-                        <label>
-                            Major
-                            <input
-                                type="text"
-                                value={resume.education[0].major}
-                                onChange={(e) => {
-                                const newEducation = [...resume.education];
-                                newEducation[0].major = e.target.value;
-                                setResume({ ...resume, education: newEducation });
-                                }}
-                            />
-                        </label>
-
-                        <label>
-                            GPA
-                            <input
-                                type="text"
-                                value={resume.education[0].gpa}
-                                onChange={(e) => {
-                                const newEducation = [...resume.education];
-                                newEducation[0].gpa = e.target.value;
-                                setResume({ ...resume, education: newEducation });
-                                }}
-                            />
-                        </label>
-
-                        <label>
-                            Activities
-                            <input
-                                type="text"
-                                value={resume.education[0].activities}
-                                onChange={(e) => {
-                                const newEducation = [...resume.education];
-                                newEducation[0].activities = e.target.value;
-                                setResume({ ...resume, education: newEducation });
-                                }}
-                            />
-                        </label>
-
-                        <label>
-                            Start Year
-                            <input
-                                type="text"
-                                value={resume.education[0].start_year}
-                                onChange={(e) => {
-                                const newEducation = [...resume.education];
-                                newEducation[0].start_year = e.target.value;
-                                setResume({ ...resume, education: newEducation });
-                                }}
-                            />
-                        </label>
-
-                        <label>
-                            End Year
-                            <input
-                                type="text"
-                                value={resume.education[0].end_year}
-                                onChange={(e) => {
-                                const newEducation = [...resume.education];
-                                newEducation[0].end_year = e.target.value;
-                                setResume({ ...resume, education: newEducation });
-                                }}
-                            />
-                        </label>
-
-                        <button type="button" className="add-section-form-button">Add Section</button>
-                    </div>
 
                     {/* Relevant Coursework */}
                     <h2>Relevant Coursework</h2>
@@ -404,178 +459,248 @@ function Form() {
                     {/* Projects */}
                     <h2>Personal / Team Projects</h2>
                     <div className="card">
+                    {resume.projects.map((project, index) => (
+                        <div key={index} className="project-block">
+
+                        <h3>Project #{index + 1}</h3>
+
                         <label>
                             Project Name
                             <input
-                                type="text"
-                                value={resume.projects[0].name}
-                                onChange={(e) => {
+                            type="text"
+                            value={project.name}
+                            onChange={(e) => {
                                 const newProj = [...resume.projects];
-                                newProj[0].name = e.target.value;
+                                newProj[index].name = e.target.value;
                                 setResume({ ...resume, projects: newProj });
-                                }}
+                            }}
                             />
                         </label>
 
                         <label>
                             Description
                             <textarea
-                                rows="3"
-                                value={resume.projects[0].description}
-                                onChange={(e) => {
+                            rows="3"
+                            value={project.description}
+                            onChange={(e) => {
                                 const newProj = [...resume.projects];
-                                newProj[0].description = e.target.value;
+                                newProj[index].description = e.target.value;
                                 setResume({ ...resume, projects: newProj });
-                                }}
+                            }}
                             />
                         </label>
 
                         <label>
                             Link
                             <input
-                                type="url"
-                                value={resume.projects[0].link}
-                                onChange={(e) => {
+                            type="url"
+                            value={project.link}
+                            onChange={(e) => {
                                 const newProj = [...resume.projects];
-                                newProj[0].link = e.target.value;
+                                newProj[index].link = e.target.value;
                                 setResume({ ...resume, projects: newProj });
-                                }}
+                            }}
                             />
                         </label>
 
                         <label>
                             Start Date
                             <input
-                                type="text"
-                                value={resume.projects[0].start_date}
-                                onChange={(e) => {
+                            type="text"
+                            value={project.start_date}
+                            onChange={(e) => {
                                 const newProj = [...resume.projects];
-                                newProj[0].start_date = e.target.value;
+                                newProj[index].start_date = e.target.value;
                                 setResume({ ...resume, projects: newProj });
-                                }}
+                            }}
                             />
                         </label>
 
                         <label>
                             End Date
                             <input
-                                type="text"
-                                value={resume.projects[0].end_date}
-                                onChange={(e) => {
+                            type="text"
+                            value={project.end_date}
+                            onChange={(e) => {
                                 const newProj = [...resume.projects];
-                                newProj[0].end_date = e.target.value;
+                                newProj[index].end_date = e.target.value;
                                 setResume({ ...resume, projects: newProj });
-                                }}
+                            }}
                             />
                         </label>
 
-                        <button type="button" className="add-section-form-button">Add Section</button>
+                        <hr className="resume-hr-between-sections" />
+                        </div>
+                    ))}
+
+                    <button
+                        type="button"
+                        className="add-section-form-button"
+                        onClick={() => {
+                        setResume({
+                            ...resume,
+                            projects: [
+                            ...resume.projects,
+                            {
+                                name: "",
+                                description: "",
+                                link: "",
+                                start_date: "",
+                                end_date: "",
+                            },
+                            ],
+                        });
+                        }}
+                    >
+                        Add Section
+                    </button>
                     </div>
+
 
                     {/* Skills */}
-                    <h2>Skills</h2>
-                    <div className="card">
-                        <label>
-                            Skill
-                            <input
-                                type="text"
-                                value={resume.skills[0]}
-                                onChange={(e) => {
-                                const newSkills = [...resume.skills];
-                                newSkills[0] = e.target.value;
-                                setResume({ ...resume, skills: newSkills });
-                                }}
-                            />
-                        </label>
-                    </div>
-
-                    {/* Certifications */}
                     <h2>Certifications</h2>
                     <div className="card">
-                        <label>
-                            Name
-                            <input
-                                type="text"
-                                value={resume.certifications[0].name}
-                                onChange={(e) => {
-                                const newCerts = [...resume.certifications];
-                                newCerts[0].name = e.target.value;
-                                setResume({ ...resume, certifications: newCerts });
-                                }}
-                            />
-                        </label>
+                        {resume.certifications.map((cert, index) => (
+                            <div key={index} className="certification-block">
+                            <h3>Certification #{index + 1}</h3>
 
-                        <label>
-                            Issuer
-                            <input
+                            <label>
+                                Name
+                                <input
                                 type="text"
-                                value={resume.certifications[0].issuer}
+                                value={cert.name}
                                 onChange={(e) => {
-                                const newCerts = [...resume.certifications];
-                                newCerts[0].issuer = e.target.value;
-                                setResume({ ...resume, certifications: newCerts });
+                                    const newCerts = [...resume.certifications];
+                                    newCerts[index].name = e.target.value;
+                                    setResume({ ...resume, certifications: newCerts });
                                 }}
-                            />
-                        </label>
+                                />
+                            </label>
 
-                        <label>
-                            Date
-                            <input
+                            <label>
+                                Issuer
+                                <input
                                 type="text"
-                                value={resume.certifications[0].date}
+                                value={cert.issuer}
                                 onChange={(e) => {
-                                const newCerts = [...resume.certifications];
-                                newCerts[0].date = e.target.value;
-                                setResume({ ...resume, certifications: newCerts });
+                                    const newCerts = [...resume.certifications];
+                                    newCerts[index].issuer = e.target.value;
+                                    setResume({ ...resume, certifications: newCerts });
                                 }}
-                            />
-                        </label>
+                                />
+                            </label>
+
+                            <label>
+                                Date Received (i.e. February 2026)
+                                <input
+                                type="text"
+                                value={cert.date}
+                                onChange={(e) => {
+                                    const newCerts = [...resume.certifications];
+                                    newCerts[index].date = e.target.value;
+                                    setResume({ ...resume, certifications: newCerts });
+                                }}
+                                />
+                            </label>
+
+                            <hr className="resume-hr-between-sections" />
+                            </div>
+                        ))}
+
+                        <button
+                            type="button"
+                            className="add-section-form-button"
+                            onClick={() => {
+                            setResume({
+                                ...resume,
+                                certifications: [
+                                ...resume.certifications,
+                                {
+                                    name: "",
+                                    issuer: "",
+                                    date: "",
+                                },
+                                ],
+                            });
+                            }}
+                        >
+                            Add Section
+                        </button>
                     </div>
+
 
                     {/* Awards */}
                     <h2>Awards</h2>
                     <div className="card">
-                        <label>
-                            Name
-                            <input
-                                type="text"
-                                value={resume.awards[0].name}
-                                onChange={(e) => {
-                                const newAwards = [...resume.awards];
-                                newAwards[0].name = e.target.value;
-                                setResume({ ...resume, awards: newAwards });
-                                }}
-                            />
-                        </label>
+                        {resume.awards.map((award, index) => (
+                            <div key={index} className="award-block">
 
-                        <label>
-                            Issuer
-                            <input
-                                type="text"
-                                value={resume.awards[0].issuer}
-                                onChange={(e) => {
-                                const newAwards = [...resume.awards];
-                                newAwards[0].issuer = e.target.value;
-                                setResume({ ...resume, awards: newAwards });
-                                }}
-                            />
-                        </label>
+                            <h3>Award #{index + 1}</h3>
 
-                        <label>
-                            Date
-                            <input
+                            <label>
+                                Name
+                                <input
                                 type="text"
-                                value={resume.awards[0].date}
+                                value={award.name}
                                 onChange={(e) => {
-                                const newAwards = [...resume.awards];
-                                newAwards[0].date = e.target.value;
-                                setResume({ ...resume, awards: newAwards });
+                                    const newAwards = [...resume.awards];
+                                    newAwards[index].name = e.target.value;
+                                    setResume({ ...resume, awards: newAwards });
                                 }}
-                            />
-                        </label>
+                                />
+                            </label>
 
-                        <button type="button" className="add-section-form-button">Add Section</button>
+                            <label>
+                                Issuer
+                                <input
+                                type="text"
+                                value={award.issuer}
+                                onChange={(e) => {
+                                    const newAwards = [...resume.awards];
+                                    newAwards[index].issuer = e.target.value;
+                                    setResume({ ...resume, awards: newAwards });
+                                }}
+                                />
+                            </label>
+
+                            <label>
+                                Date Received (i.e. February 2026)
+                                <input
+                                type="text"
+                                value={award.date}
+                                onChange={(e) => {
+                                    const newAwards = [...resume.awards];
+                                    newAwards[index].date = e.target.value;
+                                    setResume({ ...resume, awards: newAwards });
+                                }}
+                                />
+                            </label>
+
+                            <hr className="resume-hr-between-sections" />
+                            </div>
+                        ))}
+
+                        <button
+                            type="button"
+                            className="add-section-form-button"
+                            onClick={() => {
+                            setResume({
+                                ...resume,
+                                awards: [
+                                ...resume.awards,
+                                {
+                                    name: "",
+                                    issuer: "",
+                                    date: "",
+                                },
+                                ],
+                            });
+                            }}
+                        >
+                            Add Section
+                        </button>
                     </div>
+
 
                     <button type="submit">Submit Resume</button>
                 </form>
