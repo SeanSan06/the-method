@@ -1,6 +1,17 @@
-import { useState } from "react";
+import { useState } from "react";             // Usestates needed to store JSON content
+import ResumePreview from "./ResumePreview";  // This function creates/formats the resume
 
+/* 
+Overview(Function WIP):
+    UI: This function generates the UI for the entire form with questions and input boxes.
+
+    Functionality: This function talks to /llm/generate-resume endpoint. It gives a "resume"
+    usestate with the JSON fields that the endpoint needs. It gets back slightly reformated 
+    responses for each question(key-value-pairs). It uses this new JSON resume data to make
+    a resume that follows JAKE's resume template.
+*/
 function Form() {
+    // "resume" usestate follows the same key-value-pair as the Pydatic resume object
     const [resume, setResume] = useState({
         name: "",
         phone: "",
@@ -42,33 +53,49 @@ function Form() {
         certifications: [{ name: "", issuer: "", date: "" }],
         awards: [{ name: "", issuer: "", date: "" }]
     });
+    
+    // "generateResume" usestate is used to store resume JSON data from endpoint
+    const [generatedResume, setGeneratedResume] = useState(null);
 
+    /* 
+        When submit button is clicked it capture all data stored in input boxes.
+        Stores responses into a "resume" usestate which is sent to the FASTAPI backend
+        /llm/generate-resume endpoint.
+            SUCCESFUL: Once resume in JSON format is recieved from backend update
+            "generatedResume" usestate. This data will be used to create a resume
+            using JAKE's template.
+
+            FAILED: Console log a standard error.
+    */
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Passed this..")
+        // console.log("Passed this") // used for dev logs
 
         const payload = {
-            resume: resume, // "resume" basemodel obj(models.py)
-        }
+            resume: resume,
+        };
 
-        const response = await fetch("http://localhost:8000/llm/generate-resume", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload),
-        });
+        try {
+            const response = await fetch("http://localhost:8000/llm/generate-resume", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+            });
 
-        if (!response.ok) {
-            console.error("Failed to generate resume", data);
-            return;
+            const data = await response.json();
+            // console.log(data) // used for dev logs
+            setGeneratedResume(data);
+            // console.log(data) // used for dev logs
+        } catch (err) {
+            console.error("Error submitting resume:", err);
         }
-        const data = await response.json();
-        console.log(data);
     };
-  
+
+    // The actual UI React component for all questions, input boxes, and submit button
     return (
         <div id="form-page">
             <h1>Resume Maker</h1>
-                <form id="resume-form" onClick={handleSubmit}>
+                <form id="resume-form" onSubmit={handleSubmit}>
                     {/* Basic Information */}
                     <h2>Basic Information</h2>
                     <div className="card">
@@ -511,6 +538,14 @@ function Form() {
 
                     <button type="submit">Submit Resume</button>
                 </form>
+                                
+                {/* Once "generate" usestate updates this will generate a resume at bottom of page */}
+                {generatedResume && (
+                <>
+                    <hr />
+                    <ResumePreview resume={generatedResume.resume} />
+                </>
+                )}
         </div>
     );
 }

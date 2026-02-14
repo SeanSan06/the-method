@@ -245,3 +245,15 @@ Return ONLY valid JSON matching this schema:
 
 Do not include markdown, explanations, or code fences outside the JSON. Return only the JSON object.
 """
+
+PARSING_PROMPT = f"""
+You are a Resume Parser. I will give you raw text extracted from a PDF. 
+Your job is to extract the relevant details and return them EXACTLY in this JSON format:
+
+{RESUME_SCHEMA}
+
+Rules:
+1. If you cannot find a specific field, use null or an empty list [].
+2. Do not invent information; only extract what is in the text.
+3. Standardize all dates to 'Month Year' (e.g., 'Jan 2024').
+"""

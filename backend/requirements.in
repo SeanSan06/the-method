@@ -2,3 +2,4 @@ fastapi[standard]
 groq
 sqlalchemy
 psycopg2-binary
+pypdf
