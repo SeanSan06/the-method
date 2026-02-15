@@ -61,7 +61,10 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: whitesmoke;
 }
+
+
 
 .steps-box {
     width: 260px; 
@@ -71,12 +74,12 @@
     max-width: 260px;
     min-width: 250px;
     min-height: 320px;
-    background-color: white;
+    background-color: whitesmoke;
     padding: 30px;
     border-radius: 15px;
-    border: 1px solid #ddd;
+    border: 3px;
     text-align: left;
-    
+    background-color: #A3DFF7;
 }
 
 /*
