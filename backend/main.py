@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+import os
 
 from llm.client import chat
 from llm.prompts import RESUME_SYSTEM_PROMPT
@@ -52,8 +53,8 @@ async def chat_endpoint(request: ResumeRequest):
         raise HTTPException(status_code=500, detail=response)
 
     return {"response": response}
-  
-  
+
+
 
 @app.post('/llm/generate-resume')
 async def generate_resume_endpoint(request: GenerateResumeRequest):
@@ -78,7 +79,7 @@ async def generate_resume_endpoint(request: GenerateResumeRequest):
     # return http response
     return {"resume": enhanced_resume}
 
-  
+
 
 @app.post('/llm/optimize-resume')
 async def optimize_resume_endpoint(request: OptimizeResumeRequest):
@@ -123,7 +124,7 @@ async def analyze_resume_endpoint(request: AnalyzeResumeRequest):
         })
 
         return result.to_dict()
-    
+
     except ValidationError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
