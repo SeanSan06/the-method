@@ -2,17 +2,17 @@ function HowItWorks() {
     return (
         <div>
                 <h1 id="how-it-works-title"> 
-                    How The Method Works 
+                    How The <span id = "how-it-works-method-section">Method</span> Works 
                 </h1>
                 <p id="how-it-works-caption">
                     Four simple steps to your next career move
                 </p>
             <div id="whole-box">
-                <div class = "steps-box">
-                    <h2>
+                <div className = "steps-box">
+                    <h2 class = "box-number">
                         01
                     </h2>
-                    <h2>
+                    <h2 class = "box-title">
                         Resume Upload & Feedback
                     </h2>
                     <p>
@@ -20,11 +20,11 @@ function HowItWorks() {
                     </p>
                 </div>
 
-                <div class = "steps-box">
-                    <h2>
+                <div className = "steps-box">
+                    <h2 class = "box-number">
                         02
                     </h2>
-                    <h2>
+                    <h2 class = "box-title">
                         Interview Prep
                     </h2>
                     <p>
@@ -32,11 +32,11 @@ function HowItWorks() {
                     </p>
                 </div>
             
-                <div class = "steps-box">
-                    <h2>
+                <div className = "steps-box">
+                    <h2 class = "box-number">
                         03
                     </h2>
-                    <h2>
+                    <h2 class = "box-title">
                         Job Applications
                     </h2>
                     <p>
@@ -44,11 +44,11 @@ function HowItWorks() {
                     </p>
                 </div>
 
-                <div class = "steps-box">
-                    <h2>
+                <div className = "steps-box">
+                    <h2 class = "box-number">
                         04
                     </h2>
-                    <h2>
+                    <h2 class = "box-title">
                         Progress Tracking
                     </h2>
                     <p>
