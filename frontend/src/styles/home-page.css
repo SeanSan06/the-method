@@ -30,12 +30,13 @@
         cursor: pointer;
         font-size: 2rem;
 
-        background-color: skyblue;
+        background-color: var(--main-accent-color);
     }
 
     #make-resume:active {
-        background-color: rgb(125, 196, 225);
         transform: scale(0.95);
+
+        background-color: var(--main-accent-color-activte);
     }
 
 /* HowItWorks Area */
@@ -91,7 +92,7 @@
     align-items: center;
     height: 48rem;
 
-    background-color: rgb(222, 222, 222);
+    background-color: var(--review-area-main-color);
 }
 
 #review-header {
@@ -124,8 +125,8 @@
     height: 24rem;
     border-radius: 32px;
 
-    border: 4px lightgray solid;
-    background-color: whitesmoke;
+    border: 4px var(--box-border-color) solid;
+    background-color: var(--tinted-bg-color);
 }
 
 #review-card-1 p, #review-card-2 p, #review-card-3 p {
@@ -154,7 +155,7 @@
     justify-content: space-around;
     margin: 0px;
 
-    background-color: white;
+    background-color: var(--true-bg-color);
 }
 
 #copyright {
@@ -164,5 +165,5 @@
     margin: 0px;
     padding: 16px;
 
-    background-color: white;
+    background-color: var(--true-bg-color);
 }

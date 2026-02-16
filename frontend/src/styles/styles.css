@@ -1,3 +1,28 @@
+/* website colors(only put colors that are broad/apart of the theme here) */
+/* Default Light */
+:root {
+    --tinted-bg-color: whitesmoke;
+    --text-color: black;
+    --card-bg: white;
+    --true-bg-color: white;
+    --main-accent-color: skyblue;
+    --main-accent-color-activte: rgb(125, 196, 225);
+    --box-border-color: lightgray;
+    --review-area-main-color: rgb(222, 222, 222);
+    --input-bg-color: lightgray;
+    --input-border-color: #ccc;
+    --input-focus-border-color: skyblue;
+    --input-box-shadow-color: rgba(135, 206, 235, 0.35);
+}
+
+/* Dark Mode(WIP)
+[data-theme="dark"] {
+    --tinted-bg-color: red;
+    --text-color: red;
+    --card-bg: red;
+} */
+
+
 /* html, body, and root defaults & standardizing */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -9,8 +34,8 @@
   -moz-osx-font-smoothing: grayscale;
 
   color-scheme: light dark;
-  color: black;
-  background-color: white;
+  color: var(--text-color);
+  background-color: var(--tinted-bg-color);
 }
 
 * {
@@ -24,7 +49,7 @@ html, body, #root {
     margin: 0;
     padding: 0;
 
-    background-color: whitesmoke;
+    background-color: var(--tinted-bg-color);
 }
 
 /* Navigation bar area */
@@ -38,7 +63,7 @@ nav {
     margin: 0;
     padding: 0;
 
-    background-color: whitesmoke;
+    background-color: var(--tinted-bg-color);
     color: black;
     border-bottom: solid 2px skyblue;
 }
@@ -46,7 +71,7 @@ nav {
     #nav-bar h2 {
         font-size: 3rem;
 
-        background-color: whitesmoke;
+        background-color: var(--tinted-bg-color);
     }
 
     #nav-bar-links {
@@ -61,7 +86,7 @@ nav {
         gap: 40px;
         font-size: 1.5rem;
 
-        background-color: whitesmoke;
+        background-color: var(--tinted-bg-color);
     }
 
         #nav-bar-links li a {
@@ -71,7 +96,7 @@ nav {
 
         #nav-bar-links li a.active-link {
             font-weight: bold;
-            border-bottom: 3px solid skyblue;
+            border-bottom: 3px solid var(--main-accent-color);
         }
 
     #log-in-sign-up {
@@ -84,7 +109,7 @@ nav {
         flex-direction: row;
         gap: 8px;
 
-        background-color: whitesmoke;
+        background-color: var(--tinted-bg-color);
     }
 
     #log-in-sign-up button {
@@ -95,16 +120,16 @@ nav {
         cursor: pointer;
         text-align: center;
 
-        background-color: skyblue;
+        background-color: var(--main-accent-color);
     }
 
     #log-in-sign-up button:active {
         transform: scale(0.95);
 
-        background-color: rgb(125, 196, 225);
+        background-color: var(--main-accent-color-activte);
     }
 
 /* The Method Accent Color */
 .method-word {
-    color: skyblue;
+    color: var(--main-accent-color);
 }

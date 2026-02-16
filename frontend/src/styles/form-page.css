@@ -31,7 +31,7 @@
     margin-top: 2rem;
     margin-bottom: 0.5rem;
 
-    color: skyblue;
+    color: var(--text-color);
 }
 
 /* Reusable card */
@@ -43,8 +43,8 @@
     padding: 1.75rem;
     border-radius: 10px;
 
-    background-color: #fafafa;
-    border: 1px solid #e0e0e0;
+    border: 4px var(--box-border-color) solid;
+    background-color: var(--true-bg-color);
 }
 
 /* Labels */
@@ -55,7 +55,7 @@ label {
     font-size: 1.5rem;
     font-weight: 500;
 
-    color: #333;
+    color: var(--text-color)
 }
 
 /* Inputs */
@@ -68,9 +68,9 @@ textarea {
     font-size: 1.5rem;
     border-radius: 8px;
 
-    border: 1px solid #ccc;
-    background-color: lightgray;
-    color: black;
+    border: 1px solid var(--input-border-color);
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
 }
 
 /* Checkbox */
@@ -90,8 +90,8 @@ input:focus,
 textarea:focus {
     outline: none;
     
-    border-color: skyblue;
-    box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.35);
+    border-color: var(--input-focus-border-color);
+    box-shadow: 0 0 0 10px var(--input-box-shadow-color);
 }
 
 /* Submit button */
@@ -104,16 +104,20 @@ button[type="submit"] {
     border-radius: 10px;
     cursor: pointer;
 
-    background-color: skyblue;
-    color: black;
+    background-color: var(--main-accent-color);
+    color: var(text-color);
 }
 
 button[type="submit"]:active {
     transform: scale(0.97);
+
+    background-color: var(--main-accent-color-activte);
 }
 
 
-/* ResumePreview CSS(TEMP) */
+
+
+/* ResumePreview CSS(TEMP/Do not change colors to CSS variables) */
 /* Page sizing (A4) and base typography */
 /* ===== Resume Layout (Letter Size) ===== */
 .resume-wrapper {
@@ -126,13 +130,13 @@ button[type="submit"]:active {
     width: 8.5in;
     min-height: 11in;
     padding: 0.7in 0.75in;
-    background: white;
+    background: var(--true-bg-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 
     font-family: "Times New Roman", Times, serif;
     font-size: 11pt;
     line-height: 1.25;
-    color: black;
+    color: var(--text-color);
 }
 
 /* ===== Header ===== */
@@ -214,7 +218,9 @@ section h2 {
 }
 
   .add-section-form-button:active {
-      transform: scale(0.97);
+    transform: scale(0.95);
+
+    background-color: var(--main-accent-color-activte);
   }
 
 /* Italics for positions / majors */

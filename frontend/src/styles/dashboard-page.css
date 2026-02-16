@@ -18,8 +18,8 @@
     margin: 0px;
     border-radius: 16px;
 
-    border: 2px solid lightgray;
-    background-color: white;
+    border: 2px solid var(--box-border-color);
+    background-color: var(--true-bg-color);
 }
 
 #inside-border-dashes {
@@ -33,8 +33,8 @@
     margin: 0px;
     border-radius: 16px;
 
-    border: 2px dashed lightgray;
-    background-color: white;
+    border: 2px dashed var(--box-border-color);
+    background-color: var(--true-bg-color);
 }
 
 #file-upload-icon {
@@ -70,13 +70,13 @@
         cursor: pointer;
         text-align: center;
 
-        background-color: skyblue;
+        background-color: var(--main-accent-color);
     }
 
         #inside-border-dashes button:active {
             transform: scale(0.95);
 
-            background-color: rgb(125, 196, 225);
+            background-color: var(--main-accent-color-activte);
         }
 
 #supported-formats-caption {
