@@ -39,17 +39,35 @@
     }
 
 /* HowItWorks Area */
+
+/*empty css is temp stuff for experimenting*/
+p {
+    
+}
+
+.box-title {
+    
+}
+
+.box-number {
+   
+}
+
+#how-it-works-method-section {
+    display: inline;
+    color: skyblue;
+}
+
 #how-it-works-title{
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
 }
 #how-it-works-caption {
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
+    color: skyblue;
 }
 
 #whole-box {
@@ -79,7 +97,7 @@
     border-radius: 15px;
     border: 3px;
     text-align: left;
-    background-color: #A3DFF7;
+    background-color: #dbdbdb;
 }
 
 /*
