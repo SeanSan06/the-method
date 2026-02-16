@@ -96,7 +96,7 @@ p {
     padding: 30px;
     border-radius: 15px;
     border: 3px;
-    border-style:double;
+    border-style:dashed;
     border-color: skyblue;
     text-align: left;
     background-color: #dbdbdb;
