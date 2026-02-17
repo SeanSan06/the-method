@@ -29,13 +29,11 @@
         border-radius: 10px;
         cursor: pointer;
         font-size: 2rem;
-
         background-color: var(--main-accent-color);
     }
 
     #make-resume:active {
         transform: scale(0.95);
-
         background-color: var(--main-accent-color-activte);
     }
 
@@ -48,6 +46,7 @@
     text-align: center;
     margin-top: 2rem;
 }
+
 #how-it-works-caption {
     display: flex;
     flex-direction:column;
@@ -75,7 +74,6 @@
     max-width: 260px;
     min-width: 250px;
     min-height: 320px;
-    background-color: whitesmoke;
     padding: 30px;
     border-radius: 15px;
     border: 3px;
@@ -90,7 +88,7 @@
     .steps-box:hover {
         transform: translateY(-10px); /* Lifts the box up */
         background-color: #eef8ff;    /* Shifts to a very light blue on hover */
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds a soft shadow */
+        box-shadow: 0 10px 20px rgb(0 0 0 / 15%); /* Adds a soft shadow */
         cursor: pointer;              /* Shows the user it's interactive */
     }
 
@@ -101,20 +99,19 @@
     justify-content: center;
     align-items: center;
     height: 48rem;
-
     background-color: var(--review-area-main-color);
 }
 
 #review-header {
     font-size: 4rem;
     margin: 8px;
-    padding: 0px;
+    padding: 0;
 }
 
 #review-caption {
     font-size: 2rem;
     margin: 8px;
-    padding: 0px;
+    padding: 0;
 }
 
 #review-cards-area {
@@ -129,12 +126,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    margin: 0px;
+    margin: 0;
     padding: 24px;
     width: 36rem;
     height: 24rem;
     border-radius: 32px;
-
     border: 4px var(--box-border-color) solid;
     background-color: var(--tinted-bg-color);
 }
@@ -144,18 +140,15 @@
 }
 
 .reivew-quote {
-    margin-top: 32px;
-    margin-bottom: 32px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: 32px 0;
 }
 
 .reivew-name {
-    margin: 0px;
+    margin: 0;
 }
 
 .reivew-job {
-    margin: 0px;
+    margin: 0;
 }
 
 /* Footer Area */
@@ -163,8 +156,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 0px;
-
+    margin: 0;
     background-color: var(--true-bg-color);
 }
 
@@ -172,8 +164,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0px;
+    margin: 0;
     padding: 16px;
-
     background-color: var(--true-bg-color);
 }

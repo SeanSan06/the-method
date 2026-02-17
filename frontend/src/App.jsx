@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 import HomePage from './pages/HomePage';
@@ -13,6 +12,7 @@ import './styles/form-page.css'
 import './styles/dashboard-page.css'
 import './styles/about-page.css'
 import './styles/contact-page.css'
+import './styles/specific-component/resume-template.css'
 
 // Defines what Page Component appears for each of the 5 webpages 
 // based on the current path
