@@ -1,4 +1,4 @@
-name: Frontend Build(NPM)
+name: Frontend Build (NPM)
 
 on:
   pull_request:
@@ -7,12 +7,8 @@ on:
     branches: ["main"]
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-
   build:
     runs-on: ubuntu-latest
-    needs: lint
 
     defaults:
       run:
