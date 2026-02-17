@@ -7,6 +7,8 @@
     "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:all": "npm run lint && npm run lint:css",
     "preview": "vite preview"
   },
   "dependencies": {
