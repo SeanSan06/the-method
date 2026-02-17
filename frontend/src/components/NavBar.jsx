@@ -1,10 +1,7 @@
-import { useNavigate } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 
 
 function NavBar() {
-    const navigate = useNavigate()
-
     return  (
         <nav href="/" id="nav-bar">
             <h2 id="the-method">The <span class="method-word">Method</span></h2>

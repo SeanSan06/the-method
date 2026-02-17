@@ -1,18 +1,31 @@
 /* website colors(only put colors that are broad/apart of the theme here) */
-/* Default Light */
+
+/* Default Light Mode
+Also sets html, body, and root defaults & standardized stylings */
 :root {
     --tinted-bg-color: whitesmoke;
     --text-color: black;
     --card-bg: white;
     --true-bg-color: white;
     --main-accent-color: skyblue;
-    --main-accent-color-activte: rgb(125, 196, 225);
+    --main-accent-color-activte: rgb(125 196 225);
     --box-border-color: lightgray;
-    --review-area-main-color: rgb(222, 222, 222);
+    --review-area-main-color: rgb(222 222 222);
     --input-bg-color: lightgray;
     --input-border-color: #ccc;
     --input-focus-border-color: skyblue;
-    --input-box-shadow-color: rgba(135, 206, 235, 0.35);
+    --input-box-shadow-color: rgb(135 206 235 / 35%);
+
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color-scheme: light dark;
+    color: var(--text-color);
+    background-color: var(--tinted-bg-color);
 }
 
 /* Dark Mode(WIP)
@@ -22,21 +35,6 @@
     --card-bg: red;
 } */
 
-
-/* html, body, and root defaults & standardizing */
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  color-scheme: light dark;
-  color: var(--text-color);
-  background-color: var(--tinted-bg-color);
-}
 
 * {
     box-sizing: border-box;
@@ -48,7 +46,6 @@ html, body, #root {
     flex: 1 0 0;
     margin: 0;
     padding: 0;
-
     background-color: var(--tinted-bg-color);
 }
 
@@ -62,15 +59,14 @@ nav {
     height: 5rem;
     margin: 0;
     padding: 0;
-
     background-color: var(--tinted-bg-color);
     color: black;
     border-bottom: solid 2px skyblue;
 }
+
     /* Navigation bar sub areas */
     #nav-bar h2 {
         font-size: 3rem;
-
         background-color: var(--tinted-bg-color);
     }
 
@@ -81,11 +77,10 @@ nav {
         align-items: center;
         width: 48rem;
         list-style-type: none;
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
         gap: 40px;
         font-size: 1.5rem;
-
         background-color: var(--tinted-bg-color);
     }
 
@@ -108,7 +103,6 @@ nav {
         align-items: center;
         flex-direction: row;
         gap: 8px;
-
         background-color: var(--tinted-bg-color);
     }
 
@@ -119,13 +113,11 @@ nav {
         border-radius: 4px;
         cursor: pointer;
         text-align: center;
-
         background-color: var(--main-accent-color);
     }
 
     #log-in-sign-up button:active {
         transform: scale(0.95);
-
         background-color: var(--main-accent-color-activte);
     }
 

@@ -1,0 +1,171 @@
+/* ResumePreview CSS(TEMP/Do not change colors to CSS variables)
+   Page sizing (A4) and base typography
+   ===== Resume Layout (Letter Size) ===== */
+.resume-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.resume-page {
+    width: 8.5in;
+    min-height: 11in;
+    padding: 0.7in 0.75in;
+    background: var(--true-bg-color);
+    box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 11pt;
+    line-height: 1.25;
+    color: var(--text-color);
+}
+
+
+/* ===== Header ===== */
+.resume-header h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.resume-header p {
+    font-size: 11pt;
+    margin-top: 4px;
+}
+
+
+/* ===== Section Titles ===== */
+section h2 {
+    font-size: 12.5pt;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+section {
+    margin-top: 14px;
+}
+
+
+/* ===== Resume Blocks ===== */
+.resume-block {
+    margin-bottom: 8px;
+}
+
+/* Row alignment like LaTeX tabular* */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.row strong {
+    font-weight: bold;
+}
+
+.row.sub {
+    font-size: 10.5pt;
+    margin-top: 1px;
+}
+
+/* Line to break up sub-sections */
+.resume-hr-between-sections {
+    border: none;
+    border-top: 2px solid skyblue;
+    margin: 1.5rem 0;
+}
+
+/* Buttons that add a new section */
+.add-section-form-button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    width: 35%;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: skyblue;
+    color: black;
+}
+
+  .add-section-form-button:active {
+    transform: scale(0.95);
+    background-color: var(--main-accent-color-activte);
+  }
+
+/* Italics for positions / majors */
+.row.sub em {
+    font-style: italic;
+}
+
+
+/* ===== Paragraph Text ===== */
+.resume-page p {
+    margin: 4px 0;
+}
+
+
+/* ===== Lists (Bullet Points) ===== */
+ul {
+    margin: 4px 0 4px 18px;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 3px;
+}
+
+
+/* ===== Skills Line ===== */
+.skills {
+    margin-top: 4px;
+}
+
+
+/* ===== Links Styling ===== */
+.resume-header a,
+.resume-page a {
+    text-decoration: none;
+    color: black;
+}
+
+.resume-header a:hover,
+.resume-page a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===== Tighten Certifications & Awards ===== */
+section .resume-block strong {
+    display: block;
+}
+
+
+/* ===== Print Optimization ===== */
+@media print {
+    body {
+        background: white;
+    }
+
+    .resume-wrapper {
+        margin: 0;
+    }
+
+    .resume-page {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        min-height: auto;
+    }
+}

@@ -15,9 +15,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0px;
+    margin: 0;
     border-radius: 16px;
-
     border: 2px solid var(--box-border-color);
     background-color: var(--true-bg-color);
 }
@@ -30,9 +29,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0px;
+    margin: 0;
     border-radius: 16px;
-
     border: 2px dashed var(--box-border-color);
     background-color: var(--true-bg-color);
 }
@@ -44,22 +42,18 @@
 
 #upload-new-resume {
     font-size: 2rem;
-    margin: 8px 0px;
+    margin: 8px 0;
 }
 
 #upload-file-button-div-wrapper {
     font-size: 2rem;
-    margin: 8px 0px 8px 0px;
-    padding: 0px;
+    margin: 8px 0;
+    padding: 0;
 }
 
 #drag-and-drop-caption {
-    margin: 8px 0px 8px 0px;
-    padding: 0px;
-}
-
-#upload-file-button-div-wrapper {
-    margin: 8px 0px 8px 0px;
+    margin: 8px 0;
+    padding: 0;
 }
 
     #inside-border-dashes button {
@@ -69,17 +63,15 @@
         border-radius: 16px;
         cursor: pointer;
         text-align: center;
-
         background-color: var(--main-accent-color);
     }
 
         #inside-border-dashes button:active {
             transform: scale(0.95);
-
             background-color: var(--main-accent-color-activte);
         }
 
 #supported-formats-caption {
-    margin: 8px 0px 8px 0px;
-    padding: 0px;
+    margin: 8px 0;
+    padding: 0;
 }
