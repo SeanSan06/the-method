@@ -39,21 +39,6 @@
         background-color: var(--main-accent-color-activte);
     }
 
-/* HowItWorks Area */
-
-/*empty css is temp stuff for experimenting*/
-p {
-    
-}
-
-.box-title {
-    
-}
-
-.box-number {
-   
-}
-
 #how-it-works-method-section {
     display: inline;
     color: skyblue;
@@ -83,12 +68,9 @@ p {
     background-color: whitesmoke;
 }
 
-
-
 .steps-box {
     width: 260px; 
     height: 300px; 
-
     flex: 0 1 260px; 
     max-width: 260px;
     min-width: 250px;
@@ -105,29 +87,12 @@ p {
     will-change: transform;
 }
 
-.steps-box:hover {
-    transform: translateY(-10px); /* Lifts the box up */
-    background-color: #eef8ff;    /* Shifts to a very light blue on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds a soft shadow */
-    cursor: pointer;              /* Shows the user it's interactive */
-}
-
-/*
-#upper-box {
-    display: flex;
-    flex-direction: row;
-    gap: 75px;
-    justify-content: space-evenly;
-}
-
-#lower-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    justify-content: space-around;
-    gap:
-}
-*/
+    .steps-box:hover {
+        transform: translateY(-10px); /* Lifts the box up */
+        background-color: #eef8ff;    /* Shifts to a very light blue on hover */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds a soft shadow */
+        cursor: pointer;              /* Shows the user it's interactive */
+    }
 
 /* Reviews Area */
 #reviews-area {
