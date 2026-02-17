@@ -1,9 +1,26 @@
 # The Method
 A website that allows users to create, optimize, practice behavioral interviews, and apply for jobs all in one place.
 
+## Tech Stack
+<h3 style="margin-bottom: 5px;">Frontend</h3>
+
+- React
+- CSS
+
+<h3 style="margin-bottom: 5px;">Backend</h3>
+
+- Python + FastAPI
+- PostgreSQL + SQLAlchemy
+
+<h3 style="margin-bottom: 5px;">DevOps</h3>
+
+- GitHub Actions for CI/CD
+- Docker
+
+
 ## Deploy the website
 ### App can be deployed via 4 method(3 with Docker & 1 with npm):
-  - (1), (2), & (3): Testing frontend & backend logic, up to preference:\
+  - (1), (2), & (3): Testing frontend & backend logic, up to preference:
   - (4): Designing just frontend
   * **(1) Detached Mode (Recommended):**\
       Frees up your terminal so you can keep working while the app runs in the background.
@@ -43,8 +60,8 @@ A website that allows users to create, optimize, practice behavioral interviews,
 
 ## Use Linter
 ### Linters can help ensure code is styled properly, no unused variables, comments are properly placed, etc.
-#### Frontend: There are 2 linters you can run. One is for jsx and the other is for CSS. Alternatively you can run both linters at the same time. After running there will either be no errors or errors. If there are errors you must fix them.
-- First install all depencies so you can run the linter:
+#### Frontend: There are 3 linters you can run. One is for jsx and the other is for CSS. Alternatively, you can use the 3rd approach which runs both linters at the same time. After running there will either be no errors or errors. If there are errors you must fix them.
+- (0) First install all depencies so you can run the linter:
 ```
     npm ci
 ```
@@ -59,13 +76,10 @@ A website that allows users to create, optimize, practice behavioral interviews,
     npm run lint:css
 ```
 
-- Run both: This will run the previous 2 commands for you.
+- (3) Run both: This will run the previous 2 commands for you.
 ```
     npm run lint:all
 ```
-
-
-#### Backend(WIP):
 
 ## Credits
 - GROQ for AI models
