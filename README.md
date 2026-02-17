@@ -41,5 +41,31 @@ A website that allows users to create, optimize, practice behavioral interviews,
       docker compose down -v
       ```
 
+## Use Linter
+### Linters can help ensure code is styled properly, no unused variables, comments are properly placed, etc.
+#### Frontend: There are 2 linters you can run. One is for jsx and the other is for CSS. Alternatively you can run both linters at the same time. After running there will either be no errors or errors. If there are errors you must fix them.
+- First install all depencies so you can run the linter:
+```
+    npm ci
+```
+
+- (1) Eslint(jsx): This runs the linter for jsx code.
+```
+    npm run lint
+```
+
+- (2) stylelint(CSS): This runs the linter for CSS styling
+```
+    npm run lint:css
+```
+
+- Run both: This will run the previous 2 commands for you.
+```
+    npm run lint:all
+```
+
+
+#### Backend(WIP):
+
 ## Credits
 - GROQ for AI models
