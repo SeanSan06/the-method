@@ -1,8 +1,10 @@
 # The Method
-A web site that allows users to create, edit, practice interviews, and apply for jobs all in one place.
+A website that allows users to create, optimize, practice behavioral interviews, and apply for jobs all in one place.
 
 ## Deploy the website
 ### App can be deployed via 4 method(3 with Docker & 1 with npm):
+  - (1), (2), & (3): Testing frontend & backend logic, up to preference:\
+  - (4): Designing just frontend
   * **(1) Detached Mode (Recommended):**\
       Frees up your terminal so you can keep working while the app runs in the background.
       ```
@@ -28,9 +30,9 @@ A web site that allows users to create, edit, practice interviews, and apply for
       npm run dev
       ```
 
-  - This will run the website on `localhost:5173`
-  - The api on `localhost:8000`
-  - The docs on `localhost:8000/docs`
+  - The website runs on `localhost:5173`
+  - The api runs on `localhost:8000`(Nothing will return here, this is now just an API)
+  - The docs runs on `localhost:8000/docs`
 
 ### App can be taken down using this method:
   * **Take down deployed containers:**\

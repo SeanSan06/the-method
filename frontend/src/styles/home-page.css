@@ -30,28 +30,14 @@
         cursor: pointer;
         font-size: 2rem;
 
-        background-color: skyblue;
+        background-color: var(--main-accent-color);
     }
 
     #make-resume:active {
-        background-color: rgb(125, 196, 225);
         transform: scale(0.95);
+
+        background-color: var(--main-accent-color-activte);
     }
-
-/* HowItWorks Area */
-
-/*empty css is temp stuff for experimenting*/
-p {
-    
-}
-
-.box-title {
-    
-}
-
-.box-number {
-   
-}
 
 #how-it-works-method-section {
     display: inline;
@@ -82,12 +68,9 @@ p {
     background-color: whitesmoke;
 }
 
-
-
 .steps-box {
     width: 260px; 
     height: 300px; 
-
     flex: 0 1 260px; 
     max-width: 260px;
     min-width: 250px;
@@ -104,29 +87,12 @@ p {
     will-change: transform;
 }
 
-.steps-box:hover {
-    transform: translateY(-10px); /* Lifts the box up */
-    background-color: #eef8ff;    /* Shifts to a very light blue on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds a soft shadow */
-    cursor: pointer;              /* Shows the user it's interactive */
-}
-
-/*
-#upper-box {
-    display: flex;
-    flex-direction: row;
-    gap: 75px;
-    justify-content: space-evenly;
-}
-
-#lower-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    justify-content: space-around;
-    gap:
-}
-*/
+    .steps-box:hover {
+        transform: translateY(-10px); /* Lifts the box up */
+        background-color: #eef8ff;    /* Shifts to a very light blue on hover */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Adds a soft shadow */
+        cursor: pointer;              /* Shows the user it's interactive */
+    }
 
 /* Reviews Area */
 #reviews-area {
@@ -136,7 +102,7 @@ p {
     align-items: center;
     height: 48rem;
 
-    background-color: rgb(222, 222, 222);
+    background-color: var(--review-area-main-color);
 }
 
 #review-header {
@@ -169,8 +135,8 @@ p {
     height: 24rem;
     border-radius: 32px;
 
-    border: 4px lightgray solid;
-    background-color: whitesmoke;
+    border: 4px var(--box-border-color) solid;
+    background-color: var(--tinted-bg-color);
 }
 
 #review-card-1 p, #review-card-2 p, #review-card-3 p {
@@ -199,7 +165,7 @@ p {
     justify-content: space-around;
     margin: 0px;
 
-    background-color: white;
+    background-color: var(--true-bg-color);
 }
 
 #copyright {
@@ -209,5 +175,5 @@ p {
     margin: 0px;
     padding: 16px;
 
-    background-color: white;
+    background-color: var(--true-bg-color);
 }
