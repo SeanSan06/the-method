@@ -1,6 +1,7 @@
+How to use: Place an "x" inside the brakets like "[x]" to checkmark them. Do not do "[ x ]" (Delete this line before submitting your comment for this PR).
 # Description
 
-Please include a summary of the changes and the related issue (Replace this line with your answer).  
+Please include a summary of the changes and the related issue. (Replace this line with your answer).  
 
 # Type of Change
 
