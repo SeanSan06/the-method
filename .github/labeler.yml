@@ -1,0 +1,8 @@
+frontend:
+  - "frontend/**"
+backend:
+  - "backend/**"
+docs:
+  - "README.md"
+ci:
+  - ".github/workflows/**"
