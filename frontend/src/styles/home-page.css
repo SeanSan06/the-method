@@ -52,7 +52,7 @@
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    color: var(--main-accent-color);
+    color: var(--text-color);
 }
 
 #whole-box {
@@ -77,7 +77,7 @@
     padding: 30px;
     border-radius: 15px;
     border: 3px;
-    border-style:dashed;
+    border-style: solid;
     border-color: var(--main-accent-color);
     text-align: left;
     background-color: var(--tinted-card-bg);

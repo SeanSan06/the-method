@@ -1,25 +1,37 @@
-/* website colors(only put colors that are broad/apart of the theme here) */
-
-/* Default Light Mode
-Also sets html, body, and root defaults & standardized stylings */
+/* Light Mode & Dark Mode colors variables.
+   Also sets html, body, and root defaults & standardized stylings. */
 :root {
-    --true-bg-color: white;
-    --tinted-bg-color: whitesmoke;
-    --text-color: black;
-    --card-bg: white;
-    --card-bg-hover: whitesmoke;
-    --tinted-card-bg: lightgray;
-    --tinted-card-bg-hover: lightgray;
-    --tinted-card-shadowcolor-hover: rgb(0 0 0 / 15%);
-    --main-accent-color: skyblue;
-    --main-accent-color-activte: rgb(125 196 225);
-    --box-border-color: lightgray;
-    --review-area-main-color: rgb(222 222 222);
-    --input-bg-color: lightgray;
-    --input-border-color: #ccc;
-    --input-focus-border-color: skyblue;
-    --input-box-shadow-color: rgb(135 206 235 / 35%);
+    /* Backgrounds */
+    --true-bg-color: #ffffff;
+    --tinted-bg-color: #f7f8fa;
 
+    /* Text */
+    --text-color: #1e1e1e;
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-bg-hover: #f0f3f7;
+    --tinted-card-bg: #f4f6f8;
+    --tinted-card-bg-hover: #e8ebf0;
+    --tinted-card-shadowcolor-hover: rgba(0, 0, 0, 0.1);
+
+    /* Accent colors */
+    --main-accent-color: #4aa5ff;
+    --main-accent-color-activte: #3390e6;
+
+    /* Borders */
+    --box-border-color: #d1d5db;
+
+    /* Review/secondary areas */
+    --review-area-main-color: #e2e8f0;
+
+    /* Inputs */
+    --input-bg-color: #f2f4f7;
+    --input-border-color: #cbd5e1;
+    --input-focus-border-color: #4aa5ff;
+    --input-box-shadow-color: rgba(74, 165, 255, 0.25);
+
+    /* Styling */
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
@@ -34,29 +46,43 @@ Also sets html, body, and root defaults & standardized stylings */
 
 /* Dark Mode(WIP) */
 [data-theme="dark"] {
+    /* Backgrounds */
     --true-bg-color: #121212;
     --tinted-bg-color: #1e1e1e;
+    
+    /* Text */
     --text-color: #ffffff;
+
+    /* Cards */
     --card-bg: #1f1f1f;
     --card-bg-hover: #2a2a2a;
     --tinted-card-bg: #2a2a2a;
     --tinted-card-bg-hover: #333;
     --tinted-card-shadowcolor-hover: rgb(0 0 0 / 40%);
+
+    /* Accent colors */
     --main-accent-color: #4ea8ff;
     --main-accent-color-activte: #3c8ed6;
+
+    /* Borders */
     --box-border-color: #333;
+
+    /* Review/secondary areas */
     --review-area-main-color: #2a2a2a;
+
+    /* Inputs */
     --input-bg-color: #2a2a2a;
     --input-border-color: #444;
     --input-focus-border-color: #4ea8ff;
     --input-box-shadow-color: rgb(78 168 255 / 35%);
 }
 
-
+/* Global stylings */
 * {
     box-sizing: border-box;
 }
 
+/* More global stylings */
 html, body, #root {
     min-width: 100%;
     min-height: 100%;

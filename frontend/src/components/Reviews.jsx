@@ -23,7 +23,7 @@ function Star({ fillPercent = 100, size = 40 }) {
             {/* Filled star */}
             <path
                 d="M12 2l2.9 6.3 6.9.6-5.2 4.5 1.6 6.6L12 16.9 5.8 20l1.6-6.6L2.2 8.9l6.9-.6L12 2z"
-                fill="skyblue"
+                fill="var(--main-accent-color)"
                 clipPath={`url(#clip-${fillPercent})`}
             />
             </svg>
