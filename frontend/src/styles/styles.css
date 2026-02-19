@@ -14,6 +14,8 @@
     --tinted-card-bg: #f4f6f8;
     --tinted-card-bg-hover: #e8ebf0;
     --tinted-card-shadowcolor-hover: rgba(0, 0, 0, 0.1);
+    --super-tinted-area-main-color: #e2e8f0;
+    
 
     /* Accent colors */
     --main-accent-color: #4aa5ff;
@@ -21,9 +23,6 @@
 
     /* Borders */
     --box-border-color: #d1d5db;
-
-    /* Review/secondary areas */
-    --review-area-main-color: #e2e8f0;
 
     /* Inputs */
     --input-bg-color: #f2f4f7;

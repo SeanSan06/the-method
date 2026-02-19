@@ -37,6 +37,10 @@
         background-color: var(--main-accent-color-activte);
     }
 
+#how-it-works {
+    background-color: var(--tinted-bg-color);
+}
+    
 #how-it-works-method-section {
     display: inline;
     color: var(--main-accent-color);
@@ -99,7 +103,7 @@
     justify-content: center;
     align-items: center;
     height: 48rem;
-    background-color: var(--review-area-main-color);
+    background-color: var(--super-tinted-area-main-color);
 }
 
 #review-header {
