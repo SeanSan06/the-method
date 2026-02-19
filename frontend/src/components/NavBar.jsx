@@ -51,10 +51,16 @@ function NavBar() {
                     </NavLink>
                 </li>
             </ul>
-            <div id="log-in-sign-up">
-                <button>Log in</button>
-                <button>Sign up</button>
+            <div id="log-in-sign-up-lightdark-toggle">
+                <div id="log-in-sign-up">
+                    <button>Log in</button>
+                    <button>Sign up</button>
+                </div>  
+                <div>
+                    <button id="light-dark-toggle">click me</button>
+                </div>
             </div>
+            
         </nav>
     );
 }
