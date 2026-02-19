@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom'
 
 
-function NavBar() {
+function NavBar({ toggleTheme, theme }) {
     return  (
         <nav href="/" id="nav-bar">
-            <h2 id="the-method">The <span class="method-word">Method</span></h2>
+            <h2 id="the-method">The <span className="method-word">Method</span></h2>
             <ul id="nav-bar-links">
                 <li>
                     <NavLink
@@ -57,7 +57,9 @@ function NavBar() {
                     <button>Sign up</button>
                 </div>  
                 <div id="light-dark-toggle">
-                    <button >Light/Dark</button>
+                    <button onClick={toggleTheme}>
+                        {theme === "light" ? "Dark Mode" : "Light Mode"}
+                    </button>
                 </div>
             </div>
             

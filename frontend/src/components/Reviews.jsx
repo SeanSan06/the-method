@@ -56,38 +56,38 @@ function Reviews() {
                 <div id="review-cards-area">
                     <div id="review-card-1">
                         <Rating value={5} />
-                        <p class="reivew-quote"><i>
+                        <p className="reivew-quote"><i>
                             "I love this website so much! The Method helped me land
                                 a SWE intern position at my dream company!"
                         </i></p>
                         <div>
-                            <p class="reivew-name"><b>-Sean S.</b></p>
-                            <p class="reivew-job">SWE Intern at XYZ</p>
+                            <p className="reivew-name"><b>-Sean S.</b></p>
+                            <p className="reivew-job">SWE Intern at XYZ</p>
                         </div>
                     </div>
 
                     <div id="review-card-2">
                         <Rating value={4.5} />
-                        <p class="reivew-quote"><i>
+                        <p className="reivew-quote"><i>
                             "I just got into FANNG, I am so glad that
                                 The Method exists. It has truly been an amazing tool for my
                                 job search."
                         </i></p>
                         <div>
-                            <p class="reivew-name"><b>-Lien J.</b></p>
-                            <p class="reivew-job">20x Engineer at Google</p>
+                            <p className="reivew-name"><b>-Lien J.</b></p>
+                            <p className="reivew-job">20x Engineer at Google</p>
                         </div>
                     </div>
 
                     <div id="review-card-3">
                         <Rating value={4.75} />
-                        <p class="reivew-quote"><i>
+                        <p className="reivew-quote"><i>
                             "One of the best job prep websites out there.
                                 I cant believe this is free."
                         </i></p>
                         <div>
-                            <p class="reivew-name"><b>-Ved P.</b></p>
-                            <p class="reivew-job">Founder of tech startup</p>
+                            <p className="reivew-name"><b>-Ved P.</b></p>
+                            <p className="reivew-job">Founder of tech startup</p>
                         </div>
                     </div>
                 </div>

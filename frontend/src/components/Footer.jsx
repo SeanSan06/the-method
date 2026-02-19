@@ -3,7 +3,7 @@ function Footer() {
         <div>
             <div id="footer-information-area">
                 <div>
-                    <h2>The <span class="method-word">Method's</span> Moto</h2>
+                    <h2>The <span className="method-word">Method's</span> Moto</h2>
                     <p>Make Every Task Happen, Own Destiny</p>
                 </div>
                 <div>
@@ -32,7 +32,7 @@ function Footer() {
             </div>
             <p id="copyright">
             @2026 The&nbsp;
-            <span class="method-word">Method</span>. All rights reserved.
+            <span className="method-word">Method</span>. All rights reserved.
             </p>
         </div>
     )

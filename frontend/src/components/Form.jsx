@@ -347,7 +347,7 @@ function Form() {
 
                     {resume.experience.map((exp, index) => (
                         <div key={index} className="experience-block">
-                        <h3 class="resume-sub-headers">Experience #{index + 1}</h3>
+                        <h3 className="resume-sub-headers">Experience #{index + 1}</h3>
                         <label>
                             Company
                             <input
@@ -426,7 +426,7 @@ function Form() {
                             />
                         </label>
 
-                        <hr class="resume-hr-between-sections" />
+                        <hr className="resume-hr-between-sections" />
                         </div>
                     ))}
 

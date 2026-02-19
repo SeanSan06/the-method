@@ -7,7 +7,6 @@ import HowItWorks from "../components/HowItWorks";
 function HomePage() {
     return  (
         <div>
-            <NavBar />
             <HeroArea />
             <HowItWorks />
             <Reviews />
