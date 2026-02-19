@@ -112,25 +112,22 @@ nav {
     }
 
     #log-in-sign-up {
-        font-size: 1.25rem;
-        width: 12rem;
-        height: 100%;
         display: flex;
-        justify-content: space-around;
         align-items: center;
-        flex-direction: row;
-        gap: 8px;
-        background-color: var(--tinted-bg-color);
+        gap: 1rem;
+        font-size: 1.1rem;
     }
 
     #log-in-sign-up button {
         all: unset;
-        width: 80%;
-        height: 80%;
-        border-radius: 4px;
+        padding: 0.6rem 1.4rem;   /* controls size */
+        font-size: 1rem;
+        border-radius: 6px;       /* small rounding = rectangle */
         cursor: pointer;
         text-align: center;
         background-color: var(--main-accent-color);
+        color: var(--text-color);
+        display: inline-block;
     }
 
     #log-in-sign-up button:active {
@@ -138,14 +135,16 @@ nav {
         background-color: var(--main-accent-color-activte);
     }
 
+
     #light-dark-toggle {
         all: unset;
-        width: 80%;
-        height: 60%;
-        border-radius: 4px;
+        padding: 0.6rem 1.4rem;
+        font-size: 1rem;
+        border-radius: 6px;
         cursor: pointer;
-        text-align: center;
         background-color: var(--main-accent-color);
+        color: var(--text-color);
+        display: inline-block;
     }
 
 /* The Method Accent Color */
