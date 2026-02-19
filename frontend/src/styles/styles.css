@@ -3,10 +3,14 @@
 /* Default Light Mode
 Also sets html, body, and root defaults & standardized stylings */
 :root {
+    --true-bg-color: white;
     --tinted-bg-color: whitesmoke;
     --text-color: black;
     --card-bg: white;
-    --true-bg-color: white;
+    --card-bg-hover: whitesmoke;
+    --tinted-card-bg: lightgray;
+    --tinted-card-bg-hover: lightgray;
+    --tinted-card-shadowcolor-hover: rgb(0 0 0 / 15%);
     --main-accent-color: skyblue;
     --main-accent-color-activte: rgb(125 196 225);
     --box-border-color: lightgray;
