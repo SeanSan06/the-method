@@ -56,8 +56,8 @@ function NavBar() {
                     <button>Log in</button>
                     <button>Sign up</button>
                 </div>  
-                <div>
-                    <button id="light-dark-toggle">click me</button>
+                <div id="light-dark-toggle">
+                    <button >Light/Dark</button>
                 </div>
             </div>
             

@@ -82,6 +82,7 @@ nav {
     #nav-bar h2 {
         justify-self: start;
         font-size: 2rem;
+        margin: 0;
     }
 
     #nav-bar-links {
@@ -120,9 +121,9 @@ nav {
 
     #log-in-sign-up button {
         all: unset;
-        padding: 0.6rem 1.4rem;   /* controls size */
+        padding: 0.6rem 2rem;
         font-size: 1rem;
-        border-radius: 6px;       /* small rounding = rectangle */
+        border-radius: 6px;
         cursor: pointer;
         text-align: center;
         background-color: var(--main-accent-color);
@@ -135,10 +136,16 @@ nav {
         background-color: var(--main-accent-color-activte);
     }
 
-
     #light-dark-toggle {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.1rem;
+    }
+
+    #light-dark-toggle button {
         all: unset;
-        padding: 0.6rem 1.4rem;
+        padding: 0.6rem 1.2rem;
         font-size: 1rem;
         border-radius: 6px;
         cursor: pointer;
