@@ -37,9 +37,13 @@
         background-color: var(--main-accent-color-activte);
     }
 
+#how-it-works {
+    background-color: var(--tinted-bg-color);
+}
+    
 #how-it-works-method-section {
     display: inline;
-    color: skyblue;
+    color: var(--main-accent-color);
 }
 
 #how-it-works-title{
@@ -52,7 +56,7 @@
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    color: skyblue;
+    color: var(--text-color);
 }
 
 #whole-box {
@@ -64,7 +68,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: whitesmoke;
+    background-color: var(--tinted-bg-color);
 }
 
 .steps-box {
@@ -77,19 +81,19 @@
     padding: 30px;
     border-radius: 15px;
     border: 3px;
-    border-style:dashed;
-    border-color: skyblue;
+    border-style: solid;
+    border-color: var(--main-accent-color);
     text-align: left;
-    background-color: #dbdbdb;
+    background-color: var(--tinted-card-bg);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     will-change: transform;
 }
 
     .steps-box:hover {
-        transform: translateY(-10px); /* Lifts the box up */
-        background-color: #eef8ff;    /* Shifts to a very light blue on hover */
-        box-shadow: 0 10px 20px rgb(0 0 0 / 15%); /* Adds a soft shadow */
-        cursor: pointer;              /* Shows the user it's interactive */
+        transform: translateY(-10px); 
+        background-color: var(--tinted-card-bg-hover);
+        box-shadow: 0 10px 20px var(--tinted-card-shadowcolor-hover);
+        cursor: pointer;
     }
 
 /* Reviews Area */
@@ -99,7 +103,7 @@
     justify-content: center;
     align-items: center;
     height: 48rem;
-    background-color: var(--review-area-main-color);
+    background-color: var(--super-tinted-area-main-color);
 }
 
 #review-header {

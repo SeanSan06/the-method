@@ -4,7 +4,6 @@ import FileUpload from "../components/FileUpload";
 function DashboardPage() {
     return  (
         <div id="dashboard">
-            <NavBar />
             <FileUpload />
         </div>
     );

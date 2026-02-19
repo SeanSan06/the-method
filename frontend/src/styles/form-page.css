@@ -32,6 +32,13 @@
     color: var(--text-color);
 }
 
+/* Line to break up sub-sections */
+.resume-hr-between-sections {
+    border: none;
+    border-top: 2px solid skyblue;
+    margin: 1.5rem 0;
+}
+
 /* Reusable card */
 .card {
     display: flex;
@@ -88,6 +95,28 @@ textarea:focus {
     box-shadow: 0 0 0 10px var(--input-box-shadow-color);
 }
 
+/* Buttons that add a new section */
+.add-section-form-button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    width: 35%;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--main-accent-color);
+    color: var(--text-color);
+}
+
+  .add-section-form-button:active {
+    transform: scale(0.95);
+    background-color: var(--main-accent-color-activte);
+  }
+
 /* Submit button */
 button[type="submit"] {
     margin-top: 2.5rem;
@@ -105,3 +134,6 @@ button[type="submit"]:active {
     transform: scale(0.97);
     background-color: var(--main-accent-color-activte);
 }
+
+
+

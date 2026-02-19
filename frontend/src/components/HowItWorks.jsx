@@ -1,6 +1,6 @@
 function HowItWorks() {
     return (
-        <div>
+        <div id="how-it-works">
                 <h1 id="how-it-works-title"> 
                     How The <span id = "how-it-works-method-section">Method</span> Works 
                 </h1>
