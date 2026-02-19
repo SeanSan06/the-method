@@ -2,18 +2,18 @@
    Also sets html, body, and root defaults & standardized stylings. */
 :root {
     /* Backgrounds */
-    --true-bg-color: #ffffff;
+    --true-bg-color: #fff;
     --tinted-bg-color: #f7f8fa;
 
     /* Text */
     --text-color: #1e1e1e;
 
     /* Cards */
-    --card-bg: #ffffff;
+    --card-bg: #fff;
     --card-bg-hover: #f0f3f7;
     --tinted-card-bg: #f4f6f8;
     --tinted-card-bg-hover: #e8ebf0;
-    --tinted-card-shadowcolor-hover: rgba(0, 0, 0, 0.1);
+    --tinted-card-shadowcolor-hover: rgb(0 0 0 / 10%);
     --super-tinted-area-main-color: #e2e8f0;
     
 
@@ -28,7 +28,7 @@
     --input-bg-color: #f2f4f7;
     --input-border-color: #cbd5e1;
     --input-focus-border-color: #4aa5ff;
-    --input-box-shadow-color: rgba(74, 165, 255, 0.25);
+    --input-box-shadow-color: rgb(74 165 255 / 25%);
 
     /* Styling */
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -50,7 +50,7 @@
     --tinted-bg-color: #1e1e1e;
     
     /* Text */
-    --text-color: #ffffff;
+    --text-color: #fff;
 
     /* Cards */
     --card-bg: #1f1f1f;
@@ -144,23 +144,6 @@ nav {
         font-size: 1.1rem;
     }
 
-    #log-in-sign-up button {
-        all: unset;
-        padding: 0.6rem 2rem;
-        font-size: 1rem;
-        border-radius: 6px;
-        cursor: pointer;
-        text-align: center;
-        background-color: var(--main-accent-color);
-        color: var(--text-color);
-        display: inline-block;
-    }
-
-    #log-in-sign-up button:active {
-        transform: scale(0.95);
-        background-color: var(--main-accent-color-activte);
-    }
-
     #light-dark-toggle {
         display: flex;
         align-items: center;
@@ -177,6 +160,23 @@ nav {
         background-color: var(--main-accent-color);
         color: var(--text-color);
         display: inline-block;
+    }
+
+    #log-in-sign-up button {
+        all: unset;
+        padding: 0.6rem 2rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        text-align: center;
+        background-color: var(--main-accent-color);
+        color: var(--text-color);
+        display: inline-block;
+    }
+
+    #log-in-sign-up button:active {
+        transform: scale(0.95);
+        background-color: var(--main-accent-color-activte);
     }
 
 /* The Method Accent Color */
