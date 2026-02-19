@@ -11,12 +11,12 @@
     width: 8.5in;
     min-height: 11in;
     padding: 0.7in 0.75in;
-    background: var(--true-bg-color);
-    box-shadow: 0 0 10px var(--tinted-card-shadowcolor-hover);
+    background: white;
+    box-shadow: 0 0 10px rgb(0 0 0 / 15%);
     font-family: "Times New Roman", Times, serif;
     font-size: 11pt;
     line-height: 1.25;
-    color: var(--text-color);
+    color: black;
 }
 
 
@@ -74,35 +74,6 @@ section {
     font-size: 10.5pt;
     margin-top: 1px;
 }
-
-/* Line to break up sub-sections */
-.resume-hr-between-sections {
-    border: none;
-    border-top: 2px solid skyblue;
-    margin: 1.5rem 0;
-}
-
-/* Buttons that add a new section */
-.add-section-form-button {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    text-align: center;
-    margin-top: 1.5rem;
-    padding: 1rem;
-    width: 35%;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: skyblue;
-    color: black;
-}
-
-  .add-section-form-button:active {
-    transform: scale(0.95);
-    background-color: var(--main-accent-color-activte);
-  }
 
 /* Italics for positions / majors */
 .row.sub em {
