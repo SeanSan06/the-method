@@ -20,6 +20,7 @@ import './styles/specific-component/resume-template.css'
 // Defines what Page Component appears for each of the 5 webpages 
 // based on the current path
 function App() {
+    // Initialize theme based on what user set. If new user, default to light
     const [theme, setTheme] = useState(() => {
         return localStorage.getItem("theme") || "light";
     });
@@ -30,6 +31,7 @@ function App() {
         localStorage.setItem("theme", theme);
     }, [theme]);
 
+    // Toggle between light and dark themes, and save preference to localStorage
     const toggleTheme = () => {
         setTheme(prev => prev === "light" ? "dark" : "light");
     };

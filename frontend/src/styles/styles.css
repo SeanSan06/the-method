@@ -1,4 +1,4 @@
-/* Light Mode & Dark Mode colors variables.
+/* Light Mode(Default) & Dark Mode colors.
    Also sets html, body, and root defaults & standardized stylings. */
 :root {
     /* Backgrounds */
@@ -43,7 +43,7 @@
     background-color: var(--tinted-bg-color);
 }
 
-/* Dark Mode(WIP) */
+/* Dark Mode */
 [data-theme="dark"] {
     /* Backgrounds */
     --true-bg-color: #121212;
