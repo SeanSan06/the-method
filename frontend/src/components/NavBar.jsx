@@ -58,10 +58,10 @@ function NavBar({ toggleTheme, theme }) {
                 </div>  
                 <div id="light-dark-toggle">
                     <button onClick={toggleTheme}>
-                        {theme === "light" && "Switch to Dark"}
-                        {theme === "dark" && "Switch to Cream"}
+                        {theme === "light" && "Switch to Cream"}
                         {theme === "cream" && "Switch to Midnight"}
-                        {theme === "midnight" && "Switch to Light"}
+                        {theme === "midnight" && "Switch to Dark"}
+                        {theme === "dark" && "Switch to Light"}
                     </button>
                 </div>
             </div>
