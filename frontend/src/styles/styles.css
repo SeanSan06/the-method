@@ -79,30 +79,34 @@
 /* Cream Mode */
 [data-theme="cream"] {
     /* Backgrounds */
-    --true-bg-color: #fdf6e3;
-    --tinted-bg-color: #eee8d5;
+    --true-bg-color: #F5EBE0;
+    --tinted-bg-color: #EFE4D8;
 
     /* Text */
-    --text-color: #586e75;
+    --text-color: #433D35;
 
-    /* Cards: Slightly lighter than the tinted background */
-    --card-bg: #fdf6e3;
-    --card-bg-hover: #f5efdc;
-    --tinted-card-bg: #e4dec9;
-    --tinted-card-bg-hover: #d9d3bd;
-    --tinted-card-shadowcolor-hover: rgb(0 0 0 / 8%);
+    /* Cards */
+    --card-bg: #F5EBE0;
+    --card-bg-hover: #E8DDD2;
+    --tinted-card-bg: #E8DDD2;
+    --tinted-card-bg-hover: #DCCFBF;
+    --tinted-card-shadowcolor-hover: rgba(67, 61, 53, 0.08);
+    --super-tinted-area-main-color: #DCCFBF;
 
     /* Accent colors */
-    --main-accent-color: #b58900;
-    --main-accent-color-activte: #9e7700;
+    --main-accent-color: #5B85AA;       
+    --main-accent-color-activte: #466A8D;
 
-    /* Borders & Inputs */
-    --box-border-color: #d6cfb8;
-    --input-bg-color: #fdf6e3;
-    --input-border-color: #ccc4ab;
-    --input-focus-border-color: #b58900;
-    
-    /* Ensure UI elements like scrollbars match the warm vibe */
+    /* Borders */
+    --box-border-color: #C9BBAE;
+
+    /* Inputs */
+    --input-bg-color: #FBF7F2;
+    --input-border-color: #C9BBAE;
+    --input-focus-border-color: #5B85AA;
+    --input-box-shadow-color: rgba(91, 133, 170, 0.15);
+
+    /* Force UI elements to light-mode style */
     color-scheme: light;
 }
 
