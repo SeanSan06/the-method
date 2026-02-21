@@ -34,8 +34,9 @@ function App() {
     // Cycles through: light -> dark -> cream -> light
     const toggleTheme = () => {
         setTheme(prev => {
-            if (prev === "light") return "dark";
-            if (prev === "dark") return "cream";
+            if (prev === "light") return "cream";
+            if (prev === "cream") return "midnight"; // New step!
+            if (prev === "midnight") return "dark";
             return "light";
         });
     };

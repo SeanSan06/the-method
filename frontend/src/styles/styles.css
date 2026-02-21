@@ -113,6 +113,37 @@
     box-sizing: border-box;
 }
 
+/* Midnight Blue Mode */
+[data-theme="midnight"] {
+    /* Backgrounds: Deep charcoal-blue */
+    --true-bg-color: #242933;           /* Dark but clearly blue-grey */
+    --tinted-bg-color: #2E3440;         /* Soft "Nord" blue-dark */
+
+    /* Text: Snow White/Frost */
+    --text-color: #ECEFF4;
+
+    /* Cards */
+    --card-bg: #3B4252;
+    --card-bg-hover: #434C5E;
+    --tinted-card-bg: #3B4252;
+    --tinted-card-bg-hover: #4C566A;
+    --super-tinted-area-main-color: #434C5E;
+
+    /* Accent: Electric Blue (Vibrant against the dark blue) */
+    --main-accent-color: #88C0D0;
+    --main-accent-color-activte: #81A1C1;
+
+    /* Borders */
+    --box-border-color: #4C566A;
+
+    /* Inputs */
+    --input-bg-color: #3B4252;
+    --input-border-color: #4C566A;
+    --input-focus-border-color: #88C0D0;
+
+    color-scheme: dark; /* Even though it's blue, it's dark enough for dark scrollbars */
+}
+
 /* More global stylings */
 html, body, #root {
     min-width: 100%;
