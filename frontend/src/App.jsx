@@ -31,9 +31,13 @@ function App() {
         localStorage.setItem("theme", theme);
     }, [theme]);
 
-    // Toggle between light and dark themes, and save preference to localStorage
+    // Cycles through: light -> dark -> cream -> light
     const toggleTheme = () => {
-        setTheme(prev => prev === "light" ? "dark" : "light");
+        setTheme(prev => {
+            if (prev === "light") return "dark";
+            if (prev === "dark") return "cream";
+            return "light";
+        });
     };
 
     return (

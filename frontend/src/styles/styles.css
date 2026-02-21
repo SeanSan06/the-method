@@ -76,6 +76,36 @@
     --input-box-shadow-color: rgb(78 168 255 / 35%);
 }
 
+/* Cream Mode */
+[data-theme="cream"] {
+    /* Backgrounds */
+    --true-bg-color: #fdf6e3;
+    --tinted-bg-color: #eee8d5;
+
+    /* Text */
+    --text-color: #586e75;
+
+    /* Cards: Slightly lighter than the tinted background */
+    --card-bg: #fdf6e3;
+    --card-bg-hover: #f5efdc;
+    --tinted-card-bg: #e4dec9;
+    --tinted-card-bg-hover: #d9d3bd;
+    --tinted-card-shadowcolor-hover: rgb(0 0 0 / 8%);
+
+    /* Accent colors */
+    --main-accent-color: #b58900;
+    --main-accent-color-activte: #9e7700;
+
+    /* Borders & Inputs */
+    --box-border-color: #d6cfb8;
+    --input-bg-color: #fdf6e3;
+    --input-border-color: #ccc4ab;
+    --input-focus-border-color: #b58900;
+    
+    /* Ensure UI elements like scrollbars match the warm vibe */
+    color-scheme: light;
+}
+
 /* Global stylings */
 * {
     box-sizing: border-box;
