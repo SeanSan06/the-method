@@ -78,33 +78,31 @@
 
 /* Cream Mode */
 [data-theme="cream"] {
-    /* Backgrounds */
-    --true-bg-color: #F5EBE0;
+    /* Backgrounds: Warm Peach/Sand */
+    --true-bg-color: #F9F1E7;
     --tinted-bg-color: #EFE4D8;
 
     /* Text */
-    --text-color: #433D35;
+    --text-color: #4A3B31;
 
-    /* Cards */
-    --card-bg: #F5EBE0;
-    --card-bg-hover: #E8DDD2;
+    /* Cards & Areas */
+    --card-bg: #FDF9F3;
+    --card-bg-hover: #F5EBE0;
     --tinted-card-bg: #E8DDD2;
     --tinted-card-bg-hover: #DCCFBF;
-    --tinted-card-shadowcolor-hover: rgba(67, 61, 53, 0.08);
     --super-tinted-area-main-color: #DCCFBF;
 
-    /* Accent colors */
+    /* Accent */
     --main-accent-color: #5B85AA;       
     --main-accent-color-activte: #466A8D;
 
     /* Borders */
-    --box-border-color: #C9BBAE;
-
+    --box-border-color: #D6C8B8;
+    
     /* Inputs */
-    --input-bg-color: #FBF7F2;
-    --input-border-color: #C9BBAE;
+    --input-bg-color: #FFFFFF;
+    --input-border-color: #D6C8B8;
     --input-focus-border-color: #5B85AA;
-    --input-box-shadow-color: rgba(91, 133, 170, 0.15);
 
     /* Force UI elements to light-mode style */
     color-scheme: light;
