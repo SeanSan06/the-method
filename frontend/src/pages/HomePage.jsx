@@ -1,8 +1,7 @@
-import NavBar from "../components/NavBar";
 import HeroArea from "../components/HeroArea";
+import HowItWorks from "../components/HowItWorks";
 import Reviews from "../components/Reviews";
 import Footer from "../components/Footer";
-import HowItWorks from "../components/HowItWorks";
 
 function HomePage() {
     return  (

@@ -1,4 +1,3 @@
-import NavBar from "../components/NavBar";
 import FileUpload from "../components/FileUpload";
 
 function DashboardPage() {
