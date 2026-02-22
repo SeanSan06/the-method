@@ -37,6 +37,7 @@
         background-color: var(--main-accent-color-activte);
     }
 
+/* How It Works Area */
 #how-it-works {
     background-color: var(--tinted-bg-color);
 }
@@ -95,6 +96,14 @@
         box-shadow: 0 10px 20px var(--tinted-card-shadowcolor-hover);
         cursor: pointer;
     }
+
+/* Home Statistics Area */
+#home-statistics-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
+}
 
 /* Reviews Area */
 #reviews-area {
