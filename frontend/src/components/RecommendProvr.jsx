@@ -6,7 +6,9 @@ function RecommendProvr() {
                 learning as opposed to shallow AI learning. It focuses on building real 
                 connections and skills that take time to devleop.
             </p>
-            <button id="visit-provr-button">Visit Provr</button>
+            <a href="https://www.provr.me/" target="_blank" rel="noopener noreferrer" id="visit-provr-link">
+                <button id="visit-provr-button">Visit Provr</button>
+            </a>
         </div>
     );
 }

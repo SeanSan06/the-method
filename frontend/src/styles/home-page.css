@@ -322,19 +322,26 @@
     text-align: center;
 }
 
-#visit-provr-button {
-    width: 15rem;
-    height: 5rem;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 2rem;
-    background-color: var(--main-accent-color);
+#visit-provr-link {
+    text-decoration: none;
 }
 
-    #visit-provr-button:active {
-        transform: scale(0.95);
-        background-color: var(--main-accent-color-activte);
+    #visit-provr-button {
+        all: unset;
+        text-align: center;
+        color: var(--text-color);
+        width: 15rem;
+        height: 5rem;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 2rem;
+        background-color: var(--main-accent-color);
     }
+
+        #visit-provr-button:active {
+            transform: scale(0.95);
+            background-color: var(--main-accent-color-activte);
+        }
 
 /* Footer Area */
 #footer-information-area {
