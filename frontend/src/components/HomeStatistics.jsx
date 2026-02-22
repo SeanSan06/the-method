@@ -7,29 +7,29 @@ function HomeStatistics() {
                 <p>0</p>
             </div>
             <div id="home-statistics">
-                <h3>Impact Statistics</h3>
-                <div>
-                    <div>
-                        <h3>ATS Optimized</h3>
+                <h3 id="home-impact-statistics-subarea">Impact Statistics</h3>
+                <div id="impact-statistics-data">
+                    <div id="home-resumes-sent">
+                        <h4>Resumes Sent</h4>
                     </div>
-                    <div>
-                        <h3>Jobs Landed</h3>
+                    <div ud="home-interviews-held">
+                        <h4>Interviews Held</h4>
                     </div>
-                    <div>
-                        <h3>Hours Saved</h3>
+                    <div id="home-jobs-offered">
+                        <h4>Jobs Offered</h4>
                     </div>
                 </div>
 
-                <h3>The Method Statistics</h3>
-                <div>
-                    <div>
-                        <h3>Resumes Optimize</h3>
+                <h3 id="home-the-method-statistics-subarea">The Method Statistics</h3>
+                <div id="home-the-method-statistics-data">
+                    <div id="home-resumes-optimized">
+                        <h4>Resumes Optimized</h4>
                     </div>
-                    <div>
-                        <h3>Hours Practicing Inteviews</h3>
+                    <div id="home-hours-practicing-interviews">
+                        <h4>Hours Practicing Interviews</h4>
                     </div>
-                    <div>
-                        <h3>Jobs Applied</h3>
+                    <div id="home-jobs-found">
+                        <h4>Jobs Found</h4>
                     </div>
                 </div>
             </div>
