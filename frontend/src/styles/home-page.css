@@ -37,9 +37,11 @@
         background-color: var(--main-accent-color-activte);
     }
 
+
 /* How It Works Area */
 #how-it-works {
-    background-color: var(--tinted-bg-color);
+    padding: 32px;
+    background-color: var(--super-tinted-area-main-color);
 }
     
 #how-it-works-method-section {
@@ -70,7 +72,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: var(--tinted-bg-color);
+    background-color: var(--super-tinted-area-main-color);
 }
 
 .steps-box {
@@ -98,6 +100,7 @@
         cursor: pointer;
     }
 
+
 /* Home Statistics Area */
 #home-statistics-area {
     display: flex;
@@ -105,7 +108,16 @@
     justify-content: space-around;
     align-items: center;
     margin: 64px 0;
+    gap: 32px
 }
+
+#home-users-count-subarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
     /* Style h3 */
     #home-statistics-area h3 {
         font-size: 2rem;
@@ -120,7 +132,7 @@
         padding: 0;
     }
 
-/* Style all paragraphs */
+    /* Style all paragraphs */
     #home-statistics-area p {
         font-size: 1.5rem;
         margin: 8px;
@@ -139,7 +151,7 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    width: 8%;
+    width: 50%;
     height: auto;
     margin: 8px;
     padding: 8px;
@@ -154,61 +166,79 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    gap: 32px;
 }
 
     #home-impact-statistics-subarea {
-        font-size: 2rem;
-        margin: 8px;
-        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
-        #impact-statistics-data {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            width: 60%;
+        #home-impact-statistics-h3 {
+            font-size: 2rem;
+            margin: 8px;
+            padding: 0;
         }
 
-        #impact-statistics-data div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 20%;
-            height: auto;
-            margin: 8px;
-            padding: 8px;
-            background-color: var(--tinted-card-bg);
-            border: 4px var(--box-border-color) solid;
-            border-radius: 10px;
-        }
+            #impact-statistics-data {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 60%;
+            }
+
+            #impact-statistics-data div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                height: auto;
+                margin: 8px;
+                padding: 8px;
+                background-color: var(--card-bg);
+                border: 4px var(--box-border-color) solid;
+                border-radius: 10px;
+            }
 
     #home-the-method-statistics-subarea {
-        font-size: 2rem;
-        margin: 8px;
-        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
-        #home-the-method-statistics-data {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            width: 75%;
+        #home-the-method-statistics-h3 {
+            font-size: 2rem;
+            margin: 8px;
+            padding: 0;
         }
 
-        #home-the-method-statistics-data div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 20%;
-            height: auto;
-            margin: 8px;
-            padding: 8px;
-            background-color: var(--card-bg);
-            border: 4px var(--box-border-color) solid;
-            border-radius: 10px;
-        }
+            #home-the-method-statistics-data {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 75%;
+            }
+
+            #home-the-method-statistics-data div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                height: auto;
+                margin: 8px;
+                padding: 8px;
+                background-color: var(--card-bg);
+                border: 4px var(--box-border-color) solid;
+                border-radius: 10px;
+            }
+
 
 /* Reviews Area */
 #reviews-area {
@@ -268,6 +298,7 @@
 .reivew-job {
     margin: 0;
 }
+
 
 /* Footer Area */
 #footer-information-area {
