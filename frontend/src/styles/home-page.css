@@ -308,6 +308,33 @@
     gap: 16px;
 }
 
+#try-provr-h2 {
+    font-size: 4rem;
+    margin: 8px;
+    padding: 0;
+}
+
+#recommend-provr-p {
+    font-size: 1.5rem;
+    margin: 8px;
+    padding: 0;
+    max-width: 800px;
+    text-align: center;
+}
+
+#visit-provr-button {
+    width: 15rem;
+    height: 5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: var(--main-accent-color);
+}
+
+    #visit-provr-button:active {
+        transform: scale(0.95);
+        background-color: var(--main-accent-color-activte);
+    }
 
 /* Footer Area */
 #footer-information-area {
