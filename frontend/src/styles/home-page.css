@@ -299,6 +299,15 @@
     margin: 0;
 }
 
+#recommend-provr-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    gap: 16px;
+}
+
 
 /* Footer Area */
 #footer-information-area {
