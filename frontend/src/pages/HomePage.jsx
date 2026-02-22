@@ -3,6 +3,7 @@ import HowItWorks from "../components/HowItWorks";
 import HomeStatistics from "../components/HomeStatistics";
 import Reviews from "../components/Reviews";
 import RecommendProvr from "../components/RecommendProvr";
+import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
 
 function HomePage() {
@@ -13,6 +14,7 @@ function HomePage() {
             <HomeStatistics />
             <Reviews />
             <RecommendProvr />
+            <CallToAction />
             <Footer />
         </div>
     );

@@ -299,6 +299,7 @@
     margin: 0;
 }
 
+/* Recommend Provr Area */
 #recommend-provr-area {
     display: flex;
     flex-direction: column;
@@ -342,6 +343,51 @@
             transform: scale(0.95);
             background-color: var(--main-accent-color-activte);
         }
+
+/* Call To Action Area */
+#call-to-action-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    background-color: var(--super-tinted-area-main-color);
+}
+
+#ready-to-get-started-h2 {
+    font-size: 4rem;
+    margin: 8px;
+    padding: 0;
+}
+
+#call-to-action-p-top {
+    font-size: 1.5rem;
+    margin: 8px;
+    padding: 0;
+}
+
+#call-to-action-p-bottom {
+    font-size: 1.5rem;
+    margin: 8px;
+    padding: 0;
+}
+
+#call-to-action-sign-up-button {
+    all: unset;
+    text-align: center;
+    color: var(--text-color);
+    width: 15rem;
+    height: 5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: var(--main-accent-color);
+}
+
+    #call-to-action-sign-up-button:active {
+        transform: scale(0.95);
+        background-color: var(--main-accent-color-activte);
+    }
 
 /* Footer Area */
 #footer-information-area {
