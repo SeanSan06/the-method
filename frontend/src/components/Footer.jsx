@@ -23,11 +23,20 @@ function Footer() {
                     <p>Ved Patel</p>
                 </div>
                 <div>
-                    <h2>Socials</h2>
+                    <h2>Socials/Contacts</h2>
                     <p>LinkedIn</p>
                     <p>Email</p>
-                    <p></p>
-                    <p></p>
+                    <p>GitHub</p>
+                    <p>Reddit</p>
+                    <p>Discord</p>
+                </div>
+                <div>
+                    <h2>Extras</h2>
+                    <p>Pricing</p>
+                    <p>About</p>
+                    <p>Terms of Service</p>
+                    <p>Privacy Policy</p>
+                    <p>FAQs</p>
                 </div>
             </div>
             <p id="copyright">
