@@ -13,12 +13,15 @@ function HomeStatistics() {
                 <div id="impact-statistics-data">
                     <div id="home-resumes-sent">
                         <h4>Resumes Sent</h4>
+                        <p>0</p>
                     </div>
-                    <div ud="home-interviews-held">
+                    <div id="home-interviews-held">
                         <h4>Interviews Held</h4>
+                        <p>0</p>
                     </div>
                     <div id="home-jobs-offered">
                         <h4>Jobs Offered</h4>
+                        <p>0</p>
                     </div>
                 </div>
 
@@ -26,12 +29,15 @@ function HomeStatistics() {
                 <div id="home-the-method-statistics-data">
                     <div id="home-resumes-optimized">
                         <h4>Resumes Optimized</h4>
+                        <p>0</p>
                     </div>
                     <div id="home-hours-practicing-interviews">
                         <h4>Hours Practicing Interviews</h4>
+                        <p>0</p>
                     </div>
                     <div id="home-jobs-found">
                         <h4>Jobs Recommended</h4>
+                        <p>0</p>
                     </div>
                 </div>
             </div>
