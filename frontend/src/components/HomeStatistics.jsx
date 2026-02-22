@@ -1,11 +1,13 @@
 function HomeStatistics() {
     return  (
         <div id="home-statistics-area">
-            <h2>Home Statistics</h2>
+            <h2 id="home-statistics-title-h2">Real Success</h2>
+            
             <div id="home-users-count">
                 <h3>Users</h3>
                 <p>0</p>
             </div>
+
             <div id="home-statistics">
                 <h3 id="home-impact-statistics-subarea">Impact Statistics</h3>
                 <div id="impact-statistics-data">
@@ -29,7 +31,7 @@ function HomeStatistics() {
                         <h4>Hours Practicing Interviews</h4>
                     </div>
                     <div id="home-jobs-found">
-                        <h4>Jobs Found</h4>
+                        <h4>Jobs Recommended</h4>
                     </div>
                 </div>
             </div>

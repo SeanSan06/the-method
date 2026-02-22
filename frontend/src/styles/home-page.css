@@ -48,6 +48,7 @@
 }
 
 #how-it-works-title{
+    font-size: 4rem;
     text-align: center;
     margin-top: 2rem;
 }
@@ -100,10 +101,60 @@
 /* Home Statistics Area */
 #home-statistics-area {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    padding: 2rem;
+    align-items: center;
 }
+
+#home-statistics-title-h2 {
+    font-size: 4rem;
+    margin: 8px;
+    padding: 0;
+}
+
+#home-users-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 8px;
+    padding: 0;
+}
+
+#home-statistics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+    #home-impact-statistics-subarea {
+        font-size: 2rem;
+        margin: 8px;
+        padding: 0;
+    }
+
+        #impact-statistics-data {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+    #home-the-method-statistics-subarea {
+        font-size: 2rem;
+        margin: 8px;
+        padding: 0;
+    }
+
+        #home-the-method-statistics-data {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+        }
 
 /* Reviews Area */
 #reviews-area {
