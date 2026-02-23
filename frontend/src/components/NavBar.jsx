@@ -44,10 +44,10 @@ function NavBar({ toggleTheme, theme }) {
 
                 <li>
                     <NavLink
-                        to="/contact"
+                        to="/pricing"
                         className={({ isActive }) => isActive ? 'active-link' : undefined}
                     >
-                        Contact
+                        Pricing
                     </NavLink>
                 </li>
             </ul>
