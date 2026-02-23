@@ -4,9 +4,9 @@ function PricingPage() {
             <h1 id="pricing-page-h1">Pricing Page</h1>
             <div id="pricing-tiers-subarea">
                 <div id="pricing-free-tier">
-                    <h2>Free</h2>
-                    <p>Basic features for everyone</p>
-                    <p>$0/month</p>
+                    <h2 className="pricing-h2">Free</h2>
+                    <p className="pricing-p">Basic features for everyone</p>
+                    <p className="pricing-price-p">$0/month</p>
                     <div>
                         <ul>
                             <li>Basic access to all features</li>
@@ -18,9 +18,9 @@ function PricingPage() {
                     </div>
                 </div>
                 <div id="pricing-student-tier">
-                    <h2>Student</h2>
-                    <p>Discounted pricing for students</p>
-                    <p>$2.49/month</p>
+                    <h2 className="pricing-h2">Student</h2>
+                    <p className="pricing-p">Discounted pricing for students</p>
+                    <p className="pricing-price-p">$2.49/month</p>
                     <div>
                         <ul>
                             <li>Everything in free plan +</li>
@@ -32,9 +32,9 @@ function PricingPage() {
                     </div>
                 </div>
                 <div id="pricing-premium-tier">
-                    <h2>Premium</h2>
-                    <p>All features for professionals</p>
-                    <p>$6.99/month</p>
+                    <h2 className="pricing-h2">Premium</h2>
+                    <p className="pricing-p">All features for professionals</p>
+                    <p className="pricing-price-p">$6.99/month</p>
                     <div>
                         <ul>
                             <li>Everything in free plan +</li>
