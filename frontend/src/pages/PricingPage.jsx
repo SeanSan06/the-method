@@ -1,9 +1,14 @@
+import FreeIcon from "../assets/pricingFree.svg?react";
+import StudentIcon from "../assets/pricingStudent.svg?react";
+import PremiumIcon from "../assets/pricingPremium.svg?react";
+
 function PricingPage() {
     return  (
         <div id="pricing-page">
             <h1 id="pricing-page-h1">Pricing Page</h1>
             <div id="pricing-tiers-subarea">
                 <div id="pricing-free-tier">
+                    <FreeIcon className="pricing-icon" />
                     <h2 className="pricing-h2">Free</h2>
                     <p className="pricing-p">Basic features for everyone</p>
                     <p className="pricing-price-p">$0/month</p>
@@ -18,6 +23,7 @@ function PricingPage() {
                     </div>
                 </div>
                 <div id="pricing-student-tier">
+                    <StudentIcon className="pricing-icon" />
                     <h2 className="pricing-h2">Student</h2>
                     <p className="pricing-p">Discounted pricing for students</p>
                     <p className="pricing-price-p">$2.49/month</p>
@@ -32,6 +38,7 @@ function PricingPage() {
                     </div>
                 </div>
                 <div id="pricing-premium-tier">
+                    <PremiumIcon className="pricing-icon" />
                     <h2 className="pricing-h2">Premium</h2>
                     <p className="pricing-p">All features for professionals</p>
                     <p className="pricing-price-p">$5.49/month</p>
