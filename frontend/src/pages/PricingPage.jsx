@@ -34,7 +34,7 @@ function PricingPage() {
                 <div id="pricing-premium-tier">
                     <h2 className="pricing-h2">Premium</h2>
                     <p className="pricing-p">All features for professionals</p>
-                    <p className="pricing-price-p">$6.99/month</p>
+                    <p className="pricing-price-p">$5.49/month</p>
                     <div>
                         <ul>
                             <li>Everything in free plan +</li>
