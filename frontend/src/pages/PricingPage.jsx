@@ -10,7 +10,7 @@ function PricingPage() {
                 <div id="pricing-free-tier">
                     <FreeIcon className="pricing-icon" />
                     <h2 className="pricing-h2">Free</h2>
-                    <p className="pricing-p">Basic features for everyone</p>
+                    <p className="pricing-p">Essential features for all users</p>
                     <p className="pricing-price-p">$0/month</p>
                     <div>
                         <ul>
@@ -25,7 +25,7 @@ function PricingPage() {
                 <div id="pricing-student-tier">
                     <StudentIcon className="pricing-icon" />
                     <h2 className="pricing-h2">Student</h2>
-                    <p className="pricing-p">Discounted pricing for students</p>
+                    <p className="pricing-p">Discounts for students</p>
                     <p className="pricing-price-p">$2.49/month</p>
                     <div>
                         <ul>

@@ -22,6 +22,12 @@
     margin-top: 2rem;
 }
 
+    .pricing-icon {
+        width: 3rem;
+        height: 3rem;
+        fill: var(--main-accent-color);
+    }
+
     #pricing-free-tier, #pricing-student-tier, #pricing-premium-tier {
     display: flex;
     flex-direction: column;
@@ -31,10 +37,10 @@
     padding: 2rem;
     border-radius: 8px;
     margin: 1rem;
-}
+    }
 
         #pricing-free-tier:hover, #pricing-student-tier:hover, #pricing-premium-tier:hover {
-            background-color: var(--main-accent-color);
+            background-color: var(--main-accent-color-activte);
             color: var(--tinted-bg-color);
             cursor: pointer;
             transition: background-color 0.3s ease, color 0.3s ease;
