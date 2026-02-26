@@ -398,6 +398,17 @@
     background-color: var(--true-bg-color);
 }
 
+#team-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+    #team-section a {
+        margin-bottom: 16px;
+    }
+
 #copyright {
     display: flex;
     flex-direction: row;

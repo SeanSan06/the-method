@@ -14,13 +14,13 @@ function Footer() {
                     <p>About</p>
                     <p>Contact</p>
                 </div>
-                <div>
+                <div id="team-section">
                     <h2>The Team</h2>
-                    <p>Cole Saldanha</p>
-                    <p>Daniel Hurtarte</p>
-                    <p>Lien Jabujab</p>
-                    <p>Sean San</p>
-                    <p>Ved Patel</p>
+                    <a href="https://www.linkedin.com/in/cole-saldanha/" target="_blank" rel="noopener noreferrer">Cole Saldanha</a>
+                    <a href="https://www.linkedin.com/in/daniel-ricardo-hurtarte-29a911389/" target="_blank" rel="noopener noreferrer">Daniel Hurtarte</a>
+                    <a href="https://www.linkedin.com/in/lien-jabujab-0498a22b7/" target="_blank" rel="noopener noreferrer">Lien Jabujab</a>
+                    <a href="https://www.linkedin.com/in/seansan06/" target="_blank" rel="noopener noreferrer">Sean San</a>
+                    <a href="https://www.linkedin.com/in/vedevpatel24/" target="_blank" rel="noopener noreferrer">Ved Patel</a>
                 </div>
                 <div>
                     <h2>Socials/Contacts</h2>
@@ -33,7 +33,7 @@ function Footer() {
                 <div>
                     <h2>Extras</h2>
                     <p>Pricing</p>
-                    <p>About</p>
+                    <p>Footer</p>
                     <p>Terms of Service</p>
                     <p>Privacy Policy</p>
                     <p>FAQs</p>
