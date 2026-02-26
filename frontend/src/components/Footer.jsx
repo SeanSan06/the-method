@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 function Footer() {
     return (
         <div>
@@ -6,13 +8,42 @@ function Footer() {
                     <h2>The <span className="method-word">Method's</span> Moto</h2>
                     <p>Make Every Task Happen, Own Destiny</p>
                 </div>
-                <div>
+                <div id="quick-links">
                     <h2>Quick Links</h2>
-                    <p>Home</p>
-                    <p>Resume</p>
-                    <p>Dashboard</p>
-                    <p>About</p>
-                    <p>Contact</p>
+                    <NavLink id="home-quick-navlink"
+                        to="/"
+                        className={({ isActive }) => isActive ? 'active-link' : undefined}
+                    >
+                        Home
+                    </NavLink>
+
+                    <NavLink id="home-quick-navlink"
+                        to="/form"
+                        className={({ isActive }) => isActive ? 'active-link' : undefined}
+                    >
+                        Form
+                    </NavLink>
+
+                    <NavLink id="home-quick-navlink"
+                        to="/dashboard"
+                        className={({ isActive }) => isActive ? 'active-link' : undefined}
+                    >
+                        Dashboard
+                    </NavLink>
+
+                    <NavLink id="home-quick-navlink"
+                        to="/about"
+                        className={({ isActive }) => isActive ? 'active-link' : undefined}
+                    >
+                        About
+                    </NavLink>
+
+                    <NavLink id="home-quick-navlink"
+                        to="/pricing"
+                        className={({ isActive }) => isActive ? 'active-link' : undefined}
+                    >
+                        Pricing
+                    </NavLink>
                 </div>
                 <div id="team-section">
                     <h2>The Team</h2>
