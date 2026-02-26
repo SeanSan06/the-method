@@ -63,8 +63,8 @@ function Footer() {
                 </div>
                 <div>
                     <h2>Extras</h2>
-                    <p>Pricing</p>
-                    <p>Footer</p>
+                    <p>News</p>
+                    <p>Data</p>
                     <p>Terms of Service</p>
                     <p>Privacy Policy</p>
                     <p>FAQs</p>
