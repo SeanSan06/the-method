@@ -1,7 +1,25 @@
 import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
 
 
 function NavBar({ toggleTheme, theme }) {
+    const [showThemeMenu, setShowThemeMenu] = useState(false)
+
+    const themes = ['light', 'cream', 'midnight', 'dark']
+    const themeLabels = {
+        light: 'Light',
+        cream: 'Cream',
+        midnight: 'Midnight',
+        dark: 'Dark'
+    }
+
+    const handleThemeSelect = (selectedTheme) => {
+        if (selectedTheme !== theme) {
+            toggleTheme(selectedTheme)
+        }
+        setShowThemeMenu(false)
+    }
+
     return  (
         <nav href="/" id="nav-bar">
             <h2 id="the-method">The <span className="method-word">Method</span></h2>
@@ -57,12 +75,24 @@ function NavBar({ toggleTheme, theme }) {
                     <button>Sign up</button>
                 </div>  
                 <div id="light-dark-toggle">
-                    <button onClick={toggleTheme}>
-                        {theme === "light" && "Switch to Cream"}
-                        {theme === "cream" && "Switch to Midnight"}
-                        {theme === "midnight" && "Switch to Dark"}
-                        {theme === "dark" && "Switch to Light"}
-                    </button>
+                    <div className="theme-selector-container">
+                        <button onClick={() => setShowThemeMenu(!showThemeMenu)}>
+                            Theme: {themeLabels[theme]}
+                        </button>
+                        {showThemeMenu && (
+                            <div className="theme-menu">
+                                {themes.map(t => (
+                                    <button
+                                        key={t}
+                                        className={`theme-option ${t === theme ? 'active' : ''}`}
+                                        onClick={() => handleThemeSelect(t)}
+                                    >
+                                        {themeLabels[t]}
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
             

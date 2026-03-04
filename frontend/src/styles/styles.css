@@ -216,6 +216,10 @@ nav {
         font-size: 1.1rem;
     }
 
+    .theme-selector-container {
+        position: relative;
+    }
+
     #light-dark-toggle button {
         all: unset;
         padding: 0.6rem 1.2rem;
@@ -225,6 +229,51 @@ nav {
         background-color: var(--main-accent-color);
         color: var(--text-color);
         display: inline-block;
+    }
+
+    .theme-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 0.5rem;
+        background-color: var(--card-bg);
+        border: 1px solid var(--box-border-color);
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        min-width: 140px;
+        z-index: 1000;
+    }
+
+    .theme-option {
+        all: unset;
+        display: block;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+        cursor: pointer;
+        background-color: var(--card-bg);
+        color: var(--text-color);
+        border: none;
+        text-align: left;
+        transition: background-color 0.2s;
+    }
+
+    .theme-option:hover {
+        background-color: var(--card-bg-hover);
+    }
+
+    .theme-option.active {
+        background-color: var(--main-accent-color);
+        color: var(--text-color);
+        font-weight: bold;
+    }
+
+    .theme-option:first-child {
+        border-radius: 6px 6px 0 0;
+    }
+
+    .theme-option:last-child {
+        border-radius: 0 0 6px 6px;
     }
 
     #log-in-sign-up button {
