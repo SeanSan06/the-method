@@ -209,6 +209,24 @@ nav {
         font-size: 1.1rem;
     }
 
+    #log-in-sign-up button {
+        all: unset;
+        padding: 0.6rem 2rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        text-align: center;
+        background-color: var(--main-accent-color);
+        color: var(--text-color);
+        display: inline-block;
+    }
+
+    #log-in-sign-up button:active {
+        transform: scale(0.95);
+        background-color: var(--main-accent-color-activte);
+    }
+
+    /* Theme button */
     #light-dark-toggle {
         display: flex;
         align-items: center;
@@ -276,22 +294,12 @@ nav {
         border-radius: 0 0 6px 6px;
     }
 
-    #log-in-sign-up button {
-        all: unset;
-        padding: 0.6rem 2rem;
-        font-size: 1rem;
-        border-radius: 6px;
-        cursor: pointer;
-        text-align: center;
-        background-color: var(--main-accent-color);
-        color: var(--text-color);
-        display: inline-block;
+    .theme-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    #log-in-sign-up button:active {
-        transform: scale(0.95);
-        background-color: var(--main-accent-color-activte);
-    }
 
 /* The Method Accent Color */
 .method-word {
