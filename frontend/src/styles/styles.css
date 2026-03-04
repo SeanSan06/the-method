@@ -227,18 +227,7 @@ nav {
     }
 
     /* Theme button */
-    #light-dark-toggle {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-size: 1.1rem;
-    }
-
-    .theme-selector-container {
-        position: relative;
-    }
-
-    #light-dark-toggle button {
+    #light-dark-toggle .theme-selector-container > button {
         all: unset;
         padding: 0.6rem 1.2rem;
         font-size: 1rem;
@@ -249,6 +238,10 @@ nav {
         display: inline-block;
     }
 
+    .theme-selector-container {
+        position: relative;
+    }
+
     .theme-menu {
         position: absolute;
         top: 100%;
@@ -256,48 +249,60 @@ nav {
         margin-top: 0.5rem;
         background-color: var(--card-bg);
         border: 1px solid var(--box-border-color);
-        border-radius: 6px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        min-width: 140px;
+        border-radius: 0;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        min-width: 160px;
         z-index: 1000;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        animation: slideDown 0.2s ease-out;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     .theme-option {
         all: unset;
         display: block;
         width: 100%;
-        padding: 0.75rem 1rem;
+        padding: 0.85rem 1.2rem;
         font-size: 0.95rem;
         cursor: pointer;
         background-color: var(--card-bg);
         color: var(--text-color);
         border: none;
         text-align: left;
-        transition: background-color 0.2s;
+        transition: all 0.15s ease;
+        font-weight: 500;
+        border-radius: 0;
     }
 
     .theme-option:hover {
         background-color: var(--card-bg-hover);
+        padding-left: 1.4rem;
     }
 
     .theme-option.active {
         background-color: var(--main-accent-color);
         color: var(--text-color);
-        font-weight: bold;
+        font-weight: 600;
     }
 
     .theme-option:first-child {
-        border-radius: 6px 6px 0 0;
+        border-radius: 0;
     }
 
     .theme-option:last-child {
-        border-radius: 0 0 6px 6px;
-    }
-
-    .theme-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        border-radius: 0;
     }
 
 
