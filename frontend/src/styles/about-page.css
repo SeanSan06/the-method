@@ -13,3 +13,19 @@
     justify-content: center;
     width: 40%;
 }
+
+    #go-back-home {
+        all: unset;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        background-color: var(--main-accent-color);
+        color: var(--text-color);
+        display: inline-block;
+        width: 125px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }

@@ -2,7 +2,7 @@ function AboutPage() {
     return  (
         <div id="about-page">
             <div id="about-page-content">
-                <a>Go back home</a>
+                <a id="go-back-home" href="/">Go back home</a>
                 <h1>About The Method</h1>
                 <h2>Who</h2>
                 <p>Made by a team of 2nd and 3rd year Computer Science students at UCI.</p>
