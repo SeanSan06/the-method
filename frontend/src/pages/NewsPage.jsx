@@ -1,9 +1,9 @@
-function FAQs() {
+function News() {
     return  (
-        <div id="faqs">
+        <div id="news">
             <FileUpload />
         </div>
     );
 }
 
-export default FAQs;
+export default News;
