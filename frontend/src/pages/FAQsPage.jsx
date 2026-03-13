@@ -1,7 +1,6 @@
 function FAQs() {
     return  (
         <div id="faqs">
-            <FileUpload />
         </div>
     );
 }

@@ -53,7 +53,7 @@ function Footer() {
                     <a href="https://www.linkedin.com/in/seansan06/" target="_blank" rel="noopener noreferrer">Sean San</a>
                     <a href="https://www.linkedin.com/in/vedevpatel24/" target="_blank" rel="noopener noreferrer">Ved Patel</a>
                 </div>
-                <div>
+                <div id="socials-section">
                     <h2>Socials/Contacts</h2>
                     <p>LinkedIn</p>
                     <p>Email</p>
@@ -61,13 +61,13 @@ function Footer() {
                     <p>Reddit</p>
                     <p>Discord</p>
                 </div>
-                <div>
+                <div id="extras-section">
                     <h2>Extras</h2>
-                    <p>News</p>
-                    <p>Data</p>
-                    <p>Terms of Service</p>
-                    <p>Privacy Policy</p>
-                    <p>FAQs</p>
+                    <NavLink to="/news" className={({ isActive }) => isActive ? 'active-link' : undefined}>News</NavLink>
+                    <NavLink to="/data" className={({ isActive }) => isActive ? 'active-link' : undefined}>Data</NavLink>
+                    <NavLink to="/terms-of-service" className={({ isActive }) => isActive ? 'active-link' : undefined}>Terms of Service</NavLink>
+                    <NavLink to="/privacy-policy" className={({ isActive }) => isActive ? 'active-link' : undefined}>Privacy Policy</NavLink>
+                    <NavLink to="/faqs" className={({ isActive }) => isActive ? 'active-link' : undefined}>FAQs</NavLink>
                 </div>
             </div>
             <p id="copyright">

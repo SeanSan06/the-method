@@ -1,7 +1,6 @@
 function News() {
     return  (
         <div id="news">
-            <FileUpload />
         </div>
     );
 }

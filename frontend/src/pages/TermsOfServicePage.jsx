@@ -1,7 +1,6 @@
 function TermsOfService() {
     return  (
         <div id="terms-of-service">
-            <FileUpload />
         </div>
     );
 }

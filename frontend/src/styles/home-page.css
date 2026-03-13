@@ -420,6 +420,29 @@
         margin-bottom: 16px;
     }
 
+#socials-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+    #socials-section p {
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+#extras-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+    #extras-section a {
+        margin-bottom: 16px;
+    }
+
 #copyright {
     display: flex;
     flex-direction: row;
