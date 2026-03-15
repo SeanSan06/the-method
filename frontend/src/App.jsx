@@ -14,12 +14,14 @@ import TermsOfServicePage from  './pages/TermsOfServicePage';
 import PrivacyPolicyPage from  './pages/PrivacyPolicyPage';
 import FAQsPage from  './pages/FAQsPage';
 
+
 import './styles/styles.css'
 import './styles/home-page.css'
 import './styles/form-page.css'
 import './styles/dashboard-page.css'
 import './styles/about-page.css'
 import './styles/pricing-page.css'
+import './styles/news-page.css'
 
 import './styles/contact-page.css'
 
