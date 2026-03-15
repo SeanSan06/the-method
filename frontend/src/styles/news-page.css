@@ -33,7 +33,7 @@
     border-radius: 12px;
     padding: 1rem;
     width: 100%;
-    background-color: var(--card-bg);
+    background-color: var(--tinted-card-bg);
     color: var(--text-color);
 }
 

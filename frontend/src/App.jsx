@@ -41,14 +41,9 @@ function App() {
         localStorage.setItem("theme", theme);
     }, [theme]);
 
-    // Cycles through: light -> dark -> cream -> light
-    const toggleTheme = () => {
-        setTheme(prev => {
-            if (prev === "light") return "cream";
-            if (prev === "cream") return "midnight"; // New step!
-            if (prev === "midnight") return "dark";
-            return "light";
-        });
+    // Sets theme directly from navbar selection
+    const toggleTheme = (selectedTheme) => {
+        setTheme(selectedTheme);
     };
 
     return (
