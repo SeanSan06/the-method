@@ -14,6 +14,20 @@ function News() {
             body: "Example text of what this thing does.",
             date: "March 11, 2026 @ 3:00 PM",
         },
+        {
+            id: "idhere2",
+            title: "Title goes here",
+            caption: "Caption would go here",
+            body: "Example text of what this thing does.",
+            date: "March 11, 2026 @ 3:00 PM",
+        },
+        {
+            id: "idhere2",
+            title: "Title goes here",
+            caption: "Caption would go here",
+            body: "Example text of what this thing does.",
+            date: "March 11, 2026 @ 3:00 PM",
+        },
     ];
 
     return (
