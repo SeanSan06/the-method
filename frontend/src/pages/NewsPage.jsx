@@ -42,8 +42,11 @@ function News() {
                     <li key={item.id}>
                         <article className="news-card" aria-labelledby={`news-item-title-${item.id}`}>
                             <header>
-                                <h2 id={`news-item-title-${item.id}`}>{item.title}</h2>
-                                <p className="news-caption">{item.caption}</p>
+                                <div className="news-heading">
+                                    <h2 id={`news-item-title-${item.id}`}>{item.title}</h2>
+                                    <p className="news-caption">{item.caption}</p>
+                                </div>
+                                
                                 <p className="news-date">
                                     <time dateTime={item.date}>{item.date}</time>
                                 </p>
