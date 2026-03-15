@@ -1,4 +1,4 @@
-/* Light Mode & Dark Mode colors variables.
+/* Light Mode(Default) & Dark Mode colors.
    Also sets html, body, and root defaults & standardized stylings. */
 :root {
     /* Backgrounds */
@@ -43,7 +43,75 @@
     background-color: var(--tinted-bg-color);
 }
 
-/* Dark Mode(WIP) */
+/* Cream Mode */
+[data-theme="cream"] {
+    /* Backgrounds: Warm Peach/Sand */
+    --true-bg-color: #F9F1E7;
+    --tinted-bg-color: #EFE4D8;
+
+    /* Text */
+    --text-color: #4A3B31;
+
+    /* Cards & Areas */
+    --card-bg: #FDF9F3;
+    --card-bg-hover: #F5EBE0;
+    --tinted-card-bg: #E8DDD2;
+    --tinted-card-bg-hover: #DCCFBF;
+    --super-tinted-area-main-color: #DCCFBF;
+
+    /* Accent */
+    --main-accent-color: #5B85AA;       
+    --main-accent-color-activte: #466A8D;
+
+    /* Borders */
+    --box-border-color: #D6C8B8;
+    
+    /* Inputs */
+    --input-bg-color: #FFF;
+    --input-border-color: #D6C8B8;
+    --input-focus-border-color: #5B85AA;
+
+    /* Force UI elements to light-mode style */
+    color-scheme: light;
+}
+
+/* Global stylings */
+* {
+    box-sizing: border-box;
+}
+
+/* Midnight Blue Mode */
+[data-theme="midnight"] {
+    /* Backgrounds: Deep charcoal-blue */
+    --true-bg-color: #242933;           /* Dark but clearly blue-grey */
+    --tinted-bg-color: #2E3440;         /* Soft "Nord" blue-dark */
+
+    /* Text: Snow White/Frost */
+    --text-color: #ECEFF4;
+
+    /* Cards */
+    --card-bg: #3B4252;
+    --card-bg-hover: #434C5E;
+    --tinted-card-bg: #3B4252;
+    --tinted-card-bg-hover: #4C566A;
+    --super-tinted-area-main-color: #434C5E;
+
+    /* Accent: Electric Blue (Vibrant against the dark blue) */
+    --main-accent-color: #88C0D0;
+    --main-accent-color-activte: #81A1C1;
+
+    /* Borders */
+    --box-border-color: #4C566A;
+
+    /* Inputs */
+    --input-bg-color: #3B4252;
+    --input-border-color: #4C566A;
+    --input-focus-border-color: #88C0D0;
+
+    color-scheme: dark; /* Even though it's blue, it's dark enough for dark scrollbars */
+}
+
+/* Dark Mode */
 [data-theme="dark"] {
     /* Backgrounds */
     --true-bg-color: #121212;
@@ -58,6 +126,7 @@
     --tinted-card-bg: #2a2a2a;
     --tinted-card-bg-hover: #333;
     --tinted-card-shadowcolor-hover: rgb(0 0 0 / 40%);
+    --super-tinted-area-main-color: #3f3c3c;
 
     /* Accent colors */
     --main-accent-color: #4ea8ff;
@@ -76,10 +145,6 @@
     --input-box-shadow-color: rgb(78 168 255 / 35%);
 }
 
-/* Global stylings */
-* {
-    box-sizing: border-box;
-}
 
 /* More global stylings */
 html, body, #root {

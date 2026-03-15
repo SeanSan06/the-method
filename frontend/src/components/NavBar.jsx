@@ -44,10 +44,10 @@ function NavBar({ toggleTheme, theme }) {
 
                 <li>
                     <NavLink
-                        to="/contact"
+                        to="/pricing"
                         className={({ isActive }) => isActive ? 'active-link' : undefined}
                     >
-                        Contact
+                        Pricing
                     </NavLink>
                 </li>
             </ul>
@@ -58,7 +58,10 @@ function NavBar({ toggleTheme, theme }) {
                 </div>  
                 <div id="light-dark-toggle">
                     <button onClick={toggleTheme}>
-                        {theme === "light" ? "Dark Mode" : "Light Mode"}
+                        {theme === "light" && "Switch to Cream"}
+                        {theme === "cream" && "Switch to Midnight"}
+                        {theme === "midnight" && "Switch to Dark"}
+                        {theme === "dark" && "Switch to Light"}
                     </button>
                 </div>
             </div>

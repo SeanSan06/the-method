@@ -37,8 +37,11 @@
         background-color: var(--main-accent-color-activte);
     }
 
+
+/* How It Works Area */
 #how-it-works {
-    background-color: var(--tinted-bg-color);
+    padding: 32px;
+    background-color: var(--super-tinted-area-main-color);
 }
     
 #how-it-works-method-section {
@@ -47,6 +50,7 @@
 }
 
 #how-it-works-title{
+    font-size: 4rem;
     text-align: center;
     margin-top: 2rem;
 }
@@ -68,7 +72,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: var(--tinted-bg-color);
+    background-color: var(--super-tinted-area-main-color);
 }
 
 .steps-box {
@@ -95,6 +99,146 @@
         box-shadow: 0 10px 20px var(--tinted-card-shadowcolor-hover);
         cursor: pointer;
     }
+
+
+/* Home Statistics Area */
+#home-statistics-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 64px 0;
+    gap: 32px
+}
+
+#home-users-count-subarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* Style h3 */
+    #home-statistics-area h3 {
+        font-size: 2rem;
+        margin: 8px;
+        padding: 0;
+    }
+
+    /* Style all h4 */
+    #home-statistics-area h4 {
+        font-size: 1.25rem;
+        margin: 8px;
+        padding: 0;
+    }
+
+    /* Style all paragraphs */
+    #home-statistics-area p {
+        font-size: 1.5rem;
+        margin: 8px;
+        padding: 0;
+    }
+
+#home-statistics-title-h2 {
+    font-size: 4rem;
+    margin: 8px;
+    padding: 0;
+}
+
+#home-users-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    width: 50%;
+    height: auto;
+    margin: 8px;
+    padding: 8px;
+    background-color: var(--card-bg);
+    border: 4px var(--box-border-color) solid;
+    border-radius: 10px;
+}
+
+#home-statistics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+}
+
+    #home-impact-statistics-subarea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+        #home-impact-statistics-h3 {
+            font-size: 2rem;
+            margin: 8px;
+            padding: 0;
+        }
+
+            #impact-statistics-data {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 60%;
+            }
+
+            #impact-statistics-data div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                height: auto;
+                margin: 8px;
+                padding: 8px;
+                background-color: var(--card-bg);
+                border: 4px var(--box-border-color) solid;
+                border-radius: 10px;
+            }
+
+    #home-the-method-statistics-subarea {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+        #home-the-method-statistics-h3 {
+            font-size: 2rem;
+            margin: 8px;
+            padding: 0;
+        }
+
+            #home-the-method-statistics-data {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 75%;
+            }
+
+            #home-the-method-statistics-data div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                height: auto;
+                margin: 8px;
+                padding: 8px;
+                background-color: var(--card-bg);
+                border: 4px var(--box-border-color) solid;
+                border-radius: 10px;
+            }
+
 
 /* Reviews Area */
 #reviews-area {
@@ -154,6 +298,96 @@
 .reivew-job {
     margin: 0;
 }
+
+/* Recommend Provr Area */
+#recommend-provr-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    gap: 16px;
+}
+
+#try-provr-h2 {
+    font-size: 4rem;
+    margin: 8px;
+    padding: 0;
+}
+
+#recommend-provr-p {
+    font-size: 1.5rem;
+    margin: 8px;
+    padding: 0;
+    max-width: 800px;
+    text-align: center;
+}
+
+#visit-provr-link {
+    text-decoration: none;
+}
+
+    #visit-provr-button {
+        all: unset;
+        text-align: center;
+        color: var(--text-color);
+        width: 15rem;
+        height: 5rem;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 2rem;
+        background-color: var(--main-accent-color);
+    }
+
+        #visit-provr-button:active {
+            transform: scale(0.95);
+            background-color: var(--main-accent-color-activte);
+        }
+
+/* Call To Action Area */
+#call-to-action-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    background-color: var(--super-tinted-area-main-color);
+}
+
+#ready-to-get-started-h2 {
+    font-size: 4rem;
+    margin: 8px;
+    padding: 0;
+}
+
+#call-to-action-p-top {
+    font-size: 1.5rem;
+    margin: 8px;
+    padding: 0;
+}
+
+#call-to-action-p-bottom {
+    font-size: 1.5rem;
+    margin: 8px;
+    padding: 0;
+}
+
+#call-to-action-sign-up-button {
+    all: unset;
+    text-align: center;
+    color: var(--text-color);
+    width: 15rem;
+    height: 5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: var(--main-accent-color);
+}
+
+    #call-to-action-sign-up-button:active {
+        transform: scale(0.95);
+        background-color: var(--main-accent-color-activte);
+    }
 
 /* Footer Area */
 #footer-information-area {
