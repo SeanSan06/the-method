@@ -1,0 +1,27 @@
+#data-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#data-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 35%;
+}
+
+#data-content h1 {
+    color: var(--text-color);
+    margin: 0;
+}
+
+#data-content p {
+    color: var(--text-color);
+    margin: 0.25rem 0 0.5rem;
+}
+
+#data-content ol {
+    color: var(--link-color);
+    margin: 0.5rem 0 0.75rem;
+}

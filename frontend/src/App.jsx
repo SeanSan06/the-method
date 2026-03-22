@@ -22,8 +22,8 @@ import './styles/dashboard-page.css'
 import './styles/about-page.css'
 import './styles/pricing-page.css'
 import './styles/news-page.css'
-
 import './styles/contact-page.css'
+import './styles/data-page.css'
 
 import './styles/specific-component/resume-template.css'
 
