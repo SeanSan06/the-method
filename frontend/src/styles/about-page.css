@@ -1,1 +1,30 @@
+#about-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 100%;
+}
 
+#about-page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+
+    #go-back-home {
+        all: unset;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        background-color: var(--main-accent-color);
+        color: var(--text-color);
+        width: 125px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }

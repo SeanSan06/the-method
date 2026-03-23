@@ -209,24 +209,6 @@ nav {
         font-size: 1.1rem;
     }
 
-    #light-dark-toggle {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-size: 1.1rem;
-    }
-
-    #light-dark-toggle button {
-        all: unset;
-        padding: 0.6rem 1.2rem;
-        font-size: 1rem;
-        border-radius: 6px;
-        cursor: pointer;
-        background-color: var(--main-accent-color);
-        color: var(--text-color);
-        display: inline-block;
-    }
-
     #log-in-sign-up button {
         all: unset;
         padding: 0.6rem 2rem;
@@ -243,6 +225,87 @@ nav {
         transform: scale(0.95);
         background-color: var(--main-accent-color-activte);
     }
+
+    /* Theme button */
+    #light-dark-toggle .theme-selector-container > button {
+        all: unset;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+        background-color: var(--main-accent-color);
+        color: var(--text-color);
+        display: inline-block;
+    }
+
+    .theme-selector-container {
+        position: relative;
+    }
+
+    .theme-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 0.5rem;
+        background-color: var(--card-bg);
+        border: 1px solid var(--box-border-color);
+        border-radius: 0;
+        box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+        min-width: 160px;
+        z-index: 1000;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        animation: slide-down 0.2s ease-out;
+    }
+
+    @keyframes slide-down {
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+        
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .theme-option {
+        all: unset;
+        display: block;
+        width: 100%;
+        padding: 0.85rem 1.2rem;
+        font-size: 0.95rem;
+        cursor: pointer;
+        background-color: var(--card-bg);
+        color: var(--text-color);
+        border: none;
+        text-align: left;
+        transition: all 0.15s ease;
+        font-weight: 500;
+        border-radius: 0;
+    }
+
+    .theme-option:hover {
+        background-color: var(--card-bg-hover);
+        padding-left: 1.8rem;
+    }
+
+    .theme-option.active {
+        background-color: var(--main-accent-color);
+        color: var(--text-color);
+        font-weight: 600;
+    }
+
+    .theme-option:first-child {
+        border-radius: 0;
+    }
+
+    .theme-option:last-child {
+        border-radius: 0;
+    }
+
 
 /* The Method Accent Color */
 .method-word {

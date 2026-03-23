@@ -4,7 +4,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
 }
 
 #pricing-page-h1 {
@@ -14,17 +13,24 @@
 }
 
 #pricing-tiers-subarea {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: stretch;
     margin-top: 2rem;
 }
 
+    .pricing-icon {
+        width: 3rem;
+        height: 3rem;
+        fill: var(--main-accent-color);
+    }
+
     #pricing-free-tier, #pricing-student-tier, #pricing-premium-tier {
+        display: flex;
+        flex-direction: column;
         width: 300px;
-        height: 100%;
         background-color: var(--card-bg);
         border: solid 2px var(--main-accent-color);
         padding: 2rem;
@@ -33,7 +39,7 @@
     }
 
         #pricing-free-tier:hover, #pricing-student-tier:hover, #pricing-premium-tier:hover {
-            background-color: var(--main-accent-color);
+            background-color: var(--main-accent-color-activte);
             color: var(--tinted-bg-color);
             cursor: pointer;
             transition: background-color 0.3s ease, color 0.3s ease;

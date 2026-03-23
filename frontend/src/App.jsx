@@ -8,6 +8,12 @@ import FormPage from  './pages/FormPage';
 import DashboardPage from  './pages/DashboardPage';
 import AboutPage from  './pages/AboutPage';
 import PricingPage from  './pages/PricingPage';
+import NewsPage from  './pages/NewsPage';
+import DataPage from  './pages/DataPage';
+import TermsOfServicePage from  './pages/TermsOfServicePage';
+import PrivacyPolicyPage from  './pages/PrivacyPolicyPage';
+import FAQsPage from  './pages/FAQsPage';
+
 
 import './styles/styles.css'
 import './styles/home-page.css'
@@ -15,8 +21,12 @@ import './styles/form-page.css'
 import './styles/dashboard-page.css'
 import './styles/about-page.css'
 import './styles/pricing-page.css'
-
+import './styles/news-page.css'
 import './styles/contact-page.css'
+import './styles/data-page.css'
+import './styles/terms-of-service-page.css'
+import './styles/privacy-policy-page.css'
+import './styles/faq-page.css'
 
 import './styles/specific-component/resume-template.css'
 
@@ -34,14 +44,9 @@ function App() {
         localStorage.setItem("theme", theme);
     }, [theme]);
 
-    // Cycles through: light -> dark -> cream -> light
-    const toggleTheme = () => {
-        setTheme(prev => {
-            if (prev === "light") return "cream";
-            if (prev === "cream") return "midnight"; // New step!
-            if (prev === "midnight") return "dark";
-            return "light";
-        });
+    // Sets theme directly from navbar selection
+    const toggleTheme = (selectedTheme) => {
+        setTheme(selectedTheme);
     };
 
     return (
@@ -54,6 +59,11 @@ function App() {
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/news" element={<NewsPage />} />
+            <Route path="/data" element={<DataPage />} />
+            <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            <Route path="/faqs" element={<FAQsPage />} />
         </Routes>
     </div>
     )

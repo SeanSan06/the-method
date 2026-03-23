@@ -1,0 +1,42 @@
+#terms-of-service-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#terms-of-service-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 35%;
+    margin-top: 16px;
+}
+
+#terms-of-service-content .back-home-link {
+    background-color: var(--card-bg);
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+    #terms-of-service-content .back-home-link:hover {
+        background-color: var(--card-bg-hover);
+        transform: scale(0.975);
+    }
+
+#terms-of-service-content h1 {
+    color: var(--text-color);
+    margin: 0;
+}
+
+#terms-of-service-content p {
+    color: var(--text-color);
+    margin: 0.25rem 0 0.5rem;
+}
+
+#terms-of-service-content ol {
+    color: var(--text-color);
+    margin: 0.5rem 0 0.75rem;
+}
