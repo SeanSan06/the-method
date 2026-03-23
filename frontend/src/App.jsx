@@ -26,6 +26,7 @@ import './styles/contact-page.css'
 import './styles/data-page.css'
 import './styles/terms-of-service-page.css'
 import './styles/privacy-policy-page.css'
+import './styles/faq-page.css'
 
 import './styles/specific-component/resume-template.css'
 
