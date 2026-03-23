@@ -250,20 +250,21 @@ nav {
         background-color: var(--card-bg);
         border: 1px solid var(--box-border-color);
         border-radius: 0;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
         min-width: 160px;
         z-index: 1000;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        animation: slideDown 0.2s ease-out;
+        animation: slide-down 0.2s ease-out;
     }
 
-    @keyframes slideDown {
+    @keyframes slide-down {
         from {
             opacity: 0;
             transform: translateY(-8px);
         }
+        
         to {
             opacity: 1;
             transform: translateY(0);
