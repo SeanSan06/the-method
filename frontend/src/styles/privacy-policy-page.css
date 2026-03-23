@@ -1,0 +1,42 @@
+#privacy-policy-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#privacy-policy-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 35%;
+    margin-top: 16px;
+}
+
+#privacy-policy-content .back-home-link {
+    background-color: var(--card-bg);
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+    #privacy-policy-content .back-home-link:hover {
+        background-color: var(--card-bg-hover);
+        transform: scale(0.975);
+    }
+
+#privacy-policy-content h1 {
+    color: var(--text-color);
+    margin: 0;
+}
+
+#privacy-policy-content p {
+    color: var(--text-color);
+    margin: 0.25rem 0 0.5rem;
+}
+
+#privacy-policy-content ol {
+    color: var(--text-color);
+    margin: 0.5rem 0 0.75rem;
+}

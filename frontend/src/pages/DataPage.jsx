@@ -11,14 +11,14 @@ function Data() {
                 <p>
                     Last updated: <time dateTime="2026-03-22">March 22, 2026</time>
                 </p>
-                <ol>
-                        <li>Here at The Method we respect your data and privacy when applying to jobs.</li>
-                        <li>We collect your name email address for account purposes.</li>
-                        <li>We do not sell your data ever.</li>
-                        <li>Resumes will be stored in our databases, but you can always remove them.</li>
-                </ol>
-                
-                <p><strong>Disclaimer:</strong> Subject to update as we build our website. Not to worry, we will always prioritize your privacy.</p>
+
+                <p>
+                    We are commited to protecting your data and maintaining your privacy. That is why 
+                    we allow you to control your information at all times. Users who create an account 
+                    with us can always view, edit, and delete their data. We will never sell your data 
+                    to third parties, and we will always be transparent about how we use your data to 
+                    improve our services.
+                </p>
             </div>
         </div>
     );
