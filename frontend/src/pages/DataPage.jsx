@@ -4,7 +4,7 @@ function Data() {
     return  (
         <div id="data-page">
             <div id="data-content">
-                <Link to="/" id="back-home-link">
+                <Link to="/" className="back-home-link">
                     Back Home
                 </Link>
                 <h1>Our Privacy Policy</h1>

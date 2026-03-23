@@ -24,6 +24,7 @@ import './styles/pricing-page.css'
 import './styles/news-page.css'
 import './styles/contact-page.css'
 import './styles/data-page.css'
+import './styles/terms-of-service-page.css'
 
 import './styles/specific-component/resume-template.css'
 
