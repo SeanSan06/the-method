@@ -6,9 +6,10 @@ FastAPI-based backend for The Method application. Handles resume analysis, inter
 ## Setup
 
 ### Prerequisites
-- Python 3.10.12
-- PostgreSQL
+- Python 3.12.3+
+- PostgreSQL w/ SqlAlchemy
 - GROQ API key
+- Google Developer key(future)
 
 ### Installation
 ```bash
