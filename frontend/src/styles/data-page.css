@@ -2,41 +2,84 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    min-height: 100vh; 
+    padding: 2rem 1rem;
 }
 
 #data-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 35%;
+    width: 100%;
+    max-width: 600px;
     margin-top: 16px;
 }
 
-#data-content .back-home-link {
+.back-home-link {
     background-color: var(--card-bg);
     padding: 0.5rem 0.9rem;
     border-radius: 0.5rem;
     color: var(--text-color);
     text-decoration: none;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--box-border-color);
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-    #data-content .back-home-link:hover {
-        background-color: var(--card-bg-hover);
-        transform: scale(0.975);
-    }
+.back-home-link:hover {
+    background-color: var(--card-bg-hover);
+    transform: scale(0.975);
+}
 
 #data-content h1 {
-    color: var(--text-color);
-    margin: 0;
+    color: var(--text-color); 
+    margin: 0 0 0.5rem 0;
+    font-size: 2.5rem;
 }
 
 #data-content p {
-    color: var(--text-color);
-    margin: 0.25rem 0 0.5rem;
+    color: var(--text-color); 
+    margin: 0.25rem 0 1.5rem;
+    font-size: 1.1rem;
 }
 
-#data-content ol {
-    color: var(--text-color);
-    margin: 0.5rem 0 0.75rem;
+.data-info-card {
+    background-color: var(--card-bg);
+    border: 2px solid var(--box-border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.data-info-card p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* Styling the destructive "Delete" button */
+.delete-data-btn {
+    background-color: #ef4444; /* A universal red for 'delete' actions */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.delete-data-btn:hover {
+    background-color: #dc2626;
+}
+
+.delete-data-btn:active {
+    transform: scale(0.95);
+}
+
+/* Message that appears after clicking delete */
+.data-deleted-msg {
+    color: var(--main-accent-color) !important;
+    font-weight: bold;
 }
