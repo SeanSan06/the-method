@@ -1,24 +1,50 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Data() {
+    const [lastUpdated, setLastUpdated] = useState("March 22, 2026");
+    const [hasData, setHasData] = useState(true);
+
+    const handleDeleteData = () => {
+        const confirmDelete = window.confirm("Are you sure you want to delete all your data? This action cannot be undone.");
+        
+        if (confirmDelete) {
+            setHasData(false);
+            setLastUpdated("N/A"); 
+            alert("Your data has been successfully deleted.");
+            
+        }
+    };
+
     return  (
         <div id="data-page">
             <div id="data-content">
                 <Link to="/" className="back-home-link">
                     Back Home
                 </Link>
-                <h1>Our Privacy Policy</h1>
+                
+                <h1>Your Data</h1>
+                
                 <p>
-                    Last updated: <time dateTime="2026-03-22">March 22, 2026</time>
+                    Last updated: <time>{lastUpdated}</time>
                 </p>
 
-                <p>
-                    We are commited to protecting your data and maintaining your privacy. That is why 
-                    we allow you to control your information at all times. Users who create an account 
-                    with us can always view, edit, and delete their data. We will never sell your data 
-                    to third parties, and we will always be transparent about how we use your data to 
-                    improve our services.
-                </p>
+                <div className="data-info-card">
+                    <p>
+                        We are committed to protecting your data and maintaining your privacy. 
+                        You have full control over your information. Click the button below to 
+                        permanently delete all your data from our servers.
+                    </p>
+
+                    {}
+                    {hasData ? (
+                        <button className="delete-data-btn" onClick={handleDeleteData}>
+                            Delete All My Data
+                        </button>
+                    ) : (
+                        <p className="data-deleted-msg">Your data has been cleared.</p>
+                    )}
+                </div>
             </div>
         </div>
     );
