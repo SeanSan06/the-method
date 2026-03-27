@@ -1,8 +1,7 @@
-from groq import Groq # type: ignore
+from groq import Groq  # type: ignore
 from dotenv import load_dotenv
 import json
 import time
-
 
 load_dotenv()
 
@@ -21,7 +20,7 @@ def chat(messages, max_tokens=300, temperature=0.3):
             model=MODEL_FAST,
             messages=messages,
             max_tokens=max_tokens,
-            temperature=temperature
+            temperature=temperature,
         )
         return completion.choices[0].message.content
 
@@ -30,7 +29,9 @@ def chat(messages, max_tokens=300, temperature=0.3):
         return "Error occurred while processing the request."
 
 
-def generate_json(messages, max_tokens=2000, temperature=0.2, retries=2, use_smart_model=False):
+def generate_json(
+    messages, max_tokens=2000, temperature=0.2, retries=2, use_smart_model=False
+):
     """
     Send chat messages to the LLM and parse the JSON output.
     Retries on JSON parsing errors.
@@ -53,9 +54,9 @@ def generate_json(messages, max_tokens=2000, temperature=0.2, retries=2, use_sma
                 messages=messages,
                 max_tokens=max_tokens,
                 temperature=temperature,
-                response_format={"type": "json_object"}
+                response_format={"type": "json_object"},
             )
-            
+
             raw_response = completion.choices[0].message.content
             return json.loads(raw_response)
 
@@ -65,7 +66,7 @@ def generate_json(messages, max_tokens=2000, temperature=0.2, retries=2, use_sma
                 time.sleep(1)
                 continue
             return {"error": "Failed to parse JSON from LLM response."}
-        
+
         except Exception as e:
             print(f"Error occurred (attempt {attempt + 1}): {e}")
             if attempt < retries:

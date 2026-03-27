@@ -6,7 +6,13 @@ import os
 
 from llm.client import chat
 from llm.prompts import RESUME_SYSTEM_PROMPT
-from models import ResumeRequest, GenerateResumeRequest, OptimizeResumeRequest, AnalyzeResumeRequest, CoverLetterRequest
+from models import (
+    ResumeRequest,
+    GenerateResumeRequest,
+    OptimizeResumeRequest,
+    AnalyzeResumeRequest,
+    CoverLetterRequest,
+)
 from llm.service import generate_resume, optimize_resume, generate_cover_letter
 from resume_analyzer import ResumeAnalyzer, ValidationError
 
@@ -27,12 +33,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.on_event('startup')
+
+@app.on_event("startup")
 def startup_db():
     init_db()
 
 
-@app.post('/chat')
+@app.post("/chat")
 async def chat_endpoint(request: ResumeRequest):
     """
     Endpoint to handle chat requests for resume assistance.
@@ -55,8 +62,7 @@ async def chat_endpoint(request: ResumeRequest):
     return {"response": response}
 
 
-
-@app.post('/llm/generate-resume')
+@app.post("/llm/generate-resume")
 async def generate_resume_endpoint(request: GenerateResumeRequest):
     """
     HTTP route handler. Deals with FastAPI/HTTP specifics
@@ -80,31 +86,29 @@ async def generate_resume_endpoint(request: GenerateResumeRequest):
     return {"resume": enhanced_resume}
 
 
-
-@app.post('/llm/optimize-resume')
+@app.post("/llm/optimize-resume")
 async def optimize_resume_endpoint(request: OptimizeResumeRequest):
-  """
-  Optimize resume for ATS according to job description.
+    """
+    Optimize resume for ATS according to job description.
 
-  Args:
-       request (OptimizeResumeRequest): The request body containing the user's prompt.
-  Returns:
-       dict: The LLM's response or an error message.
-  """
+    Args:
+         request (OptimizeResumeRequest): The request body containing the user's prompt.
+    Returns:
+         dict: The LLM's response or an error message.
+    """
 
-  resume_dict = request.resume.model_dump()
-  job_description = request.job_description
+    resume_dict = request.resume.model_dump()
+    job_description = request.job_description
 
-  optimized_resume = optimize_resume(resume_dict, job_description)
+    optimized_resume = optimize_resume(resume_dict, job_description)
 
-  if "error" in optimized_resume:
-      raise HTTPException(status_code=500, detail=optimized_resume["error"])
+    if "error" in optimized_resume:
+        raise HTTPException(status_code=500, detail=optimized_resume["error"])
 
-  return {"resume": optimized_resume}
+    return {"resume": optimized_resume}
 
 
-
-@app.post('/analyze-resume')
+@app.post("/analyze-resume")
 async def analyze_resume_endpoint(request: AnalyzeResumeRequest):
     """
     Analyze resume against job description.
@@ -118,10 +122,9 @@ async def analyze_resume_endpoint(request: AnalyzeResumeRequest):
     try:
         resume_dict = request.resume.model_dump()
 
-        result = resume_analyzer.analyze({
-            "resume": resume_dict,
-            "job_description": request.job_description
-        })
+        result = resume_analyzer.analyze(
+            {"resume": resume_dict, "job_description": request.job_description}
+        )
 
         return result.to_dict()
 
@@ -131,7 +134,7 @@ async def analyze_resume_endpoint(request: AnalyzeResumeRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.post('/llm/generate-cover-letter')
+@app.post("/llm/generate-cover-letter")
 async def generate_cover_letter_endpoint(request: CoverLetterRequest):
     """
     Generate a cover letter based on resume and job description.
@@ -148,12 +151,15 @@ async def generate_cover_letter_endpoint(request: CoverLetterRequest):
     position_title = request.position_title
     hiring_manager_name = request.hiring_manager_name
 
-    result = generate_cover_letter(resume_dict, job_description, company_name, position_title, hiring_manager_name)
+    result = generate_cover_letter(
+        resume_dict, job_description, company_name, position_title, hiring_manager_name
+    )
 
     if "error" in result:
         raise HTTPException(status_code=500, detail=result["error"])
 
     return result
+
 
 @app.get("/interview-questions/{company}")
 def get_interview_questions_endpoint(company: str):
@@ -161,6 +167,8 @@ def get_interview_questions_endpoint(company: str):
     data = get_questions(company)
 
     if data is None:
-        raise HTTPException(status_code=404, detail=f"Company '{company}' not found or has no data")
+        raise HTTPException(
+            status_code=404, detail=f"Company '{company}' not found or has no data"
+        )
 
     return data

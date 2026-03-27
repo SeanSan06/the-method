@@ -146,7 +146,6 @@ The skills array should contain normalized, lowercase, deduplicated technical sk
 Do not include markdown, explanations, or code fences. Return only the JSON object."""
 
 
-
 COVER_LETTER_PROMPT = """You are an expert career writer who specializes in natural, human-sounding cover letters.
 
 Given a resume JSON, job description, company name (optional), position title (optional), and hiring manager name (optional), write a tailored cover letter in proper business letter format that feels genuinely written by the candidate — not by AI.

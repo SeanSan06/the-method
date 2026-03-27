@@ -2,13 +2,13 @@
 This module defines Pydantic models for resume-related data structures and requests.
 """
 
-
 from typing import Optional
 from pydantic import BaseModel
 
 
 class ResumeRequest(BaseModel):
     messages: list
+
 
 class Education(BaseModel):
     school: str | None = None
@@ -18,6 +18,7 @@ class Education(BaseModel):
     start_year: str | None = None
     end_year: str | None = None
 
+
 class Experience(BaseModel):
     company: str | None = None
     title: str | None = None
@@ -25,6 +26,7 @@ class Experience(BaseModel):
     description: str | None = None
     start_date: str | None = None
     end_date: str | None = None
+
 
 class Project(BaseModel):
     name: str | None = None
@@ -38,15 +40,18 @@ class Link(BaseModel):
     type: str | None = None  # linkedin, github, portfolio, other
     url: str | None = None
 
+
 class Certification(BaseModel):
     name: str | None = None
     issuer: str | None = None
     date: str | None = None
 
+
 class Award(BaseModel):
     name: str | None = None
     issuer: str | None = None
     date: str | None = None
+
 
 class Resume(BaseModel):
     name: str  # required
@@ -63,8 +68,10 @@ class Resume(BaseModel):
     certifications: list[Certification] | None = None
     awards: list[Award] | None = None
 
+
 class GenerateResumeRequest(BaseModel):
     resume: Resume
+
 
 class OptimizeResumeRequest(BaseModel):
     resume: Resume
@@ -74,7 +81,6 @@ class OptimizeResumeRequest(BaseModel):
 class AnalyzeResumeRequest(BaseModel):
     resume: Resume
     job_description: str
-
 
 
 class AnalyzeResumeResponse(BaseModel):

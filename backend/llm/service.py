@@ -1,7 +1,12 @@
-from llm.prompts import RESUME_SYSTEM_PROMPT, ATS_OPTIMIZATION_PROMPT, COVER_LETTER_PROMPT
+from llm.prompts import (
+    RESUME_SYSTEM_PROMPT,
+    ATS_OPTIMIZATION_PROMPT,
+    COVER_LETTER_PROMPT,
+)
 from llm.client import generate_json
 import json
 from typing import Optional
+
 
 def generate_resume(resume_dict: dict) -> dict:
     """
@@ -14,14 +19,14 @@ def generate_resume(resume_dict: dict) -> dict:
     """
     messages = [
         {"role": "system", "content": RESUME_SYSTEM_PROMPT},
-        {"role": "user", "content": json.dumps(resume_dict)}
+        {"role": "user", "content": json.dumps(resume_dict)},
     ]
 
     result = generate_json(messages, use_smart_model=False)
 
     if "error" in result:
         return {"error": result["error"], "original": resume_dict}
-    
+
     return result
 
 
@@ -32,7 +37,7 @@ def optimize_resume(resume_dict: dict, job_description: str) -> dict:
     Args:
         resume_dict (dict): The raw resume data with resume model fields
         job_description (str): The job description text to optimize against
-    
+
     Returns:
         dict: The optimized resume data - same structure as input
     """
@@ -44,18 +49,24 @@ Job Description:
 
     messages = [
         {"role": "system", "content": ATS_OPTIMIZATION_PROMPT},
-        {"role": "user", "content": user_content}
+        {"role": "user", "content": user_content},
     ]
 
     result = generate_json(messages, use_smart_model=True)
-    
+
     if "error" in result:
         return {"error": result["error"], "original": resume_dict}
-    
+
     return result
 
 
-def generate_cover_letter(resume_dict: dict, job_description: str, company_name: Optional[str], position_title: Optional[str], hiring_manager_name: Optional[str]) -> dict:
+def generate_cover_letter(
+    resume_dict: dict,
+    job_description: str,
+    company_name: Optional[str],
+    position_title: Optional[str],
+    hiring_manager_name: Optional[str],
+) -> dict:
     """
     Generate a cover letter based on resume data and job description.
 
@@ -80,10 +91,12 @@ Hiring Manager Name: {hiring_manager_name or "Not provided"}"""
 
     messages = [
         {"role": "system", "content": COVER_LETTER_PROMPT},
-        {"role": "user", "content": user_content}
+        {"role": "user", "content": user_content},
     ]
 
-    result = generate_json(messages, max_tokens=1000, temperature=0.5, use_smart_model=True)
+    result = generate_json(
+        messages, max_tokens=1000, temperature=0.5, use_smart_model=True
+    )
 
     if "error" in result:
         return {"error": result["error"]}
