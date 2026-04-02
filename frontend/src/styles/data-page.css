@@ -2,9 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    min-height: 100vh; 
-    padding: 2rem 1rem;
 }
 
 #data-content {
@@ -34,14 +31,8 @@
 
 #data-content h1 {
     color: var(--text-color); 
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.5rem;
     font-size: 2.5rem;
-}
-
-#data-content p {
-    color: var(--text-color); 
-    margin: 0.25rem 0 1.5rem;
-    font-size: 1.1rem;
 }
 
 .data-info-card {
@@ -55,6 +46,12 @@
 .data-info-card p {
     margin-top: 0;
     margin-bottom: 1.5rem;
+}
+
+#data-content p {
+    color: var(--text-color); 
+    margin: 0.25rem 0 1.5rem;
+    font-size: 1.1rem;
 }
 
 /* Styling the destructive "Delete" button */
