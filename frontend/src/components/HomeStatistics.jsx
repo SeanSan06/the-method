@@ -2,7 +2,13 @@ function HomeStatistics() {
     return  (
         <section id="home-statistics-area">
             <div id="home-statistics-header">
-                <h2 id="home-statistics-title-h2">Real Progress</h2>
+                <div id="home-statistics-title-row">
+                    <h2 id="home-statistics-title-h2">Real Progress</h2>
+                    <div className="stat-info-tooltip" tabIndex="0" aria-label="Info: statistics shown here are based on user-reported data only.">
+                        <span aria-hidden="true">i</span>
+                        <span className="stat-tooltip-text">User-reported data only.</span>
+                    </div>
+                </div>
                 <p id="home-statistics-caption">Track the steps that matter most from preparation to results.</p>
             </div>
 
@@ -28,7 +34,7 @@ function HomeStatistics() {
                 <section className="home-statistics-panel">
                     <h3 className="home-statistics-panel-title">Outcome Impact</h3>
                     <div className="home-statistics-grid">
-                        <article className="home-stat-card home-stat-card-highlight">
+                        <article className="home-stat-card">
                             <h4>Offers Received</h4>
                             <p>0</p>
                         </article>
