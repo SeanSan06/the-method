@@ -251,13 +251,59 @@ nav {
     /* Theme button */
     .theme-selector-container > button {
         all: unset;
+        min-width: 140px;
+        width: 140px;
         padding: 0.6rem 1.2rem;
         font-size: 1rem;
         border-radius: 6px;
         cursor: pointer;
         background-color: var(--main-accent-color);
         color: var(--text-color);
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: all 0.2s ease;
+        gap: 0.55rem;
+    }
+
+    .theme-button {
+        flex-wrap: wrap;
+    }
+
+    .theme-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 18px;
+        width: 18px;
+        height: 18px;
+        color: currentColor;
+        line-height: 0;
+    }
+
+    .theme-icon svg {
+        display: block;
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+        stroke: currentColor;
+    }
+
+    .theme-icon svg path,
+    .theme-icon svg circle,
+    .theme-icon svg rect,
+    .theme-icon svg line {
+        fill: currentColor;
+        stroke: currentColor;
+    }
+
+    .theme-selector-container > button:hover {
+        background-color: var(--main-accent-color-activte);
+    }
+
+    .theme-selector-container > button:active {
+        transform: scale(0.95);
     }
 
     .theme-selector-container {
@@ -268,23 +314,23 @@ nav {
         position: absolute;
         top: 100%;
         right: 0;
-        margin-top: 0.5rem;
+        margin-top: 0.6rem;
         background-color: var(--card-bg);
         border: 1px solid var(--box-border-color);
-        border-radius: 0;
-        box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
-        min-width: 160px;
+        border-radius: 8px;
+        box-shadow: 0 12px 32px rgb(0 0 0 / 15%);
+        min-width: 170px;
         z-index: 1000;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        animation: slide-down 0.2s ease-out;
+        animation: slide-down 0.25s cubic-bezier(0.23, 1, 0.320, 1);
     }
 
     @keyframes slide-down {
         from {
             opacity: 0;
-            transform: translateY(-8px);
+            transform: translateY(-12px);
         }
         
         to {
@@ -295,9 +341,11 @@ nav {
 
     .theme-option {
         all: unset;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         width: 100%;
-        padding: 0.85rem 1.2rem;
+        padding: 0.9rem 1.2rem;
         font-size: 0.95rem;
         cursor: pointer;
         background-color: var(--card-bg);
@@ -307,6 +355,18 @@ nav {
         transition: all 0.15s ease;
         font-weight: 500;
         border-radius: 0;
+        gap: 0.75rem;
+    }
+
+    .theme-option:hover {
+        background-color: var(--main-accent-color);
+        color: var(--text-color);
+        padding-left: 1.8rem;
+    }
+
+    .theme-option.active {
+        background-color: var(--main-accent-color);
+        font-weight: 700;
     }
 
     .theme-option:hover {
