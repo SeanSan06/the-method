@@ -398,6 +398,10 @@
     background-color: var(--true-bg-color);
 }
 
+#footer-information-area h2:not(#footer-moto) {
+    text-decoration: underline;
+}
+
 #quick-links {
     display: flex;
     flex-direction: column;
