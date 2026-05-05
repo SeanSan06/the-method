@@ -69,6 +69,12 @@
         cursor: pointer;
         font-size: 2rem;
         background-color: var(--main-accent-color);
+        color: var(--text-color);
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    #make-resume:hover {
+        background-color: var(--main-accent-color-activte);
     }
 
     #make-resume:active {
@@ -404,6 +410,11 @@
         cursor: pointer;
         font-size: 2rem;
         background-color: var(--main-accent-color);
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    #visit-provr-button:hover {
+        background-color: var(--main-accent-color-activte);
     }
 
         #visit-provr-button:active {
@@ -449,6 +460,11 @@
     cursor: pointer;
     font-size: 2rem;
     background-color: var(--main-accent-color);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#call-to-action-sign-up-button:hover {
+    background-color: var(--main-accent-color-activte);
 }
 
     #call-to-action-sign-up-button:active {
