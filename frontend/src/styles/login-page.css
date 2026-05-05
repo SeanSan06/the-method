@@ -1,0 +1,15 @@
+/* Login Page */
+#login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 5rem);
+    padding: 32px;
+}
+
+#login-page h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+}
