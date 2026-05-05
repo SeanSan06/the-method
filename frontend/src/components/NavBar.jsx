@@ -1,8 +1,9 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 
 function NavBar({ toggleTheme, theme }) {
+    const navigate = useNavigate()
     const [showThemeMenu, setShowThemeMenu] = useState(false)
 
     const themes = ['light', 'cream', 'midnight', 'dark']
@@ -21,7 +22,7 @@ function NavBar({ toggleTheme, theme }) {
     }
 
     return  (
-        <nav href="/" id="nav-bar">
+        <nav id="nav-bar">
             <h2 id="the-method">The <span className="method-word">Method</span></h2>
             <ul id="nav-bar-links">
                 <li>
@@ -70,32 +71,28 @@ function NavBar({ toggleTheme, theme }) {
                 </li>
             </ul>
             <div id="log-in-sign-up-lightdark-toggle">
-                <div id="log-in-sign-up">
-                    <button>Log in</button>
-                    <button>Sign up</button>
-                </div>  
-                <div id="light-dark-toggle">
-                    <div className="theme-selector-container">
-                        <button onClick={() => setShowThemeMenu(!showThemeMenu)}>
-                            Theme: {themeLabels[theme]}
-                        </button>
-                        {showThemeMenu && (
-                            <div className="theme-menu">
-                                {themes.map(t => (
-                                    <button
-                                        key={t}
-                                        className={`theme-option ${t === theme ? 'active' : ''}`}
-                                        onClick={() => handleThemeSelect(t)}
-                                    >
-                                        {themeLabels[t]}
-                                    </button>
-                                ))}
-                            </div>
-                        )}
-                    </div>
+                <div className="theme-selector-container">
+                    <button onClick={() => setShowThemeMenu(!showThemeMenu)}>
+                        Theme: {themeLabels[theme]}
+                    </button>
+                    {showThemeMenu && (
+                        <div className="theme-menu">
+                            {themes.map(t => (
+                                <button
+                                    key={t}
+                                    className={`theme-option ${t === theme ? 'active' : ''}`}
+                                    onClick={() => handleThemeSelect(t)}
+                                >
+                                    {themeLabels[t]}
+                                </button>
+                            ))}
+                        </div>
+                    )}
                 </div>
+                <button id="get-started-btn" onClick={() => navigate('/login')}>
+                    Get Started
+                </button>
             </div>
-            
         </nav>
     );
 }

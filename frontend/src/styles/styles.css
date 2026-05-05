@@ -202,14 +202,8 @@ nav {
         justify-self: end;
     }
 
-    #log-in-sign-up {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-size: 1.1rem;
-    }
-
-    #log-in-sign-up button {
+    /* Get Started button */
+    #get-started-btn {
         all: unset;
         padding: 0.6rem 2rem;
         font-size: 1rem;
@@ -219,15 +213,19 @@ nav {
         background-color: var(--main-accent-color);
         color: var(--text-color);
         display: inline-block;
+        transition: all 0.2s ease;
     }
 
-    #log-in-sign-up button:active {
-        transform: scale(0.95);
+    #get-started-btn:hover {
         background-color: var(--main-accent-color-activte);
     }
 
+    #get-started-btn:active {
+        transform: scale(0.95);
+    }
+
     /* Theme button */
-    #light-dark-toggle .theme-selector-container > button {
+    .theme-selector-container > button {
         all: unset;
         padding: 0.6rem 1.2rem;
         font-size: 1rem;

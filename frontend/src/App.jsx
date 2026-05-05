@@ -13,6 +13,7 @@ import DataPage from  './pages/DataPage';
 import TermsOfServicePage from  './pages/TermsOfServicePage';
 import PrivacyPolicyPage from  './pages/PrivacyPolicyPage';
 import FAQsPage from  './pages/FAQsPage';
+import LoginPage from './pages/LoginPage';
 
 
 import './styles/styles.css'
@@ -27,6 +28,7 @@ import './styles/data-page.css'
 import './styles/terms-of-service-page.css'
 import './styles/privacy-policy-page.css'
 import './styles/faq-page.css'
+import './styles/login-page.css'
 
 import './styles/specific-component/resume-template.css'
 
@@ -64,6 +66,7 @@ function App() {
             <Route path="/terms-of-service" element={<TermsOfServicePage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/faqs" element={<FAQsPage />} />
+            <Route path="/login" element={<LoginPage />} />
         </Routes>
     </div>
     )
