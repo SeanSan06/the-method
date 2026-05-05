@@ -188,11 +188,35 @@ nav {
         #nav-bar-links li a {
             text-decoration: none;
             color: var(--text-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        #nav-bar-links li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--main-accent-color);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.20s ease;
+        }
+
+        #nav-bar-links li a:hover::after,
+        #nav-bar-links li a:focus-visible::after {
+            transform: scaleX(1);
         }
 
         #nav-bar-links li a.active-link {
             font-weight: bold;
-            border-bottom: 3px solid var(--main-accent-color);
+        }
+
+        #nav-bar-links li a.active-link::after {
+            transform: scaleX(1);
         }
 
     #log-in-sign-up-lightdark-toggle {
