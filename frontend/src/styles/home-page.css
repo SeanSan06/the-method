@@ -7,19 +7,58 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 16px;
+    gap: 24px;
 }
 
     #hero-area h1 {
-        font-size: 10rem;
+        font-size: 12.5rem;
         margin: 0;
         padding: 0;
+        line-height: 0.9;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-wrap: wrap;
     }
 
     #hero-area p {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         margin: 0;
         padding: 0;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
+
+    .hero-letter {
+        display: inline-block;
+        white-space: pre;
+    }
+
+    .hero-space {
+        width: 0.35em;
+    }
+
+    .hero-fade-letter {
+        opacity: 0;
+        transform: translateY(0.35em);
+        animation: hero-letter-fade-in 100ms ease-out forwards;
+        animation-delay: calc(var(--animation-order) * var(--animation-step));
+        will-change: opacity, transform;
+    }
+
+    @keyframes hero-letter-fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(0.35em);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     #make-resume {
