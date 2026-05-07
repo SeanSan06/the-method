@@ -5,7 +5,7 @@ function Footer() {
         <div>
             <div id="footer-information-area">
                 <div>
-                    <h2>The <span className="method-word">Method's</span> Moto</h2>
+                    <h2 id="footer-moto">The <span className="method-word">Method's</span> Moto</h2>
                     <p>Make Every Task Happen, Own Destiny</p>
                 </div>
                 <div id="quick-links">

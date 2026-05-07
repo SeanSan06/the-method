@@ -1,52 +1,55 @@
 function HomeStatistics() {
     return  (
-        <div id="home-statistics-area">
-            <div id="home-users-count-subarea">
-                <h2 id="home-statistics-title-h2">Real Success</h2>
-                <div id="home-users-count">
-                    <h4>Users</h4>
-                    <p>0</p>
-                </div>
-            </div>
-
-            <div id="home-statistics">
-                <div id="home-impact-statistics-subarea">
-                    <h3 id="home-impact-statistics-h3">Impact Statistics</h3>
-                    <div id="impact-statistics-data">
-                        <div id="home-resumes-sent">
-                            <h4>Resumes Sent</h4>
-                            <p>0</p>
-                        </div>
-                        <div id="home-interviews-held">
-                            <h4>Interviews Held</h4>
-                            <p>0</p>
-                        </div>
-                        <div id="home-jobs-offered">
-                            <h4>Jobs Offered</h4>
-                            <p>0</p>
-                        </div>
+        <section id="home-statistics-area">
+            <div id="home-statistics-header">
+                <div id="home-statistics-title-row">
+                    <h2 id="home-statistics-title-h2">Real Progress</h2>
+                    <div className="stat-info-tooltip" tabIndex="0" aria-label="Info: statistics shown here are based on user-reported data only.">
+                        <span aria-hidden="true">i</span>
+                        <span className="stat-tooltip-text">User-reported data only.</span>
                     </div>
                 </div>
+                <p id="home-statistics-caption">Track the steps that matter most from preparation to results.</p>
+            </div>
 
-                <div id="home-impact-statistics-subarea">
-                    <h3 id="home-the-method-statistics-h3">The Method Statistics</h3>
-                    <div id="home-the-method-statistics-data">
-                        <div id="home-resumes-optimized">
+            <div id="home-statistics-panels">
+                <section className="home-statistics-panel">
+                    <h3 className="home-statistics-panel-title">User Progress</h3>
+                    <div className="home-statistics-grid">
+                        <article className="home-stat-card">
                             <h4>Resumes Optimized</h4>
                             <p>0</p>
-                        </div>
-                        <div id="home-hours-practicing-interviews">
-                            <h4>Hours Practicing Interviews</h4>
+                        </article>
+                        <article className="home-stat-card">
+                            <h4>Applications Sent</h4>
                             <p>0</p>
-                        </div>
-                        <div id="home-jobs-found">
-                            <h4>Jobs Recommended</h4>
+                        </article>
+                        <article className="home-stat-card">
+                            <h4>Interviews Booked</h4>
                             <p>0</p>
-                        </div>
+                        </article>
                     </div>
-                </div>
+                </section>
+
+                <section className="home-statistics-panel">
+                    <h3 className="home-statistics-panel-title">Outcome Impact</h3>
+                    <div className="home-statistics-grid">
+                        <article className="home-stat-card">
+                            <h4>Offers Received</h4>
+                            <p>0</p>
+                        </article>
+                        <article className="home-stat-card">
+                            <h4>Success Rate</h4>
+                            <p>0%</p>
+                        </article>
+                        <article className="home-stat-card">
+                            <h4>Time Saved</h4>
+                            <p>0h</p>
+                        </article>
+                    </div>
+                </section>
             </div>
-        </div>
+        </section>
     );
 }
 

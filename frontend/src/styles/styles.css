@@ -188,11 +188,35 @@ nav {
         #nav-bar-links li a {
             text-decoration: none;
             color: var(--text-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        #nav-bar-links li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--main-accent-color);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.20s ease;
+        }
+
+        #nav-bar-links li a:hover::after,
+        #nav-bar-links li a:focus-visible::after {
+            transform: scaleX(1);
         }
 
         #nav-bar-links li a.active-link {
             font-weight: bold;
-            border-bottom: 3px solid var(--main-accent-color);
+        }
+
+        #nav-bar-links li a.active-link::after {
+            transform: scaleX(1);
         }
 
     #log-in-sign-up-lightdark-toggle {
@@ -202,14 +226,8 @@ nav {
         justify-self: end;
     }
 
-    #log-in-sign-up {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-size: 1.1rem;
-    }
-
-    #log-in-sign-up button {
+    /* Get Started button */
+    #get-started-btn {
         all: unset;
         padding: 0.6rem 2rem;
         font-size: 1rem;
@@ -219,23 +237,73 @@ nav {
         background-color: var(--main-accent-color);
         color: var(--text-color);
         display: inline-block;
+        transition: all 0.2s ease;
     }
 
-    #log-in-sign-up button:active {
-        transform: scale(0.95);
+    #get-started-btn:hover {
         background-color: var(--main-accent-color-activte);
     }
 
+    #get-started-btn:active {
+        transform: scale(0.95);
+    }
+
     /* Theme button */
-    #light-dark-toggle .theme-selector-container > button {
+    .theme-selector-container > button {
         all: unset;
+        min-width: 140px;
+        width: 140px;
         padding: 0.6rem 1.2rem;
         font-size: 1rem;
         border-radius: 6px;
         cursor: pointer;
         background-color: var(--main-accent-color);
         color: var(--text-color);
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: all 0.2s ease;
+        gap: 0.55rem;
+    }
+
+    .theme-button {
+        flex-wrap: wrap;
+    }
+
+    .theme-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 18px;
+        width: 18px;
+        height: 18px;
+        color: currentcolor;
+        line-height: 0;
+    }
+
+    .theme-icon svg {
+        display: block;
+        width: 18px;
+        height: 18px;
+               fill: currentcolor;
+        stroke: currentcolor;
+    }
+
+    .theme-icon svg path,
+    .theme-icon svg circle,
+    .theme-icon svg rect,
+    .theme-icon svg line {
+           fill: currentcolor;
+        stroke: currentcolor;
+    }
+
+    .theme-selector-container > button:hover {
+        background-color: var(--main-accent-color-activte);
+    }
+
+    .theme-selector-container > button:active {
+        transform: scale(0.95);
     }
 
     .theme-selector-container {
@@ -246,23 +314,23 @@ nav {
         position: absolute;
         top: 100%;
         right: 0;
-        margin-top: 0.5rem;
+        margin-top: 0.6rem;
         background-color: var(--card-bg);
         border: 1px solid var(--box-border-color);
-        border-radius: 0;
-        box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
-        min-width: 160px;
+        border-radius: 8px;
+        box-shadow: 0 12px 32px rgb(0 0 0 / 15%);
+        min-width: 170px;
         z-index: 1000;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        animation: slide-down 0.2s ease-out;
+        animation: slide-down 0.25s cubic-bezier(0.23, 1, 0.320, 1);
     }
 
     @keyframes slide-down {
         from {
             opacity: 0;
-            transform: translateY(-8px);
+            transform: translateY(-12px);
         }
         
         to {
@@ -273,9 +341,11 @@ nav {
 
     .theme-option {
         all: unset;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         width: 100%;
-        padding: 0.85rem 1.2rem;
+        padding: 0.9rem 1.2rem;
         font-size: 0.95rem;
         cursor: pointer;
         background-color: var(--card-bg);
@@ -285,7 +355,9 @@ nav {
         transition: all 0.15s ease;
         font-weight: 500;
         border-radius: 0;
+        gap: 0.75rem;
     }
+
 
     .theme-option:hover {
         background-color: var(--card-bg-hover);
