@@ -37,11 +37,15 @@
     font-size: 1.1rem;
 }
 
+/* Account and forgot password links */
 #create-account-link,
 #forgot-password-link {
     color: var(--main-accent-color);
     text-decoration: none;
     font-weight: 600;
+    margin-left: auto;
+    font-size: 0.98rem;
+    transition: text-decoration 0.2s;
 }
 
 #create-account-link:hover,
@@ -112,10 +116,6 @@
     accent-color: var(--main-accent-color);
 }
 
-#forgot-password-link {
-    margin-left: auto;
-    font-size: 0.98rem;
-}
 
 #login-submit-button {
     all: unset;
