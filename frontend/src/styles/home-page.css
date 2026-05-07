@@ -61,6 +61,7 @@
         }
     }
 
+
     #make-resume {
         all: unset;
         width: 20rem;
@@ -70,7 +71,27 @@
         font-size: 2rem;
         background-color: var(--main-accent-color);
         color: var(--text-color);
-        transition: background-color 0.2s ease, transform 0.2s ease;
+        transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 24px 0 rgba(56,98,255,0.08);
+        opacity: 0;
+        transform: translateY(56px) scale(0.98);
+        animation: hero-button-slide-up 0.65s cubic-bezier(0.23, 1, 0.32, 1) 0.2s both;
+        will-change: opacity, transform;
+    }
+
+    @keyframes hero-button-slide-up {
+        0% {
+            opacity: 0;
+            transform: translateY(56px) scale(0.98);
+        }
+        60% {
+            opacity: 1;
+            transform: translateY(-8px) scale(1.01);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
     }
 
     #make-resume:hover {

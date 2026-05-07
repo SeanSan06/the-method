@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 
+
 function HeroArea() {
     const navigate = useNavigate()
 
