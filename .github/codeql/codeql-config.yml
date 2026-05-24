@@ -1,0 +1,14 @@
+# CodeQL config for The Method
+# Exclude generated/build/runtime artifact paths and cache folders
+paths-ignore:
+  - '**/node_modules/**'
+  - '**/dist/**'
+  - '**/build/**'
+  - '**/coverage/**'
+  - '**/logs/**'
+  - '**/.venv/**'
+  - '**/__pycache__/**'
+  - '**/*.min.js'
+  - '**/.pytest_cache/**'
+  - '**/.mypy_cache/**'
+  - '**/.next/**'
