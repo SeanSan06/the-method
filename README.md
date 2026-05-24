@@ -1,5 +1,23 @@
 # The Method
 A website that allows users to create, optimize, practice behavioral interviews, and apply for jobs all in one place.
+- Create new latex based resumes that you can download
+- Optimize resumes with key ideas and AI powered feedback
+- Pratice inteviews questions that are commonly asked
+- Apply to new jobs in your field
+
+## Features
+### Current
+- Home page
+- Footer page contents
+- Website theme switcher
+- Basic resume generator
+
+### Work In Progress
+- Login/signup system
+- Supabase database system
+
+### Future
+- Hosting website on Vercel
 
 ## Tech Stack
 <h3 style="margin-bottom: 5px;">Frontend</h3>
@@ -11,11 +29,64 @@ A website that allows users to create, optimize, practice behavioral interviews,
 
 - Python + FastAPI
 - PostgreSQL + SQLAlchemy
+- Supabase
 
 <h3 style="margin-bottom: 5px;">DevOps</h3>
 
 - GitHub Actions for CI/CD
 - Docker
+
+
+<h3 style="margin-bottom: 5px;">Hosting</h3>
+
+- Vercel
+
+## Project Folder Structure
+
+```text
+the-method/
+├── backend/
+│   ├── Dockerfile
+│   ├── main.py
+│   ├── models.py
+│   ├── requirements.txt
+│   ├── resume_analyzer.py
+│   ├── database/
+│   │   ├── __init__.py
+│   │   ├── engine.py
+│   │   └── models.py
+│   ├── interview/
+│   │   ├── refresh.py
+│   │   └── service.py
+│   └── llm/
+│       ├── client.py
+│       ├── prompts.py
+│       ├── service.py
+│       └── test_llm.py
+├── frontend/
+│   ├── Dockerfile
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   ├── components/
+│   │   │   ├── FileUpload.jsx
+│   │   │   ├── ResumePreview.jsx
+│   │   │   └── ...
+│   │   ├── pages/
+│   │   │   ├── HomePage.jsx
+│   │   │   ├── FormPage.jsx
+│   │   │   └── ...
+│   │   └── styles/
+│   │       ├── styles.css
+│   │       └── ...
+├── docker-compose.yml
+├── README.md
+└── test-prompts/
+    └── test.txt
+```
 
 
 ## Deploy the website
