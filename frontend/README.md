@@ -1,20 +1,95 @@
-# React + Vite
+# The Method Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for **The Method**, a web application for resume building, AI-powered resume optimization, interview practice, and job search.
 
-Currently, two official plugins are available:
+## Overview
+- Built with **React** and **Vite** for fast development and hot module reloading.
+- Modern, component-based architecture with dedicated pages for each major feature.
+- Custom CSS and stylelint for consistent, accessible design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Folder Structure
 
-## React Compiler
+```text
+frontend/
+├── Dockerfile
+├── index.html
+├── package.json
+├── vite.config.js
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── assets/
+│   ├── components/
+│   │   ├── CallToAction.jsx
+│   │   ├── ContactEmail.jsx
+│   │   ├── FileUpload.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Form.jsx
+│   │   ├── HeroArea.jsx
+│   │   ├── HomeStatistics.jsx
+│   │   ├── HowItWorks.jsx
+│   │   ├── NavBar.jsx
+│   │   ├── Privacy.jsx
+│   │   ├── RecommendProvr.jsx
+│   │   ├── ResumePreview.jsx
+│   │   └── Reviews.jsx
+│   ├── pages/
+│   │   ├── AboutPage.jsx
+│   │   ├── ContactPage.jsx
+│   │   ├── DashboardPage.jsx
+│   │   ├── DataPage.jsx
+│   │   ├── FAQsPage.jsx
+│   │   ├── FormPage.jsx
+│   │   ├── HomePage.jsx
+│   │   ├── LoginPage.jsx
+│   │   ├── NewsPage.jsx
+│   │   ├── PricingPage.jsx
+│   │   ├── PrivacyPolicyPage.jsx
+│   │   └── TermsOfServicePage.jsx
+│   └── styles/
+│       ├── about-page.css
+│       ├── contact-page.css
+│       ├── dashboard-page.css
+│       ├── data-page.css
+│       ├── faq-page.css
+│       ├── form-page.css
+│       ├── home-page.css
+│       ├── login-page.css
+│       ├── news-page.css
+│       ├── pricing-page.css
+│       ├── privacy-policy-page.css
+│       ├── styles.css
+│       ├── terms-of-service-page.css
+│       └── specific-component/
+│           └── resume-template.css
+├── public/
+└── ...
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Development
 
-## Expanding the ESLint configuration
+### Install dependencies
+```bash
+npm ci
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Run in development mode
+```bash
+npm run dev
+```
 
+### Linting
+- **JSX:** `npm run lint`
+- **CSS:** `npm run lint:css`
+- **All:** `npm run lint:all`
+
+## Build for production
+```bash
+npm run build
+```
+
+## Docker
+This frontend can be built and run using Docker. See the project root README for details.
 
 ## Attributions
-<a href="https://www.flaticon.com/free-icons/upload" title="upload icons">Upload icons created by Ilham Fitrotul Hayat - Flaticon</a>
+Upload icons created by Ilham Fitrotul Hayat - Flaticon
