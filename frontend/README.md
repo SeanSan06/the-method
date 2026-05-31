@@ -1,3 +1,29 @@
+# Frontend Folder & File Structure
+
+## Recommended Structure
+
+The frontend is organized for scalability and maintainability. Follow these guidelines when adding new files or folders:
+
+- **src/**: Main source code for the frontend React app.
+	- **components/**: Reusable UI components (e.g., buttons, forms, navbars). Each component should be in its own file, named in PascalCase (e.g., `MyComponent.jsx`).
+	- **pages/**: Top-level route components representing full pages (e.g., `HomePage.jsx`, `LoginPage.jsx`).
+	- **assets/**: Static assets such as images, fonts, or icons.
+	- **styles/**: CSS files for global styles and page/component-specific styles. Use a separate CSS file for each page or major component when possible.
+		- **specific-component/**: Styles specific to certain components (e.g., `resume-template.css`).
+- **public/**: Static files served directly (e.g., `favicon.ico`, `robots.txt`).
+- **App.jsx**: Main app component, sets up routing and layout.
+- **main.jsx**: Entry point for React, renders the app.
+
+## Guidelines
+
+- Use clear, descriptive names for files and folders.
+- Keep components small and focused; split into smaller components if needed.
+- Place shared logic or hooks in a `hooks/` folder (create if needed).
+- Place utility functions in a `utils/` folder (create if needed).
+- Keep unrelated code separated by folder.
+- Add a README.md to any new major folder to describe its purpose if it grows large.
+
+This structure helps keep the codebase organized and easy to navigate as the project grows.
 # The Method Frontend
 
 This is the frontend for **The Method**, a web application for resume building, AI-powered resume optimization, interview practice, and job search.

@@ -18,6 +18,7 @@ A website that allows users to create, optimize, practice behavioral interviews,
 
 ### Future
 - Hosting website on Vercel
+- Interview prep section
 
 ## Tech Stack
 <h3 style="margin-bottom: 5px;">Frontend</h3>
