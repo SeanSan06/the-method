@@ -1,20 +1,121 @@
-# React + Vite
+# Frontend Folder & File Structure
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Recommended Structure
 
-Currently, two official plugins are available:
+The frontend is organized for scalability and maintainability. Follow these guidelines when adding new files or folders:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **src/**: Main source code for the frontend React app.
+	- **components/**: Reusable UI components (e.g., buttons, forms, navbars). Each component should be in its own file, named in PascalCase (e.g., `MyComponent.jsx`).
+	- **pages/**: Top-level route components representing full pages (e.g., `HomePage.jsx`, `LoginPage.jsx`).
+	- **assets/**: Static assets such as images, fonts, or icons.
+	- **styles/**: CSS files for global styles and page/component-specific styles. Use a separate CSS file for each page or major component when possible.
+		- **specific-component/**: Styles specific to certain components (e.g., `resume-template.css`).
+- **public/**: Static files served directly (e.g., `favicon.ico`, `robots.txt`).
+- **App.jsx**: Main app component, sets up routing and layout.
+- **main.jsx**: Entry point for React, renders the app.
 
-## React Compiler
+## Guidelines
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Use clear, descriptive names for files and folders.
+- Keep components small and focused; split into smaller components if needed.
+- Place shared logic or hooks in a `hooks/` folder (create if needed).
+- Place utility functions in a `utils/` folder (create if needed).
+- Keep unrelated code separated by folder.
+- Add a README.md to any new major folder to describe its purpose if it grows large.
 
-## Expanding the ESLint configuration
+This structure helps keep the codebase organized and easy to navigate as the project grows.
+# The Method Frontend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This is the frontend for **The Method**, a web application for resume building, AI-powered resume optimization, interview practice, and job search.
 
+## Overview
+- Built with **React** and **Vite** for fast development and hot module reloading.
+- Modern, component-based architecture with dedicated pages for each major feature.
+- Custom CSS and stylelint for consistent, accessible design.
+
+## Folder Structure
+
+```text
+frontend/
+├── Dockerfile
+├── index.html
+├── package.json
+├── vite.config.js
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── assets/
+│   ├── components/
+│   │   ├── CallToAction.jsx
+│   │   ├── ContactEmail.jsx
+│   │   ├── FileUpload.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Form.jsx
+│   │   ├── HeroArea.jsx
+│   │   ├── HomeStatistics.jsx
+│   │   ├── HowItWorks.jsx
+│   │   ├── NavBar.jsx
+│   │   ├── Privacy.jsx
+│   │   ├── RecommendProvr.jsx
+│   │   ├── ResumePreview.jsx
+│   │   └── Reviews.jsx
+│   ├── pages/
+│   │   ├── AboutPage.jsx
+│   │   ├── ContactPage.jsx
+│   │   ├── DashboardPage.jsx
+│   │   ├── DataPage.jsx
+│   │   ├── FAQsPage.jsx
+│   │   ├── FormPage.jsx
+│   │   ├── HomePage.jsx
+│   │   ├── LoginPage.jsx
+│   │   ├── NewsPage.jsx
+│   │   ├── PricingPage.jsx
+│   │   ├── PrivacyPolicyPage.jsx
+│   │   └── TermsOfServicePage.jsx
+│   └── styles/
+│       ├── about-page.css
+│       ├── contact-page.css
+│       ├── dashboard-page.css
+│       ├── data-page.css
+│       ├── faq-page.css
+│       ├── form-page.css
+│       ├── home-page.css
+│       ├── login-page.css
+│       ├── news-page.css
+│       ├── pricing-page.css
+│       ├── privacy-policy-page.css
+│       ├── styles.css
+│       ├── terms-of-service-page.css
+│       └── specific-component/
+│           └── resume-template.css
+├── public/
+└── ...
+```
+
+## Development
+
+### Install dependencies
+```bash
+npm ci
+```
+
+### Run in development mode
+```bash
+npm run dev
+```
+
+### Linting
+- **JSX:** `npm run lint`
+- **CSS:** `npm run lint:css`
+- **All:** `npm run lint:all`
+
+## Build for production
+```bash
+npm run build
+```
+
+## Docker
+This frontend can be built and run using Docker. See the project root README for details.
 
 ## Attributions
-<a href="https://www.flaticon.com/free-icons/upload" title="upload icons">Upload icons created by Ilham Fitrotul Hayat - Flaticon</a>
+Upload icons created by Ilham Fitrotul Hayat - Flaticon

@@ -48,6 +48,8 @@ async def chat_endpoint(request: ResumeRequest):
         request (ResumeRequest): The request body containing the user's prompt.
     Returns:
         dict: The LLM's response or an error message.
+    Raises:
+        HTTPException: If the LLM returns an error response (500).
     """
 
     # Prepend system prompt to messages
@@ -71,6 +73,8 @@ async def generate_resume_endpoint(request: GenerateResumeRequest):
         request (GenerateResumeRequest): The request body containing the user's prompt.
     Returns:
         dict: The LLM's response or an error message.
+    Raises:
+        HTTPException: If the resume generation fails (500).
     """
 
     # extract data from HTTP request
@@ -92,9 +96,11 @@ async def optimize_resume_endpoint(request: OptimizeResumeRequest):
     Optimize resume for ATS according to job description.
 
     Args:
-         request (OptimizeResumeRequest): The request body containing the user's prompt.
+        request (OptimizeResumeRequest): The request body containing the user's prompt.
     Returns:
-         dict: The LLM's response or an error message.
+        dict: The LLM's response or an error message.
+    Raises:
+        HTTPException: If the resume optimization fails (500).
     """
 
     resume_dict = request.resume.model_dump()
@@ -117,6 +123,8 @@ async def analyze_resume_endpoint(request: AnalyzeResumeRequest):
         request (AnalyzeResumeRequest): The request body containing the user's prompt.
     Returns:
         dict: The analysis results or an error message.
+    Raises:
+        HTTPException: If the input is invalid (400) or an internal error occurs (500).
     """
 
     try:
@@ -140,9 +148,11 @@ async def generate_cover_letter_endpoint(request: CoverLetterRequest):
     Generate a cover letter based on resume and job description.
 
     Args:
-        request (OptimizeResumeRequest): The request body containing the user's prompt.
+        request (CoverLetterRequest): The request body containing the user's prompt.
     Returns:
         dict: The generated cover letter or an error message.
+    Raises:
+        HTTPException: If the cover letter generation fails (500).
     """
 
     resume_dict = request.resume.model_dump()
@@ -163,6 +173,16 @@ async def generate_cover_letter_endpoint(request: CoverLetterRequest):
 
 @app.get("/interview-questions/{company}")
 def get_interview_questions_endpoint(company: str):
+    """
+    Retrieve interview questions for a specified company.
+
+    Args:
+        company (str): The name of the company to retrieve interview questions for.
+    Returns:
+        dict: The interview questions data for the company, or an error message if not found.
+    Raises:
+        HTTPException: If the company is not found or has no data (404).
+    """
 
     data = get_questions(company)
 

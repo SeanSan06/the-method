@@ -7,10 +7,14 @@ from pydantic import BaseModel
 
 
 class ResumeRequest(BaseModel):
+    """Request model for sending a list of messages related to a resume."""
+
     messages: list
 
 
 class Education(BaseModel):
+    """Represents an education entry in a resume."""
+
     school: str | None = None
     major: str | None = None
     gpa: str | None = None
@@ -20,6 +24,8 @@ class Education(BaseModel):
 
 
 class Experience(BaseModel):
+    """Represents a work experience entry in a resume."""
+
     company: str | None = None
     title: str | None = None
     location: str | None = None
@@ -29,6 +35,8 @@ class Experience(BaseModel):
 
 
 class Project(BaseModel):
+    """Represents a project entry in a resume."""
+
     name: str | None = None
     description: str | None = None
     link: str | None = None
@@ -37,23 +45,31 @@ class Project(BaseModel):
 
 
 class Link(BaseModel):
+    """Represents a link (e.g., LinkedIn, GitHub) in a resume."""
+
     type: str | None = None  # linkedin, github, portfolio, other
     url: str | None = None
 
 
 class Certification(BaseModel):
+    """Represents a certification in a resume."""
+
     name: str | None = None
     issuer: str | None = None
     date: str | None = None
 
 
 class Award(BaseModel):
+    """Represents an award or honor in a resume."""
+
     name: str | None = None
     issuer: str | None = None
     date: str | None = None
 
 
 class Resume(BaseModel):
+    """Main resume model containing all user information."""
+
     name: str  # required
     phone: str | None = None
     email: str | None = None
@@ -70,20 +86,28 @@ class Resume(BaseModel):
 
 
 class GenerateResumeRequest(BaseModel):
+    """Request model for generating a resume."""
+
     resume: Resume
 
 
 class OptimizeResumeRequest(BaseModel):
+    """Request model for optimizing a resume for a job description."""
+
     resume: Resume
     job_description: str
 
 
 class AnalyzeResumeRequest(BaseModel):
+    """Request model for analyzing a resume against a job description."""
+
     resume: Resume
     job_description: str
 
 
 class AnalyzeResumeResponse(BaseModel):
+    """Response model for resume analysis results."""
+
     score: float
     confidence: str
     recommendation: str
@@ -99,6 +123,8 @@ class AnalyzeResumeResponse(BaseModel):
 
 
 class CoverLetterRequest(BaseModel):
+    """Request model for generating a cover letter."""
+
     resume: Resume
     job_description: str
     company_name: Optional[str] | None = None
@@ -107,6 +133,8 @@ class CoverLetterRequest(BaseModel):
 
 
 class CoverLetterResponse(BaseModel):
+    """Response model for a generated cover letter."""
+
     cover_letter: str
     word_count: int
     suggestions: list[str] | None = None
