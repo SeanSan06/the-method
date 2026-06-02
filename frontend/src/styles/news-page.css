@@ -1,72 +1,51 @@
-/* ...existing code... */
-.news-title {
-    text-align: center;
+#news-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#news-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 35%;
+    margin-top: 16px;
+}
+
+#news-content .back-home-link {
+    display: inline-block;
+    background-color: var(--card-bg);
+    padding: 0.5rem 0.9rem;
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
     margin-bottom: 0.5rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+    #news-content .back-home-link:hover {
+        background-color: var(--card-bg-hover);
+        transform: scale(0.975);
+    }
+
+.news-title, .news-intro {
     color: var(--text-color);
 }
 
+.news-title {
+    margin: 0;
+}
+
 .news-intro {
-    text-align: center;
-    max-width: 65ch;
-    margin: 0 auto 1.5rem;
-    color: var(--text-color);
+    margin: 0.25rem 0 1.5rem;
 }
 
 .news-grid {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
-}
-
-.news-grid > li {
-    width: 60%;
-    min-width: 280px;
-}
-
-.news-card {
-    border: 1px solid var(--box-border-color);
-    border-radius: 12px;
-    padding: 1rem;
-    width: 100%;
-    background-color: var(--tinted-card-bg);
-    color: var(--text-color);
-}
-
-.news-card:hover {
-    background-color: var(--card-bg-hover);
-}
-
-.news-card header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-.news-heading h2 {
-    margin: 0;
-    color: var(--text-color);
-}
-
-.news-caption {
-    font-weight: 600;
-    color: var(--text-color);
-    margin: 0.25rem 0 0.5rem;
-}
-
-.news-date {
-    margin: 0;
-    font-size: 0.875rem;
-    color: var(--text-color);
-    white-space: nowrap;
-    text-align: right;
-}
-
-.news-card time {
-    color: var(--main-accent-color);
 }
