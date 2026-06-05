@@ -189,7 +189,7 @@ function Form() {
                             });
                             }}
                         >
-                            Add Section
+                            +
                         </button>
                     </div>
 
@@ -319,7 +319,7 @@ function Form() {
                             });
                             }}
                         >
-                            Add Section
+                            +
                         </button>
                     </div>
 
@@ -450,7 +450,7 @@ function Form() {
                             });
                             }}
                         >
-                            Add Section
+                            +
                         </button>
 
                     </div>
@@ -552,7 +552,7 @@ function Form() {
                         });
                         }}
                     >
-                        Add Section
+                        +
                     </button>
                     </div>
 
@@ -624,7 +624,7 @@ function Form() {
                             });
                             }}
                         >
-                            Add Section
+                            +
                         </button>
                     </div>
 
@@ -697,7 +697,7 @@ function Form() {
                             });
                             }}
                         >
-                            Add Section
+                            +
                         </button>
                     </div>
 
