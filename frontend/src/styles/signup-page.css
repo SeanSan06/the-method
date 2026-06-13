@@ -1,0 +1,46 @@
+/* Signup page styles — match login-page layout */
+#signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+#signup-card {
+    width: 420px;
+    max-width: calc(100% - 2rem);
+    border-radius: 12px;
+    padding: 1.75rem;
+}
+
+#signup-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.signup-field-group {
+    margin-bottom: 0.85rem;
+}
+
+.signup-field-label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 0.35rem;
+}
+
+.signup-input {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+#signup-submit-button {
+    width: 100%;
+    margin-top: 0.75rem;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
