@@ -14,6 +14,7 @@ import TermsOfServicePage from  './pages/TermsOfServicePage';
 import PrivacyPolicyPage from  './pages/PrivacyPolicyPage';
 import FAQsPage from  './pages/FAQsPage';
 import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
 
 
 import './styles/styles.css'
@@ -29,6 +30,7 @@ import './styles/terms-of-service-page.css'
 import './styles/privacy-policy-page.css'
 import './styles/faq-page.css'
 import './styles/login-page.css'
+import './styles/signup-page.css'
 
 import './styles/specific-component/resume-template.css'
 
@@ -67,6 +69,7 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
             <Route path="/faqs" element={<FAQsPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
         </Routes>
     </div>
     )
