@@ -67,15 +67,31 @@
     color: var(--text-color);
 }
 
-.signup-input {
+.signup-input,
+.signup-input[type="password"] {
     width: 100%;
+    min-height: 3.4rem;
     padding: 0.95rem 1rem;
     border-radius: 10px;
     border: 2px solid var(--box-border-color);
-    background-color: var(--true-bg-color);
-    color: var(--text-color);
-    font-size: 1rem;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    background-color: var(--true-bg-color) !important;
+    color: var(--text-color) !important;
+    font-family: inherit !important;
+    font-size: 1rem !important;
+    line-height: 1.2 !important;
+    font-weight: 400;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-text-fill-color: var(--text-color) !important;
+    background-clip: padding-box;
+    caret-color: var(--text-color);
+}
+
+.signup-input[type="password"]::-ms-reveal,
+.signup-input[type="password"]::-ms-clear {
+    display: none;
 }
 
 .signup-input:focus {
@@ -87,6 +103,15 @@
 .signup-input::placeholder {
     color: var(--text-color);
     opacity: 0.6;
+}
+
+.signup-input:-webkit-autofill,
+.signup-input:-webkit-autofill:hover,
+.signup-input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--text-color);
+    box-shadow: 0 0 0 1000px var(--true-bg-color) inset;
+    -webkit-box-shadow: 0 0 0 1000px var(--true-bg-color) inset;
+    background-color: var(--true-bg-color);
 }
 
 #signup-submit-button {
