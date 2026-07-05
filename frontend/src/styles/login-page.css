@@ -84,7 +84,6 @@
     line-height: 1.2;
     box-sizing: border-box;
     appearance: none;
-    -webkit-appearance: none;
     background-clip: padding-box;
     caret-color: var(--text-color);
     transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);

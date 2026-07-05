@@ -82,8 +82,8 @@
     font-weight: 400;
     box-sizing: border-box;
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+
+    /* vendor prefixes removed; keep appearance generic */
     -webkit-text-fill-color: var(--text-color) !important;
     background-clip: padding-box;
     caret-color: var(--text-color);
@@ -109,9 +109,11 @@
 .signup-input:-webkit-autofill,
 .signup-input:-webkit-autofill:hover,
 .signup-input:-webkit-autofill:focus {
+    /* stylelint-disable property-no-vendor-prefix */
     -webkit-text-fill-color: var(--text-color);
     box-shadow: 0 0 0 1000px var(--true-bg-color) inset;
     -webkit-box-shadow: 0 0 0 1000px var(--true-bg-color) inset;
+    /* stylelint-enable property-no-vendor-prefix */
     background-color: var(--true-bg-color);
 }
 

@@ -76,19 +76,6 @@
     box-shadow: var(--shadow-card);
 }
 
-.card > label,
-.card > h3,
-.card > button,
-.card > .resume-hr-between-sections,
-.card > .link-block,
-.card > .education-block,
-.card > .experience-block,
-.card > .project-block,
-.card > .certification-block,
-.card > .award-block {
-    grid-column: 1 / -1;
-}
-
 /* Labels */
 label {
     display: flex;
@@ -142,6 +129,11 @@ textarea::placeholder {
     opacity: 0.55;
 }
 
+textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -160,11 +152,7 @@ input[type="checkbox"] {
     transform: translateY(1px);
 }
 
-/* Textarea resize behavior */
-textarea {
-    min-height: 8rem;
-    resize: vertical;
-}
+/* (moved textarea above) */
 
 /* Section blocks */
 .link-block,
@@ -180,6 +168,7 @@ textarea {
     border-radius: var(--radius-lg);
     border: 1px solid var(--box-border-color);
     background-color: var(--tinted-bg-color);
+    grid-column: 1 / -1;
 }
 
 .link-block h3,
@@ -273,6 +262,7 @@ button[type="submit"]:disabled {
     box-shadow: none;
 }
 
+/* stylelint-disable media-feature-range-notation */
 @media (max-width: 640px) {
     #form-page {
         padding: var(--space-xl) var(--space-md) var(--space-4xl);
@@ -294,6 +284,7 @@ button[type="submit"]:disabled {
         align-items: center;
     }
 }
+/* stylelint-enable media-feature-range-notation */
 
 
 
