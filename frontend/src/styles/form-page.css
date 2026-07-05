@@ -30,6 +30,17 @@
     gap: var(--space-lg);
 }
 
+.form-error-message {
+    width: 100%;
+    max-width: 980px;
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid rgb(220 38 38 / 35%);
+    background-color: rgb(220 38 38 / 12%);
+    color: rgb(185 28 28);
+    font-weight: 600;
+}
+
 /* Section headers */
 #resume-form > h2 {
     margin: var(--space-lg) 0 calc(var(--space-xs) * -1);
@@ -253,6 +264,13 @@ button[type="submit"]:hover {
 
 button[type="submit"]:active {
     transform: translateY(0) scale(0.98);
+}
+
+button[type="submit"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none;
+    box-shadow: none;
 }
 
 @media (max-width: 640px) {

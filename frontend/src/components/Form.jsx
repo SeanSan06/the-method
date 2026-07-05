@@ -56,6 +56,8 @@ function Form() {
     
     // "generateResume" usestate is used to store resume JSON data from endpoint
     const [generatedResume, setGeneratedResume] = useState(null);
+    const [submitError, setSubmitError] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     /* 
         When submit button is clicked it capture all data stored in input boxes.
@@ -69,6 +71,8 @@ function Form() {
     */
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setSubmitError("");
+        setIsSubmitting(true);
         // console.log("Passed this") // used for dev logs
 
         const payload = {
@@ -83,11 +87,20 @@ function Form() {
             });
 
             const data = await response.json();
-            console.log(data) // used for dev logs
-            setGeneratedResume(data);
-            console.log(data) // used for dev logs
+
+            if (!response.ok) {
+                setGeneratedResume(null);
+                setSubmitError(data.detail || data.error || "Resume generation failed.");
+                return;
+            }
+
+            setGeneratedResume(data.resume);
         } catch (err) {
+            setGeneratedResume(null);
+            setSubmitError("Could not reach the backend. Make sure Docker is running and the API is available at http://localhost:8000.");
             console.error("Error submitting resume:", err);
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -95,6 +108,11 @@ function Form() {
     return (
         <div id="form-page">
             <h1>Resume Maker</h1>
+            {submitError && (
+                <div role="alert" className="form-error-message" aria-live="polite">
+                    {submitError}
+                </div>
+            )}
                 <form id="resume-form" onSubmit={handleSubmit}>
                     {/* Basic Information */}
                     <h2>Basic Information</h2>
@@ -701,7 +719,9 @@ function Form() {
                         </button>
                     </div>
 
-                    <button type="submit">Submit Resume</button>
+                    <button type="submit" disabled={isSubmitting}>
+                        {isSubmitting ? "Submitting..." : "Submit Resume"}
+                    </button>
                 </form>
                                 
                 {/* Once "generate" usestate updates this will generate a resume at bottom of page */}
