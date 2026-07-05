@@ -1,5 +1,5 @@
-/* Login Page */
-#login-page {
+/* Signup page styles — mirror login page look and spacing */
+#signup-page {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
     background-color: var(--super-tinted-area-main-color);
 }
 
-#login-card {
+#signup-card {
     width: 100%;
     max-width: 560px;
     padding: var(--space-3xl);
@@ -18,113 +18,106 @@
     box-shadow: var(--shadow-elevated);
 }
 
-#login-header {
+#signup-header {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
     margin-bottom: var(--space-xl);
 }
 
-#login-title {
+#signup-title {
     font-size: var(--font-size-heading-lg);
     line-height: 1.1;
     margin: 0;
     padding: 0;
 }
 
-#login-subtitle {
+#signup-subtitle {
     margin: 0;
     font-size: var(--font-size-body-lg);
 }
 
-/* Account and forgot password links */
-#create-account-link,
-#forgot-password-link {
+/* Link that points back to login */
+#login-link {
     color: var(--main-accent-color);
     text-decoration: none;
     font-weight: 600;
-    margin-left: auto;
     font-size: 0.98rem;
-    transition: text-decoration var(--transition-fast);
 }
 
-#create-account-link:hover,
-#forgot-password-link:hover {
+#login-link:hover {
     text-decoration: underline;
 }
 
-#login-form {
+#signup-form {
     display: flex;
     flex-direction: column;
     gap: var(--space-lg);
 }
 
-.login-field-group {
+.signup-field-group {
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
 }
 
-.login-field-label {
+.signup-field-label {
     font-size: var(--font-size-label);
     font-weight: 600;
     color: var(--text-color);
 }
 
-.login-input {
+.signup-input,
+.signup-input[type="password"] {
     width: 100%;
     min-height: var(--control-height-md);
     padding: var(--input-padding-y) var(--input-padding-x);
     border-radius: var(--radius-md);
     border: 2px solid var(--box-border-color);
-    background-color: var(--true-bg-color);
-    color: var(--text-color);
-    font-family: inherit;
-    font-size: 1rem;
-    line-height: 1.2;
+    background-color: var(--true-bg-color) !important;
+    color: var(--text-color) !important;
+    font-family: inherit !important;
+    font-size: var(--font-size-body) !important;
+    line-height: 1.2 !important;
+    font-weight: 400;
     box-sizing: border-box;
     appearance: none;
+
+    /* vendor prefixes removed; keep appearance generic */
+    -webkit-text-fill-color: var(--text-color) !important;
     background-clip: padding-box;
     caret-color: var(--text-color);
     transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
 }
 
-.login-input:focus {
+.signup-input[type="password"]::-ms-reveal,
+.signup-input[type="password"]::-ms-clear {
+    display: none;
+}
+
+.signup-input:focus {
     outline: none;
     border-color: var(--main-accent-color);
     box-shadow: var(--shadow-focus);
 }
 
-.login-input::placeholder {
+.signup-input::placeholder {
     color: var(--text-color);
     opacity: 0.6;
 }
 
-#login-form-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--space-md);
-    flex-wrap: wrap;
-    margin-top: var(--space-xxs);
+.signup-input:-webkit-autofill,
+.signup-input:-webkit-autofill:hover,
+.signup-input:-webkit-autofill:focus {
+    /* stylelint-disable property-no-vendor-prefix */
+    -webkit-text-fill-color: var(--text-color);
+    box-shadow: 0 0 0 1000px var(--true-bg-color) inset;
+    -webkit-box-shadow: 0 0 0 1000px var(--true-bg-color) inset;
+    /* stylelint-enable property-no-vendor-prefix */
+    background-color: var(--true-bg-color);
 }
 
-#remember-me-option {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-xs);
-    font-size: 0.98rem;
-    cursor: pointer;
-}
-
-#login-remember-me {
-    width: 1rem;
-    height: 1rem;
-    accent-color: var(--main-accent-color);
-}
-
-
-#login-submit-button {
+#signup-submit-button {
     all: unset;
     display: inline-flex;
     align-items: center;
@@ -141,10 +134,10 @@
     transition: background-color var(--transition-fast), transform var(--transition-fast);
 }
 
-#login-submit-button:hover {
+#signup-submit-button:hover {
     background-color: var(--main-accent-color-activte);
 }
 
-#login-submit-button:active {
+#signup-submit-button:active {
     transform: scale(0.98);
 }

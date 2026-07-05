@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function News() {
     const updates = [
         {
@@ -14,49 +16,42 @@ function News() {
             body: "Example text of what this thing does.",
             date: "March 11, 2026 @ 3:00 PM",
         },
-        {
-            id: "idhere2",
-            title: "Title goes here",
-            caption: "Caption would go here",
-            body: "Example text of what this thing does.",
-            date: "March 11, 2026 @ 3:00 PM",
-        },
-        {
-            id: "idhere2",
-            title: "Title goes here",
-            caption: "Caption would go here",
-            body: "Example text of what this thing does.",
-            date: "March 11, 2026 @ 3:00 PM",
-        },
     ];
 
     return (
-        <section id="news" aria-labelledby="news-title">
-            <h1 id="news-title" className="news-title">News</h1>
-            <p className="news-intro">
-                Latest updates about The Method, including features, improvements, and announcements.
-            </p>
+        <div id="news-page">
+            <div id="news-content">
+                <Link to="/" className="back-home-link">
+                    Back Home
+                </Link>
 
-            <ul className="news-grid" role="list">
-                {updates.map((item) => (
-                    <li key={item.id}>
-                        <article className="news-card" aria-labelledby={`news-item-title-${item.id}`}>
-                            <header>
-                                <div className="news-heading">
-                                    <h2 id={`news-item-title-${item.id}`}>{item.title}</h2>
-                                    <p className="news-caption">{item.caption}</p>
-                                </div>
-                                
-                                <p className="news-date">
-                                    <time dateTime={item.date}>{item.date}</time>
-                                </p>
-                            </header>
-                            <p>{item.body}</p>
-                        </article>
-                    </li>
-                ))}
-            </ul>
-        </section>
+                <h1 id="news-title" className="news-title">News</h1>
+                <p className="news-intro">
+                    Latest updates about The Method, including features, improvements, and announcements.
+                </p>
+
+                <ul className="news-grid" role="list">
+                    {updates.map((item) => (
+                        <li key={item.id}>
+                            <article className="news-card" aria-labelledby={`news-item-title-${item.id}`}>
+                                <header>
+                                    <div className="news-heading">
+                                        <h2 id={`news-item-title-${item.id}`}>{item.title}</h2>
+                                        <p className="news-caption">{item.caption}</p>
+                                    </div>
+
+                                    <p className="news-date">
+                                        <time dateTime={item.date}>{item.date}</time>
+                                    </p>
+                                </header>
+
+                                <p>{item.body}</p>
+                            </article>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
     );
 }
 

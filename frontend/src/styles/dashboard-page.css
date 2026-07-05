@@ -1,7 +1,7 @@
 #upload-file-area {
     width: 100%;
     min-height: 100vh;
-    padding: 2rem 1rem 4rem;
+    padding: var(--space-xl) var(--space-md) var(--space-4xl);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,13 +10,13 @@
 #upload-file-field {
     width: 85%;
     min-height: 45vh;
-    padding: 32px;
+    padding: var(--space-xl);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0;
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     border: 2px solid var(--box-border-color);
     background-color: var(--true-bg-color);
 }
@@ -30,7 +30,7 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     border: 2px dashed var(--box-border-color);
     background-color: var(--true-bg-color);
 }
@@ -41,18 +41,18 @@
 }
 
 #upload-new-resume {
-    font-size: 2rem;
-    margin: 8px 0;
+    font-size: var(--font-size-heading-md);
+    margin: var(--space-xs) 0;
 }
 
 #upload-file-button-div-wrapper {
-    font-size: 2rem;
-    margin: 8px 0;
+    font-size: var(--font-size-heading-md);
+    margin: var(--space-xs) 0;
     padding: 0;
 }
 
 #drag-and-drop-caption {
-    margin: 8px 0;
+    margin: var(--space-xs) 0;
     padding: 0;
 }
 
@@ -60,10 +60,12 @@
         all: unset;
         width: 15rem;
         height: 5rem;
-        border-radius: 16px;
+        border-radius: var(--radius-lg);
         cursor: pointer;
         text-align: center;
         background-color: var(--main-accent-color);
+        color: var(--text-color);
+        transition: background-color var(--transition-fast), transform var(--transition-fast);
     }
 
         #inside-border-dashes button:active {
@@ -72,6 +74,6 @@
         }
 
 #supported-formats-caption {
-    margin: 8px 0;
+    margin: var(--space-xs) 0;
     padding: 0;
 }

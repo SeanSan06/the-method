@@ -9,7 +9,7 @@
 #pricing-page-h1 {
     font-size: 3.5rem;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: var(--space-xl);
 }
 
 #pricing-tiers-subarea {
@@ -18,7 +18,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    margin-top: 2rem;
+    margin-top: var(--space-xl);
 }
 
     .pricing-icon {
@@ -33,9 +33,11 @@
         width: 300px;
         background-color: var(--card-bg);
         border: solid 2px var(--main-accent-color);
-        padding: 2rem;
-        border-radius: 8px;
-        margin: 1rem;
+        padding: var(--space-xl);
+        border-radius: var(--radius-sm);
+        margin: var(--space-md);
+        box-shadow: var(--shadow-card);
+        transition: background-color var(--transition-fast), transform var(--transition-fast), color var(--transition-fast);
     }
 
         #pricing-free-tier:hover, #pricing-student-tier:hover, #pricing-premium-tier:hover {

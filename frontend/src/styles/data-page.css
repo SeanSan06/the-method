@@ -10,18 +10,18 @@
     align-items: flex-start;
     width: 100%;
     max-width: 600px;
-    margin-top: 16px;
+    margin-top: var(--space-md);
 }
 
 .back-home-link {
     background-color: var(--card-bg);
     padding: 0.5rem 0.9rem;
-    border-radius: 0.5rem;
+    border-radius: var(--radius-sm);
     color: var(--text-color);
     text-decoration: none;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-lg);
     border: 1px solid var(--box-border-color);
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
 }
 
 .back-home-link:hover {
@@ -31,40 +31,41 @@
 
 #data-content h1 {
     color: var(--text-color); 
-    margin: 0 0 0.5rem;
+    margin: 0 0 var(--space-xs);
     font-size: 2.5rem;
 }
 
 .data-info-card {
     background-color: var(--card-bg);
     border: 2px solid var(--box-border-color);
-    border-radius: 10px;
-    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
     width: 100%;
+    box-shadow: var(--shadow-card);
 }
 
 .data-info-card p {
     margin-top: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-lg);
 }
 
 #data-content p {
     color: var(--text-color); 
-    margin: 0.25rem 0 1.5rem;
-    font-size: 1.1rem;
+    margin: var(--space-xxs) 0 var(--space-lg);
+    font-size: var(--font-size-body-lg);
 }
 
 /* Styling the destructive "Delete" button */
 .delete-data-btn {
-    background-color: #ef4444; /* A universal red for 'delete' actions */
-    color: white;
+    background-color: #ef4444;
+    color: #fff;
     border: none;
     padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1.1rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-body-lg);
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
+    transition: background-color var(--transition-fast), transform 0.1s;
 }
 
 .delete-data-btn:hover {
