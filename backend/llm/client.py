@@ -5,8 +5,8 @@ import time
 
 load_dotenv()
 
-MODEL_FAST = "llama-3.1-8b-instant"
-MODEL_SMART = "llama-3.3-70b-versatile"
+MODEL_FAST = "openai/gpt-oss-20b"
+MODEL_SMART = "openai/gpt-oss-120b"
 client = Groq()
 
 
