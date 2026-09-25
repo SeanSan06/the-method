@@ -1,0 +1,11 @@
+node_modules/
+dist/
+coverage/
+.vite/
+*.log
+.env
+.env.*
+!.env.example
+Dockerfile
+.dockerignore
+README.md
