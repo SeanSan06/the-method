@@ -115,7 +115,16 @@ npm run build
 ```
 
 ## Docker
-This frontend can be built and run using Docker. See the project root README for details.
+
+The image is built from `frontend/Dockerfile` (Node.js) and runs the Vite dev server with `npm run dev`, serving the app at `http://localhost:5173` with hot reload.
+
+To run only the frontend (this service has no `depends_on`, so `db` is not started):
+
+```bash
+docker compose up --build frontend
+```
+
+Note: the frontend calls the backend API directly at `http://localhost:8000`, so start the backend too (`docker compose up --build backend`) if you need API features. See the project root README for running the full stack.
 
 ## Attributions
 Upload icons created by Ilham Fitrotul Hayat - Flaticon

@@ -1,4 +1,8 @@
+# Development-only overrides, automatically merged into docker-compose.yml by
+# Compose when running `docker compose up` locally. It is NOT used in CI or
+# production; to run without it, pass `-f docker-compose.yml` explicitly
 services:
+  # Hot reload for the backend via `docker compose up --watch`
   backend:
     develop:
       watch:

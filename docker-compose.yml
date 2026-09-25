@@ -1,4 +1,9 @@
+# Base Compose file shared by every environment (local, CI, production)
+#
+# Compose automatically merges this with docker-compose.override.yml when
+# running locally; see that file for hot-reload / watch configuration
 services:
+  # FastAPI backend: serves the REST API + interactive docs at /docs
   backend:
     build: backend
     ports:
@@ -10,10 +15,12 @@ services:
     depends_on:
       db:
         condition: service_healthy
+  # Vite dev server: serves the React frontend with HMR on port 5173
   frontend:
     build: frontend
     ports:
       - "5173:5173"
+  # Single-instance PostgreSQL database.
   db:
     image: postgres:18-alpine
     volumes:
@@ -28,5 +35,6 @@ services:
       timeout: 5s
       retries: 5
 
+# Declares the named volume used by the db service above
 volumes:
   postgres-data:
