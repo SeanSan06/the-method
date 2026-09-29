@@ -7,20 +7,13 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+#   Only the entries an application repo actually produces. The stock Python
+#   template also lists lib/, var/, parts/, sdist/, wheels/, share/ and friends,
+#   but those are unanchored and match at any depth, so they would silently
+#   swallow a future backend/lib/ package.
 .Python
 build/
-develop-eggs/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -45,6 +38,7 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
+coverage/
 *.cover
 *.py.cover
 .hypothesis/
@@ -56,7 +50,6 @@ cover/
 *.pot
 
 # Django stuff:
-*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -78,18 +71,11 @@ target/
 # pyenv
 .python-version
 
-# pipenv
-Pipfile.lock
-
-# UV
-uv.lock
-
-# poetry
-poetry.lock
+# Lockfiles are intentionally NOT ignored (frontend/package-lock.json is
+#   committed). The stock template ignores Pipfile.lock, uv.lock, poetry.lock
+#   and pdm.lock, which would silently drop a lockfile if we ever adopt one of
+#   those tools. Frontend uses npm; backend uses pip-tools via requirements.in.
 poetry.toml
-
-# pdm
-pdm.lock
 pdm.toml
 .pdm-python
 .pdm-build/
@@ -121,7 +107,12 @@ activemq-data/
 *.sage.py
 
 # Environments
+#   .env.* covers .env.production, .env.staging, .env.local etc. Both
+#   frontend/.dockerignore and backend/.dockerignore already ignore .env.*, so
+#   git was the only one still letting them through.
 .env
+.env.*
+!.env.example
 .envrc
 .venv
 env/
@@ -154,14 +145,8 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# PyCharm
-.idea/
-
 # Abstra
 .abstra/
-
-# Visual Studio Code
-.vscode/
 
 # Ruff stuff:
 .ruff_cache/
@@ -176,16 +161,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-__pycache__/
-.env
-*.pyc
-venv/
-
-# Local Data
-backend/interview/data/
 
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -195,16 +173,30 @@ lerna-debug.log*
 
 # Node-specific ignores
 node_modules
-dist
 dist-ssr
 *.local
 
+# Runtime-cloned dataset
+#   interview/refresh.py runs `git clone DATA_URL backend/interview/data`, so
+#   this folder becomes a whole nested repo (its own .git) plus CSVs. Left
+#   unignored, `git add .` stages it as a submodule pointer (mode 160000)
+#   instead of files, and fresh clones get an empty data dir. Anchored so a
+#   future backend/data/ or backend/database/data/ is unaffected.
+backend/interview/data/
+
 # Editor directories and files
+#   .vscode/* (not .vscode/) so git still descends into the directory and the
+#   negation below can actually re-include the file.
 .vscode/*
 !.vscode/extensions.json
-.idea
-# fuck macos
+.idea/
+
+# OS files
 .DS_Store
+Thumbs.db
+Desktop.ini
+
+# Windows / Visual Studio cruft
 *.suo
 *.ntvs*
 *.njsproj
