@@ -52,6 +52,13 @@ docker-compose*.yml
 **/*.sqlite3-journal
 **/*.db
 
+# Runtime-cloned dataset
+#   interview/refresh.py clones DATA_URL into backend/interview/data at
+#   runtime, so it is never part of a build context. Matches the existing
+#   interview/data/ rule in backend/.dockerignore. **/ is required: a bare
+#   name only matches at the context root, not backend/interview/data.
+**/interview/data
+
 # Logs
 **/logs
 **/*.log

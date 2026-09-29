@@ -176,6 +176,14 @@ node_modules
 dist-ssr
 *.local
 
+# Runtime-cloned dataset
+#   interview/refresh.py runs `git clone DATA_URL backend/interview/data`, so
+#   this folder becomes a whole nested repo (its own .git) plus CSVs. Left
+#   unignored, `git add .` stages it as a submodule pointer (mode 160000)
+#   instead of files, and fresh clones get an empty data dir. Anchored so a
+#   future backend/data/ or backend/database/data/ is unaffected.
+backend/interview/data/
+
 # Editor directories and files
 #   .vscode/* (not .vscode/) so git still descends into the directory and the
 #   negation below can actually re-include the file.
