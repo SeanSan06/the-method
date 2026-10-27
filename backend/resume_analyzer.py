@@ -324,17 +324,16 @@ class ResumeAnalyzer:
             if not isinstance(exp, dict):
                 continue
 
-            start_date = exp.get("start_date", "")
-            end_date = exp.get("end_date", "")
+            start_date = exp.get("start_date") or ""
+            end_date = exp.get("end_date") or ""
 
             # Extract year from date string
             current_year = datetime.now().year
-            start_year = self._extract_year(start_date) or current_year
-            end_year = (
-                current_year
-                if "present" in end_date.lower()
-                else (self._extract_year(end_date) or current_year)
-            )
+            start_year = self._extract_year(str(start_date)) or current_year
+            if isinstance(end_date, str) and "present" in end_date.lower():
+                end_year = current_year
+            else:
+                end_year = self._extract_year(str(end_date)) or current_year
 
             years = max(0, end_year - start_year)
             total_years += years

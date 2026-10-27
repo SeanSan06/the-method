@@ -2,12 +2,17 @@ from groq import Groq  # type: ignore
 from dotenv import load_dotenv
 import json
 import time
+import os
 
 load_dotenv()
 
 MODEL_FAST = "openai/gpt-oss-20b"
 MODEL_SMART = "openai/gpt-oss-120b"
-client = Groq()
+
+groq_api_key = os.getenv("GROQ_API_KEY")
+if not groq_api_key:
+    raise ValueError("GROQ_API_KEY environment variable is not set")
+client = Groq(api_key=groq_api_key)
 
 
 # only for llm testing
