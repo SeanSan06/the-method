@@ -4,7 +4,11 @@ from sqlalchemy.orm import sessionmaker
 
 from .models import Base
 
-PSYCOPG_DATABASE_URL = os.getenv("DATABASE_URL").replace(
+database_url = os.getenv("DATABASE_URL")
+if not database_url:
+    raise ValueError("DATABASE_URL environment variable is not set")
+
+PSYCOPG_DATABASE_URL = database_url.replace(
     "postgresql://", "postgresql+psycopg2://"
 )
 

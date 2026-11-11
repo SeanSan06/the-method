@@ -187,7 +187,7 @@ class Resume(Base):
         server_default=text("uuid_generate_v4()"),
     )
     user_id: Mapped[UUID] = mapped_column(
-        ForeignKey("users.id", ondelete="CASCADE"), unique=True, nullable=False
+        ForeignKey("users.id", ondelete="CASCADE"), nullable=False
     )
     resume_data: Mapped[str] = mapped_column(Text, nullable=False)
     created_at: Mapped[datetime] = mapped_column(server_default=func.now())
@@ -195,4 +195,4 @@ class Resume(Base):
         server_default=func.now(), onupdate=func.now()
     )
 
-    user: Mapped["User"] = relationship(back_populates="resume")
+    user: Mapped["User"] = relationship(back_populates="resumes")
